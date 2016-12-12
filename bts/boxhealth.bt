@@ -1,0 +1,734 @@
+[
+  {
+    "version": "1.2.0"
+  },
+  {
+    "activated": true,
+    "metadata": {
+      "label": ""
+    },
+    "properties": {},
+    "children": [
+      {
+        "activated": true,
+        "metadata": {
+          "label": ""
+        },
+        "properties": {},
+        "children": [
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "op1": {
+                "type": "entityKnowledge",
+                "value": "InitPhase"
+              },
+              "op2": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "op": "=="
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": "Init"
+                },
+                "properties": {
+                  "behavior": {
+                    "type": "uriPath",
+                    "value": "bts/boxinit.bt"
+                  },
+                  "inputParams": []
+                },
+                "children": [],
+                "id": "824c535e-dc08-499b-b7e6-dbf4a1e8c165",
+                "type": "embedded"
+              }
+            ],
+            "id": "780fd3a0-cd8d-49c0-887e-e19356465cd2",
+            "type": "condition"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "name": "Log",
+              "inputParams": [
+                {
+                  "key": "MessageLog",
+                  "type": "string",
+                  "value": "Initi terminé"
+                }
+              ],
+              "outputParams": []
+            },
+            "children": [],
+            "id": "018173d2-0a5d-4eb2-94f4-b05945907412",
+            "type": "action"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "name": "InitTreeDecision",
+              "inputParams": [],
+              "outputParams": []
+            },
+            "children": [],
+            "id": "3aaf6e34-2002-48d0-9d2c-8359d39f3524",
+            "type": "action"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "name": "Log",
+              "inputParams": [
+                {
+                  "key": "MessageLog",
+                  "type": "string",
+                  "value": "Init Tree Decision OK"
+                }
+              ],
+              "outputParams": []
+            },
+            "children": [],
+            "id": "d9c47632-baaf-4f42-9736-c7a76b76d58b",
+            "type": "action"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "op1": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "op2": {
+                "type": "boolean",
+                "value": "true"
+              },
+              "op": "=="
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "statusCondition": "failsIfAnyFails",
+                  "retryPolicy": "propagateToAll"
+                },
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "CTRL si Date du jour Modifier"
+                    },
+                    "properties": {
+                      "active": "false"
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "Day"
+                          },
+                          "op2": {
+                            "type": "entityKnowledge",
+                            "value": "Day_Current"
+                          },
+                          "op": "=="
+                        },
+                        "children": [],
+                        "id": "9533d293-7456-477f-9b27-52eb633d9810",
+                        "type": "condition"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "behavior": {
+                                "type": "uriPath",
+                                "value": "bts/LoadActivitiesOfDay.bt"
+                              },
+                              "inputParams": []
+                            },
+                            "children": [],
+                            "id": "6f3c8b48-6f58-4674-a5d8-3978974a9902",
+                            "type": "embedded"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "destination": "Day_Current",
+                              "op": {
+                                "type": "entityKnowledge",
+                                "value": "Day"
+                              }
+                            },
+                            "children": [],
+                            "id": "9333a3fd-6312-4cfb-8878-adff26906cf4",
+                            "type": "set"
+                          }
+                        ],
+                        "id": "d02e113f-5216-41fa-b571-e4fe24cb26e7",
+                        "type": "sequence"
+                      }
+                    ],
+                    "id": "9819629b-c923-4437-82cc-f7857f55b45f",
+                    "type": "priority"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "Check Activité Personne"
+                    },
+                    "properties": {
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "bts/checkActivity.bt"
+                      },
+                      "inputParams": []
+                    },
+                    "children": [],
+                    "id": "481888e8-31b5-44d9-9a5f-efa1087185e7",
+                    "type": "embedded"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "Check Activité Securite "
+                    },
+                    "properties": {
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "bts/checkActivitySecurity.bt"
+                      },
+                      "inputParams": []
+                    },
+                    "children": [],
+                    "id": "f105d183-0785-4af7-97a4-bfdbfa972112",
+                    "type": "embedded"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "Check Activite Maintenance"
+                    },
+                    "properties": {
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "bts/checkActivityMaintenance.bt"
+                      },
+                      "inputParams": []
+                    },
+                    "children": [],
+                    "id": "fe7724c8-ce3f-48d7-adf4-bed6adfca598",
+                    "type": "embedded"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "bts/MajCurrentCapteurP.bt"
+                      },
+                      "inputParams": []
+                    },
+                    "children": [],
+                    "id": "68756048-2228-4d76-8d8f-2043d12acae3",
+                    "type": "embedded"
+                  }
+                ],
+                "id": "75a0f639-7074-4130-bb28-f3821e60c883",
+                "type": "parallel"
+              }
+            ],
+            "id": "7be7751a-66dd-48bd-b1d9-1fda3364d5f0",
+            "type": "until"
+          },
+          {
+            "activated": false,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {},
+            "children": [
+              {
+                "activated": false,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "active": "false"
+                },
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "entityKnowledge",
+                        "value": "TraitementMajCapt"
+                      },
+                      "op2": {
+                        "type": "boolean",
+                        "value": "false"
+                      },
+                      "op": "=="
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "activated": false,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "Log",
+                              "inputParams": [
+                                {
+                                  "key": "MessageLog",
+                                  "type": "string",
+                                  "value": "Fait une mise à jour capteur"
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "b099a344-45ef-405a-a437-36c6c160c5fc",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "behavior": {
+                                "type": "uriPath",
+                                "value": "bts/MajCurrentCapteurP.bt"
+                              },
+                              "inputParams": []
+                            },
+                            "children": [],
+                            "id": "cfa6d293-5738-4772-8804-018e5c39410e",
+                            "type": "embedded"
+                          }
+                        ],
+                        "id": "d5986166-1293-4531-ac3d-41da64be245b",
+                        "type": "sequence"
+                      }
+                    ],
+                    "id": "5301f6ff-d6c0-4862-9e8b-4b2eb107c93e",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {},
+                    "children": [],
+                    "id": "3ab9d230-6cf0-459b-a9c9-c0118011f124",
+                    "type": "success"
+                  }
+                ],
+                "id": "c4f373c5-b1a7-49eb-a3e3-2c4a1d72e956",
+                "type": "priority"
+              }
+            ],
+            "id": "0ab0744f-d7e6-4549-8314-9bb229f0b421",
+            "type": "sequence"
+          },
+          {
+            "activated": false,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "op1": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "op2": {
+                "type": "boolean",
+                "value": "true"
+              },
+              "op": "=="
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "activated": false,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "name": "Log",
+                      "inputParams": [
+                        {
+                          "key": "MessageLog",
+                          "type": "string",
+                          "value": "start sequence"
+                        }
+                      ],
+                      "outputParams": []
+                    },
+                    "children": [],
+                    "id": "fae653d3-aaeb-40bf-8486-185497735a33",
+                    "type": "action"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "bts/activityreveil.bt"
+                      },
+                      "inputParams": []
+                    },
+                    "children": [],
+                    "id": "ac51e37f-b272-479f-9296-a7522e3314c8",
+                    "type": "embedded"
+                  },
+                  {
+                    "activated": false,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "name": "Log",
+                      "inputParams": [
+                        {
+                          "key": "MessageLog",
+                          "type": "string",
+                          "value": "reveil"
+                        }
+                      ],
+                      "outputParams": []
+                    },
+                    "children": [],
+                    "id": "557bc1ef-32a3-4eec-97d7-8de9842a4c4a",
+                    "type": "action"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "bts/activityPetitDejeuner.bt"
+                      },
+                      "inputParams": []
+                    },
+                    "children": [],
+                    "id": "39c883be-0afb-469b-a69d-f3193fcefda2",
+                    "type": "embedded"
+                  },
+                  {
+                    "activated": false,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "name": "Log",
+                      "inputParams": [
+                        {
+                          "key": "MessageLog",
+                          "type": "string",
+                          "value": "petit dej"
+                        }
+                      ],
+                      "outputParams": []
+                    },
+                    "children": [],
+                    "id": "2c261799-a33d-4158-877a-44c10a1fa417",
+                    "type": "action"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "bts/activitydouche.bt"
+                      },
+                      "inputParams": []
+                    },
+                    "children": [],
+                    "id": "4980d24d-5107-489a-8045-3b9c7f8a300e",
+                    "type": "embedded"
+                  },
+                  {
+                    "activated": false,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "name": "Log",
+                      "inputParams": [
+                        {
+                          "key": "MessageLog",
+                          "type": "string",
+                          "value": "douche"
+                        }
+                      ],
+                      "outputParams": []
+                    },
+                    "children": [],
+                    "id": "d165708c-589c-49d7-b382-bd56d04131e0",
+                    "type": "action"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "bts/activityDejeuner.bt"
+                      },
+                      "inputParams": []
+                    },
+                    "children": [],
+                    "id": "f0e7151b-93b4-408d-bbe9-a76567c2e9a6",
+                    "type": "embedded"
+                  },
+                  {
+                    "activated": false,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "name": "Log",
+                      "inputParams": [
+                        {
+                          "key": "MessageLog",
+                          "type": "string",
+                          "value": "dej"
+                        }
+                      ],
+                      "outputParams": []
+                    },
+                    "children": [],
+                    "id": "6b19349e-aa56-4f80-b9b4-be88d3296d4f",
+                    "type": "action"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "bts/activitySieste.bt"
+                      },
+                      "inputParams": []
+                    },
+                    "children": [],
+                    "id": "954e30ac-a93a-4e19-b1c6-2f1e882cb06c",
+                    "type": "embedded"
+                  },
+                  {
+                    "activated": false,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "name": "Log",
+                      "inputParams": [
+                        {
+                          "key": "MessageLog",
+                          "type": "string",
+                          "value": "sieste"
+                        }
+                      ],
+                      "outputParams": []
+                    },
+                    "children": [],
+                    "id": "d36b63d8-d7f1-454e-bafd-63c90091bdc6",
+                    "type": "action"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "bts/activityDiner.bt"
+                      },
+                      "inputParams": []
+                    },
+                    "children": [],
+                    "id": "115d0448-04b8-45bd-b63b-9c0cdd0bb452",
+                    "type": "embedded"
+                  },
+                  {
+                    "activated": false,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "name": "Log",
+                      "inputParams": [
+                        {
+                          "key": "MessageLog",
+                          "type": "string",
+                          "value": "diner"
+                        }
+                      ],
+                      "outputParams": []
+                    },
+                    "children": [],
+                    "id": "f206024e-86ef-4974-ae11-eca3501fbcc5",
+                    "type": "action"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "bts/activityCoucher.bt"
+                      },
+                      "inputParams": []
+                    },
+                    "children": [],
+                    "id": "6ba0031e-beeb-4c89-adb2-e4ecd933f5ef",
+                    "type": "embedded"
+                  },
+                  {
+                    "activated": false,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "name": "Log",
+                      "inputParams": [
+                        {
+                          "key": "MessageLog",
+                          "type": "string",
+                          "value": "coucher"
+                        }
+                      ],
+                      "outputParams": []
+                    },
+                    "children": [],
+                    "id": "7513b02e-93af-474f-ae8d-764791d9d834",
+                    "type": "action"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "bts/MajCurrentCapteurP.bt"
+                      },
+                      "inputParams": []
+                    },
+                    "children": [],
+                    "id": "5fd9a4d4-5316-4603-8bdd-9dc1b21425c2",
+                    "type": "embedded"
+                  },
+                  {
+                    "activated": false,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "name": "Log",
+                      "inputParams": [
+                        {
+                          "key": "MessageLog",
+                          "type": "string",
+                          "value": "maj"
+                        }
+                      ],
+                      "outputParams": []
+                    },
+                    "children": [],
+                    "id": "3c09b3f1-d41d-4eef-8ed9-746bf6bc1d1a",
+                    "type": "action"
+                  }
+                ],
+                "id": "11a6d121-5310-4d02-81cb-c36f00536129",
+                "type": "sequence"
+              }
+            ],
+            "id": "0974231f-d2f2-4a76-adeb-b102fb156219",
+            "type": "until"
+          }
+        ],
+        "id": "850b1858-3207-4e4c-a0be-71e26bb42c6f",
+        "type": "sequence"
+      }
+    ],
+    "id": "218463bd-dca2-4d47-a431-6994e66b3533"
+  }
+]

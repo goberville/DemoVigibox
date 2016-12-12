@@ -1,0 +1,12 @@
+[
+  {
+    "version": "0.0.1"
+  },
+  {
+    "homeUrl": "F:\DemoVigibox\DemoVigibox\bts",
+    "description": "Projet DemoVigiBox",
+    "actionLibraries": {
+      "google": true
+    }
+  }
+]
