@@ -939,22 +939,6 @@
                   "label": ""
                 },
                 "properties": {
-                  "destination": "current_CaptChambreP",
-                  "op": {
-                    "type": "integer",
-                    "value": "1"
-                  }
-                },
-                "children": [],
-                "id": "7490432b-6827-46e0-ba15-ffbfdff5340e",
-                "type": "set"
-              },
-              {
-                "activated": true,
-                "metadata": {
-                  "label": ""
-                },
-                "properties": {
                   "destination": "current_CaptCouloirP",
                   "op": {
                     "type": "integer",
@@ -971,7 +955,23 @@
                   "label": ""
                 },
                 "properties": {
-                  "destination": "current_CaptCouloirO",
+                  "destination": "current_CaptCouloirT",
+                  "op": {
+                    "type": "string",
+                    "value": ""
+                  }
+                },
+                "children": [],
+                "id": "55e2ac7c-4ba0-40d8-88c8-9644f056cc6c",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptCouloirPE",
                   "op": {
                     "type": "integer",
                     "value": "0"
@@ -979,6 +979,38 @@
                 },
                 "children": [],
                 "id": "42322646-a99b-4833-b15a-941641a0b626",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptCouloirC",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "9997b5af-1470-4f51-a442-73b269d19405",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptChambreP",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "7490432b-6827-46e0-ba15-ffbfdff5340e",
                 "type": "set"
               },
               {
@@ -995,6 +1027,38 @@
                 },
                 "children": [],
                 "id": "7c91a6ec-3922-4494-854a-6140c7c2a879",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptChambreW",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "1e5629a2-26b0-40d8-a474-0ee4ae625409",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptChambreC",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "3cd0e445-7297-4fe6-81dc-4d840f8515c1",
                 "type": "set"
               }
             ],
