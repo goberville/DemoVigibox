@@ -9,7 +9,7 @@
     },
     "properties": {},
     "children": [
-     {
+      {
         "activated": true,
         "metadata": {
           "label": ""
@@ -731,6 +731,70 @@
                   "label": ""
                 },
                 "properties": {
+                  "destination": "current_CaptCuisinePF",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "ee0abd13-f81a-4797-b13c-eaa16eb2e59e",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptCuisineE",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "31d50f01-b625-4b94-8768-53e5c02e3e3c",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptCuisineW",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "977291ab-36f0-46dd-862d-9d43dca60113",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptCuisineC",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "17cc4376-88f2-4f2a-93a7-69a13d94884c",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
                   "destination": "current_CaptSalonP",
                   "op": {
                     "type": "integer",
@@ -763,7 +827,7 @@
                   "label": ""
                 },
                 "properties": {
-                  "destination": "current_CaptSalonO",
+                  "destination": "current_CaptSalonW",
                   "op": {
                     "type": "integer",
                     "value": "0"
@@ -771,6 +835,22 @@
                 },
                 "children": [],
                 "id": "b5ff7609-6d1f-4583-88a2-093717e2299d",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptSalonC",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "d31acb30-f55a-4ef2-bb85-e47a266b0b7e",
                 "type": "set"
               },
               {
