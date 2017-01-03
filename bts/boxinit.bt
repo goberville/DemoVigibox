@@ -843,6 +843,22 @@
                   "label": ""
                 },
                 "properties": {
+                  "destination": "current_CaptSalonE",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "b9e928a9-86ea-4289-8f3f-d860173fc3ae",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
                   "destination": "current_CaptSalonC",
                   "op": {
                     "type": "integer",
@@ -867,6 +883,54 @@
                 },
                 "children": [],
                 "id": "ca860140-2a0d-4174-97c0-d22f3cc6d86a",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptSDBT",
+                  "op": {
+                    "type": "string",
+                    "value": ""
+                  }
+                },
+                "children": [],
+                "id": "7f193e00-166c-46b6-9e07-dfe4dca11458",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptSDBPE",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "49d58e22-d536-4d39-acf1-b18ccfedfe0a",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptSDBC",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "c4bc9edc-7ce6-4f6d-9e25-fda869b28179",
                 "type": "set"
               },
               {
