@@ -19,352 +19,18 @@
           {
             "activated": true,
             "metadata": {
-              "label": "CTRL si Periode Activity Reveil"
+              "label": ""
             },
             "properties": {
-              "active": "false"
-            },
-            "children": [
-              {
-                "activated": true,
-                "metadata": {
-                  "label": ""
-                },
-                "properties": {
-                  "op1": {
-                    "type": "entityKnowledge",
-                    "value": "Time"
-                  },
-                  "op2": {
-                    "type": "entityKnowledge",
-                    "value": "Time_Reveil_Min[0]"
-                  },
-                  "op": "<"
-                },
-                "children": [
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {},
-                    "children": [
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": ""
-                        },
-                        "properties": {
-                          "name": "Log",
-                          "inputParams": [
-                            {
-                              "key": "MessageLog",
-                              "type": "string",
-                              "value": "Pas Activité Reveil"
-                            }
-                          ],
-                          "outputParams": []
-                        },
-                        "children": [],
-                        "id": "c877c67c-624b-4922-9801-46ea5ed82062",
-                        "type": "action"
-                      },
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": ""
-                        },
-                        "properties": {
-                          "destination": "TaskActivityReveil",
-                          "op": {
-                            "type": "integer",
-                            "value": "0"
-                          }
-                        },
-                        "children": [],
-                        "id": "fd2ba51f-98e7-4314-ab60-b4fb372ed98d",
-                        "type": "set"
-                      },
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": "Check_Reveil"
-                        },
-                        "properties": {
-                          "destination": "Check_Reveil",
-                          "op": {
-                            "type": "boolean",
-                            "value": "false"
-                          }
-                        },
-                        "children": [],
-                        "id": "086072a8-f816-4888-beab-54c92b5f90ea",
-                        "type": "set"
-                      }
-                    ],
-                    "id": "d04624ba-4d9e-4359-8c6e-dafd80b4b0fb",
-                    "type": "sequence"
-                  }
-                ],
-                "id": "a4dc07a7-3fbe-4e4f-b7aa-e6ccab13c17d",
-                "type": "condition"
-              },
-              {
-                "activated": true,
-                "metadata": {
-                  "label": ""
-                },
-                "properties": {
-                  "active": "false"
-                },
-                "children": [
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "op1": {
-                        "type": "entityKnowledge",
-                        "value": "Time"
-                      },
-                      "op2": {
-                        "type": "entityKnowledge",
-                        "value": "Time_Reveil_Max[0]"
-                      },
-                      "op": "<"
-                    },
-                    "children": [
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": ""
-                        },
-                        "properties": {},
-                        "children": [
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {
-                              "op1": {
-                                "type": "entityKnowledge",
-                                "value": "TaskActivityReveil"
-                              },
-                              "op2": {
-                                "type": "integer",
-                                "value": "0"
-                              },
-                              "op": "=="
-                            },
-                            "children": [
-                              {
-                                "activated": true,
-                                "metadata": {
-                                  "label": ""
-                                },
-                                "properties": {},
-                                "children": [
-                                  {
-                                    "activated": false,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {
-                                      "name": "Log",
-                                      "inputParams": [
-                                        {
-                                          "key": "MessageLog",
-                                          "type": "string",
-                                          "value": "Debut Activité Reveil"
-                                        }
-                                      ],
-                                      "outputParams": []
-                                    },
-                                    "children": [],
-                                    "id": "86b2d634-c8ab-4baf-b8eb-d99ee9067994",
-                                    "type": "action"
-                                  },
-                                  {
-                                    "activated": true,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {
-                                      "destination": "TaskActivityReveil",
-                                      "op": {
-                                        "type": "integer",
-                                        "value": "1"
-                                      }
-                                    },
-                                    "children": [],
-                                    "id": "ea3dc37d-4cd3-451e-932c-b6ad329ab846",
-                                    "type": "set"
-                                  }
-                                ],
-                                "id": "644ab51a-4860-4da6-a8c4-ff6976a071db",
-                                "type": "sequence"
-                              }
-                            ],
-                            "id": "9125a7a8-c86d-4832-a739-df81146204b5",
-                            "type": "condition"
-                          }
-                        ],
-                        "id": "2234a6ca-5976-492e-b114-ae51e164d637",
-                        "type": "sequence"
-                      }
-                    ],
-                    "id": "7d31e307-5012-427c-9246-17a52e24f1ce",
-                    "type": "condition"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "op1": {
-                        "type": "entityKnowledge",
-                        "value": "Time"
-                      },
-                      "op2": {
-                        "type": "entityKnowledge",
-                        "value": "Time_Reveil_Max[0]"
-                      },
-                      "op": ">"
-                    },
-                    "children": [
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": ""
-                        },
-                        "properties": {},
-                        "children": [
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {
-                              "name": "Log",
-                              "inputParams": [
-                                {
-                                  "key": "MessageLog",
-                                  "type": "string",
-                                  "value": "Temps activite reveil terminé"
-                                }
-                              ],
-                              "outputParams": []
-                            },
-                            "children": [],
-                            "id": "032966b4-aec8-41c6-976a-04d35ba54022",
-                            "type": "action"
-                          },
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {
-                              "op1": {
-                                "type": "entityKnowledge",
-                                "value": "TaskActivityReveil"
-                              },
-                              "op2": {
-                                "type": "integer",
-                                "value": "1"
-                              },
-                              "op": "=="
-                            },
-                            "children": [
-                              {
-                                "activated": true,
-                                "metadata": {
-                                  "label": ""
-                                },
-                                "properties": {},
-                                "children": [
-                                  {
-                                    "activated": false,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {
-                                      "name": "Log",
-                                      "inputParams": [
-                                        {
-                                          "key": "MessageLog",
-                                          "type": "string",
-                                          "value": "Fin Activité Reveil"
-                                        }
-                                      ],
-                                      "outputParams": []
-                                    },
-                                    "children": [],
-                                    "id": "62ccf83e-3ed9-4db3-b0fd-9ce9beb6cdac",
-                                    "type": "action"
-                                  },
-                                  {
-                                    "activated": true,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {
-                                      "destination": "TaskActivityReveil",
-                                      "op": {
-                                        "type": "integer",
-                                        "value": "2"
-                                      }
-                                    },
-                                    "children": [],
-                                    "id": "02ff3663-1367-4cd1-ac99-7cae7086ec84",
-                                    "type": "set"
-                                  }
-                                ],
-                                "id": "b35be07f-93ee-4073-95ae-23500ed1a039",
-                                "type": "sequence"
-                              }
-                            ],
-                            "id": "d7bf0157-8e54-45b7-9665-acd2fe0ec027",
-                            "type": "condition"
-                          }
-                        ],
-                        "id": "31cce75d-cf09-40b2-85b4-dcccf8a8e4e4",
-                        "type": "sequence"
-                      }
-                    ],
-                    "id": "7ae1218c-3ead-4ac8-b3b4-604fd02b0d98",
-                    "type": "condition"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {},
-                    "children": [],
-                    "id": "85e7b48d-e417-4164-9fde-a8b9c8fc4c62",
-                    "type": "success"
-                  }
-                ],
-                "id": "e58950a0-edf1-4f6a-b527-bdde8ea69119",
-                "type": "priority"
-              },
-              {
-                "activated": true,
-                "metadata": {
-                  "label": ""
-                },
-                "properties": {},
-                "children": [],
-                "id": "f56bd027-d0b3-4566-b2dd-d37cc31cc471",
-                "type": "success"
+              "destination": "MessageAlerte",
+              "op": {
+                "type": "string",
+                "value": ""
               }
-            ],
-            "id": "884c216e-6309-4d7c-9667-dc20a3ce01f5",
-            "type": "priority"
+            },
+            "children": [],
+            "id": "94010477-ff34-4e90-8ec7-a8a49a151816",
+            "type": "set"
           },
           {
             "activated": true,
@@ -372,8 +38,70 @@
               "label": ""
             },
             "properties": {
-              "active": "false"
+              "destination": "BoolAlerteMessage",
+              "op": {
+                "type": "boolean",
+                "value": "false"
+              }
             },
+            "children": [],
+            "id": "d37dc09f-e4ff-4f68-a7ad-976d82cf5057",
+            "type": "set"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "destination": "MessageLog",
+              "op": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            "children": [],
+            "id": "d0afa076-526a-42d5-99c3-d789070e4100",
+            "type": "set"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "destination": "TraitementMajCapt",
+              "op": {
+                "type": "boolean",
+                "value": "false"
+              }
+            },
+            "children": [],
+            "id": "ba6f02be-d74d-4646-90f4-98a6a13bdd7b",
+            "type": "set"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "destination": "Day_Current",
+              "op": {
+                "type": "integer",
+                "value": "9"
+              }
+            },
+            "children": [],
+            "id": "b66f824d-41f9-466a-9bd5-d14bb433018a",
+            "type": "set"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {},
             "children": [
               {
                 "activated": true,
@@ -381,388 +109,15 @@
                   "label": ""
                 },
                 "properties": {
-                  "op1": {
-                    "type": "entityKnowledge",
-                    "value": "TaskActivityReveil"
-                  },
-                  "op2": {
+                  "destination": "TaskActivityReveil",
+                  "op": {
                     "type": "integer",
-                    "value": "1"
-                  },
-                  "op": "=="
-                },
-                "children": [
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "active": "false"
-                    },
-                    "children": [
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": "Si pas present dans la chambre"
-                        },
-                        "properties": {
-                          "op1": {
-                            "type": "entityKnowledge",
-                            "value": "current_CaptChambreP"
-                          },
-                          "op2": {
-                            "type": "integer",
-                            "value": "1"
-                          },
-                          "op": "!="
-                        },
-                        "children": [
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {},
-                            "children": [
-                              {
-                                "activated": false,
-                                "metadata": {
-                                  "label": ""
-                                },
-                                "properties": {
-                                  "name": "Log",
-                                  "inputParams": [
-                                    {
-                                      "key": "MessageLog",
-                                      "type": "string",
-                                      "value": "Personne dans la chambre"
-                                    }
-                                  ],
-                                  "outputParams": []
-                                },
-                                "children": [],
-                                "id": "c76ca8ad-e76b-4973-9fea-525980c4906f",
-                                "type": "action"
-                              },
-                              {
-                                "activated": true,
-                                "metadata": {
-                                  "label": ""
-                                },
-                                "properties": {
-                                  "destination": "TaskActivityReveil",
-                                  "op": {
-                                    "type": "integer",
-                                    "value": "3"
-                                  }
-                                },
-                                "children": [],
-                                "id": "3d04e7b6-f07e-4cc8-b71b-6a7af2b2fd2b",
-                                "type": "set"
-                              }
-                            ],
-                            "id": "a471e78f-0e3d-40b0-bbd2-a7d76774c4d6",
-                            "type": "sequence"
-                          }
-                        ],
-                        "id": "cdfc34a7-f919-4dd0-a914-499f0d80a584",
-                        "type": "condition"
-                      },
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": "Si Periode Activity Reveil "
-                        },
-                        "properties": {},
-                        "children": [
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": "Si capteur chambre à changé d'état"
-                            },
-                            "properties": {
-                              "op1": {
-                                "type": "entityKnowledge",
-                                "value": "current_CaptChambreP"
-                              },
-                              "op2": {
-                                "type": "entityKnowledge",
-                                "value": "actuator_CaptChambreP"
-                              },
-                              "op": "!="
-                            },
-                            "children": [
-                              {
-                                "activated": true,
-                                "metadata": {
-                                  "label": ""
-                                },
-                                "properties": {},
-                                "children": [
-                                  {
-                                    "activated": false,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {
-                                      "name": "Log",
-                                      "inputParams": [
-                                        {
-                                          "key": "MessageLog",
-                                          "type": "string",
-                                          "value": "Capteur chambre à changer 1 à 0"
-                                        }
-                                      ],
-                                      "outputParams": []
-                                    },
-                                    "children": [],
-                                    "id": "a80cb09f-efe8-4598-b08f-5b052c98114b",
-                                    "type": "action"
-                                  },
-                                  {
-                                    "activated": true,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {
-                                      "destination": "current_CaptChambreP",
-                                      "op": {
-                                        "type": "entityKnowledge",
-                                        "value": "actuator_CaptChambreP"
-                                      }
-                                    },
-                                    "children": [],
-                                    "id": "4b8176a5-5653-4873-bc4a-cdd8497d784d",
-                                    "type": "set"
-                                  }
-                                ],
-                                "id": "ba5657af-0df7-4916-8602-ee8f1fbf884f",
-                                "type": "sequence"
-                              }
-                            ],
-                            "id": "13bc80c4-2771-41df-bb4c-7b87d3e6308c",
-                            "type": "condition"
-                          },
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": "Check_Reveil"
-                            },
-                            "properties": {
-                              "destination": "Check_Reveil",
-                              "op": {
-                                "type": "boolean",
-                                "value": "true"
-                              }
-                            },
-                            "children": [],
-                            "id": "2a0a054e-0ead-4a7e-a0e4-9a514a0f9984",
-                            "type": "set"
-                          },
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": "Ctrl si un autre capteur est passé en Presence"
-                            },
-                            "properties": {
-                              "active": "false"
-                            },
-                            "children": [
-                              {
-                                "activated": true,
-                                "metadata": {
-                                  "label": "Si capteur chambre à changé d'état"
-                                },
-                                "properties": {
-                                  "op1": {
-                                    "type": "entityKnowledge",
-                                    "value": "current_CaptCouloirP"
-                                  },
-                                  "op2": {
-                                    "type": "entityKnowledge",
-                                    "value": "actuator_CaptCouloirP"
-                                  },
-                                  "op": "!="
-                                },
-                                "children": [
-                                  {
-                                    "activated": true,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {},
-                                    "children": [
-                                      {
-                                        "activated": false,
-                                        "metadata": {
-                                          "label": ""
-                                        },
-                                        "properties": {
-                                          "name": "Log",
-                                          "inputParams": [
-                                            {
-                                              "key": "MessageLog",
-                                              "type": "string",
-                                              "value": "Capteur couloir à changer 0 à 1"
-                                            }
-                                          ],
-                                          "outputParams": []
-                                        },
-                                        "children": [],
-                                        "id": "1532a6da-15d6-4409-b1a0-f14dcb5369a3",
-                                        "type": "action"
-                                      },
-                                      {
-                                        "activated": true,
-                                        "metadata": {
-                                          "label": ""
-                                        },
-                                        "properties": {
-                                          "destination": "current_CaptCouloirP",
-                                          "op": {
-                                            "type": "entityKnowledge",
-                                            "value": "actuator_CaptCouloirP"
-                                          }
-                                        },
-                                        "children": [],
-                                        "id": "de5f3414-3462-4d0e-adcc-4673bdea0824",
-                                        "type": "set"
-                                      }
-                                    ],
-                                    "id": "69f0e101-2486-4c45-84d1-8776d2386d1a",
-                                    "type": "sequence"
-                                  }
-                                ],
-                                "id": "b8c5c50e-d986-4cb3-a7c9-27db6d91c956",
-                                "type": "condition"
-                              },
-                              {
-                                "activated": false,
-                                "metadata": {
-                                  "label": ""
-                                },
-                                "properties": {
-                                  "behavior": {
-                                    "type": "uriPath",
-                                    "value": "bts/MajCurrentCapteurP.bt"
-                                  },
-                                  "inputParams": []
-                                },
-                                "children": [],
-                                "id": "c1e63272-c3ce-4117-8457-60389eed1c62",
-                                "type": "embedded"
-                              },
-                              {
-                                "activated": true,
-                                "metadata": {
-                                  "label": ""
-                                },
-                                "properties": {},
-                                "children": [
-                                  {
-                                    "activated": true,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {
-                                      "destination": "MessageAlerte",
-                                      "op": {
-                                        "type": "string",
-                                        "value": "06010100030120"
-                                      }
-                                    },
-                                    "children": [],
-                                    "id": "7d052138-0298-4be1-84da-d2449fb39d1c",
-                                    "type": "set"
-                                  },
-                                  {
-                                    "activated": true,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {
-                                      "destination": "BoolAlerteMessage",
-                                      "op": {
-                                        "type": "boolean",
-                                        "value": "true"
-                                      }
-                                    },
-                                    "children": [],
-                                    "id": "6fa691b7-4643-418b-b980-94de0150c218",
-                                    "type": "set"
-                                  },
-                                  {
-                                    "activated": true,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {
-                                      "behavior": {
-                                        "type": "uriPath",
-                                        "value": "bts/SendAlerteSigfox.bt"
-                                      },
-                                      "inputParams": []
-                                    },
-                                    "children": [],
-                                    "id": "8688580c-17d9-4f4a-a55e-ee4f4d379dbe",
-                                    "type": "embedded"
-                                  }
-                                ],
-                                "id": "07953778-1176-412c-b0e3-29bac6f34a38",
-                                "type": "sequence"
-                              }
-                            ],
-                            "id": "4cbe9888-985f-49f2-a7ad-0536844f101b",
-                            "type": "priority"
-                          },
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {
-                              "name": "Log",
-                              "inputParams": [
-                                {
-                                  "key": "MessageLog",
-                                  "type": "string",
-                                  "value": "Mamie est reveillée"
-                                }
-                              ],
-                              "outputParams": []
-                            },
-                            "children": [],
-                            "id": "9857f4d2-a4f4-40b8-8907-3fbdd664b0c5",
-                            "type": "action"
-                          },
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {
-                              "destination": "TaskActivityReveil",
-                              "op": {
-                                "type": "integer",
-                                "value": "2"
-                              }
-                            },
-                            "children": [],
-                            "id": "c04598f6-2353-44bc-8498-2b5452061dc9",
-                            "type": "set"
-                          }
-                        ],
-                        "id": "045764b1-c48d-4956-9d3b-6d52f8eca531",
-                        "type": "sequence"
-                      }
-                    ],
-                    "id": "a305180e-b148-460f-8f09-09c013d82a11",
-                    "type": "priority"
+                    "value": "3"
                   }
-                ],
-                "id": "0ff1a164-ec05-4c15-a57e-c5c13462d52e",
-                "type": "condition"
+                },
+                "children": [],
+                "id": "bb5fc673-13c6-4d36-9794-c829ced7adc6",
+                "type": "set"
               },
               {
                 "activated": true,
@@ -770,190 +125,935 @@
                   "label": ""
                 },
                 "properties": {
-                  "op1": {
-                    "type": "entityKnowledge",
-                    "value": "TaskActivityReveil"
-                  },
-                  "op2": {
-                    "type": "integer",
-                    "value": "2"
-                  },
-                  "op": "=="
-                },
-                "children": [
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": "Gestion alerte "
-                    },
-                    "properties": {},
-                    "children": [
-                      {
-                        "activated": false,
-                        "metadata": {
-                          "label": ""
-                        },
-                        "properties": {
-                          "name": "Log",
-                          "inputParams": [
-                            {
-                              "key": "MessageLog",
-                              "type": "string",
-                              "value": "Task Reveille terminée"
-                            }
-                          ],
-                          "outputParams": []
-                        },
-                        "children": [],
-                        "id": "0349e0df-9fe6-4cb5-ac0c-95edc7448990",
-                        "type": "action"
-                      },
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": ""
-                        },
-                        "properties": {
-                          "destination": "TaskActivityReveil",
-                          "op": {
-                            "type": "integer",
-                            "value": "3"
-                          }
-                        },
-                        "children": [],
-                        "id": "26e4f877-9173-424e-980a-b8727b7ed13d",
-                        "type": "set"
-                      },
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": ""
-                        },
-                        "properties": {
-                          "active": "false"
-                        },
-                        "children": [
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {
-                              "op1": {
-                                "type": "entityKnowledge",
-                                "value": "Check_Reveil"
-                              },
-                              "op2": {
-                                "type": "boolean",
-                                "value": "false"
-                              },
-                              "op": "=="
-                            },
-                            "children": [
-                              {
-                                "activated": true,
-                                "metadata": {
-                                  "label": ""
-                                },
-                                "properties": {},
-                                "children": [
-                                  {
-                                    "activated": true,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {
-                                      "destination": "MessageAlerte",
-                                      "op": {
-                                        "type": "string",
-                                        "value": "04010100040103"
-                                      }
-                                    },
-                                    "children": [],
-                                    "id": "8ea887e7-5f6b-4093-a9f6-d1b685fbcdcd",
-                                    "type": "set"
-                                  },
-                                  {
-                                    "activated": true,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {
-                                      "destination": "BoolAlerteMessage",
-                                      "op": {
-                                        "type": "boolean",
-                                        "value": "true"
-                                      }
-                                    },
-                                    "children": [],
-                                    "id": "bb3f94d4-3847-4233-aeb6-26102919d46a",
-                                    "type": "set"
-                                  },
-                                  {
-                                    "activated": true,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {
-                                      "behavior": {
-                                        "type": "uriPath",
-                                        "value": "bts/SendAlerteSigfox.bt"
-                                      },
-                                      "inputParams": []
-                                    },
-                                    "children": [],
-                                    "id": "b3c17760-823c-4980-8a19-9f435f540508",
-                                    "type": "embedded"
-                                  }
-                                ],
-                                "id": "2c3e27db-40a7-432c-b47c-8bfa65b7658e",
-                                "type": "sequence"
-                              }
-                            ],
-                            "id": "d5cb9276-2b13-4262-8b12-31eb8f6d15d0",
-                            "type": "condition"
-                          },
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {},
-                            "children": [],
-                            "id": "c50a028f-e9db-4544-a444-9f50912d58b3",
-                            "type": "success"
-                          }
-                        ],
-                        "id": "0c0616df-d387-4aef-95ef-ee3774621149",
-                        "type": "priority"
-                      }
-                    ],
-                    "id": "7c053205-95c1-446a-a3cd-494cd220908f",
-                    "type": "sequence"
+                  "destination": "Check_Reveil",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
                   }
-                ],
-                "id": "fe6f566f-a502-4ccd-9309-536b0a57219b",
-                "type": "condition"
+                },
+                "children": [],
+                "id": "f5d7f1ed-9255-4448-9043-0be2dc9f1156",
+                "type": "set"
               },
               {
                 "activated": true,
                 "metadata": {
                   "label": ""
                 },
-                "properties": {},
+                "properties": {
+                  "destination": "Activity_Reveil",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
                 "children": [],
-                "id": "5539d590-1070-401f-abd7-7ad56290841e",
-                "type": "success"
+                "id": "d26694fa-1393-4ec3-9a9d-2530dba475ce",
+                "type": "set"
               }
             ],
-            "id": "d14344bf-ef45-4840-8581-8e539d7c5878",
-            "type": "priority"
+            "id": "dbdcc15a-7569-4226-9409-047b45ee5852",
+            "type": "sequence"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {},
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "TaskActivityToilette",
+                  "op": {
+                    "type": "integer",
+                    "value": "3"
+                  }
+                },
+                "children": [],
+                "id": "87d210dd-cf2e-4365-adc2-b216b11fc8d2",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Check_Toilette",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "0b711472-d54b-4090-b8ca-72cba90d6033",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Activity_Toilette",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "cd6d58c8-ad0c-4efa-a0da-78a5d869d576",
+                "type": "set"
+              }
+            ],
+            "id": "403a6576-127d-462f-9eec-a3fb0d1301f3",
+            "type": "sequence"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {},
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "TaskActivityPetitDejeuner",
+                  "op": {
+                    "type": "integer",
+                    "value": "3"
+                  }
+                },
+                "children": [],
+                "id": "6d596512-2f16-4af2-a60a-d54e32e55835",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Check_PetitDejeuner",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "9eb3d0f9-7d98-4ad6-ade6-45b9acdee124",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Activity_PetitDejeuner",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "3cdee39f-7a97-4f93-a243-3a04558f21e1",
+                "type": "set"
+              }
+            ],
+            "id": "7d7196a2-d6ed-4e18-ae4f-10da4c1238bd",
+            "type": "sequence"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {},
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "TaskActivityDejeuner",
+                  "op": {
+                    "type": "integer",
+                    "value": "3"
+                  }
+                },
+                "children": [],
+                "id": "a9a177df-4970-4e59-8b92-9c038a6334cc",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Check_Dejeuner",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "212190c5-ad1a-4bd7-a794-89eabd890c23",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Activity_Dejeuner",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "67da6644-18cf-4911-8c36-9f59ab75a4c9",
+                "type": "set"
+              }
+            ],
+            "id": "154394dc-c0a0-4483-97a9-e41d0e5e01b1",
+            "type": "sequence"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {},
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "TaskActivityDiner",
+                  "op": {
+                    "type": "integer",
+                    "value": "3"
+                  }
+                },
+                "children": [],
+                "id": "ca3d98e5-3c27-4119-8ff3-6bac2c785511",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Check_Diner",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "10d34247-217b-46cb-88d7-2afd5d9e8416",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Activity_Diner",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "fe8085c0-613c-435c-9ac8-54ba2e3db160",
+                "type": "set"
+              }
+            ],
+            "id": "f397f6c4-1836-4509-b365-c2b8c2cda8bc",
+            "type": "sequence"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {},
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "TaskActivityCoucher",
+                  "op": {
+                    "type": "integer",
+                    "value": "3"
+                  }
+                },
+                "children": [],
+                "id": "a056d31b-e5fa-4ed8-b7d5-b311d181ec1d",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Check_Coucher",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "3696f1b4-1b53-4a77-9039-0531813a6dcf",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Activity_Coucher",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "ce6cc0ee-f0a8-44dc-9670-b719e14c54ae",
+                "type": "set"
+              }
+            ],
+            "id": "21cbf7a6-8b35-460e-a8c7-5f6356dcc0d0",
+            "type": "sequence"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {},
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "TaskActivitySieste",
+                  "op": {
+                    "type": "integer",
+                    "value": "3"
+                  }
+                },
+                "children": [],
+                "id": "970ec61c-121a-4098-8a57-029ab09b64cc",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Check_Sieste",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "66dbc428-09a3-4f58-8145-4dd0fab9403a",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Activity_Sieste",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "0fff88ec-c096-448d-a72d-2e56ae09c182",
+                "type": "set"
+              }
+            ],
+            "id": "df9dc668-dc3a-4373-81a0-bc2142783905",
+            "type": "sequence"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {},
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "TaskActivityLoisir",
+                  "op": {
+                    "type": "integer",
+                    "value": "3"
+                  }
+                },
+                "children": [],
+                "id": "f3752cc9-4d83-4f4c-bf2a-1be06a255e46",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Check_Loisir",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "e19a9b21-a45b-45ad-aa38-b44fcebf7645",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Activity_Loisir",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "cb95f414-4c34-4182-9d88-00152b234665",
+                "type": "set"
+              }
+            ],
+            "id": "93182abd-1e32-4291-b1f9-a92ba0c1f47a",
+            "type": "sequence"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {},
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "TaskActivityVisite",
+                  "op": {
+                    "type": "integer",
+                    "value": "3"
+                  }
+                },
+                "children": [],
+                "id": "0b52381f-bd0c-4a35-aca8-6e29a2f99b32",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Check_Visite",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "827c34a0-ab0a-4d84-94e1-ad98b6704cf9",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Activity_Visite",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "ff39425a-4c27-47a2-83d0-59da21758d2f",
+                "type": "set"
+              }
+            ],
+            "id": "3165de3e-e6f7-4d7d-b6cf-a7589745fad7",
+            "type": "sequence"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {},
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "TaskActivitySortie",
+                  "op": {
+                    "type": "integer",
+                    "value": "3"
+                  }
+                },
+                "children": [],
+                "id": "e94e8f81-2bd3-4ff8-8ec8-0f9de4ba0ddc",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Check_Sortie",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "c3d4dc4a-772d-4915-b342-18c1dd08d58a",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "Activity_Sortie",
+                  "op": {
+                    "type": "boolean",
+                    "value": "false"
+                  }
+                },
+                "children": [],
+                "id": "d3c1d37b-92dc-478d-9c1c-70b344012f16",
+                "type": "set"
+              }
+            ],
+            "id": "11ab1f90-b720-42f7-aaec-faea5f6199db",
+            "type": "sequence"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {},
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptCuisineP",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "9a76f297-075e-411b-8147-317dab2461cc",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptCuisinePF",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "ed55b3c5-3292-4f6a-84a3-23c570787398",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptCuisineE",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "1c872d46-6ec5-421a-bf17-192ef34d7f5a",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptCuisineW",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "a613500e-8d69-4168-84f3-1d016c4a870a",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptCuisineT",
+                  "op": {
+                    "type": "string",
+                    "value": ""
+                  }
+                },
+                "children": [],
+                "id": "da1980d9-504a-497c-94ec-212906df40b9",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptCuisineC",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "bc856157-cf68-4fea-8212-16716dc51636",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptSalonP",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "f84b57e4-296c-4acb-911f-12f30beb456f",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptSalonT",
+                  "op": {
+                    "type": "string",
+                    "value": ""
+                  }
+                },
+                "children": [],
+                "id": "bf7f77b2-8206-4c01-a946-6c3d0e0740d2",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptSalonW",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "b5ff7609-6d1f-4583-88a2-093717e2299d",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptSalonC",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "b3817ab2-3386-4cd0-abfa-b92f55ae747b",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptSDBP",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "ca860140-2a0d-4174-97c0-d22f3cc6d86a",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptSDBPD",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "f0f02195-aff6-4736-b5a0-887db694daf9",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptSDBPC",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "97fddf1a-5b47-4c86-beec-fe710d562eae",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptCouloirP",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "59b8c781-b297-4a2c-b9b9-cec8eedc3c54",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptCouloirT",
+                  "op": {
+                    "type": "string",
+                    "value": ""
+                  }
+                },
+                "children": [],
+                "id": "9b353de7-6100-4c3f-9a9c-a0b02f9c4438",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptCouloirPE",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "42322646-a99b-4833-b15a-941641a0b626",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptCouloirC",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "c6e7a6e0-3e66-4d7b-814b-009754978049",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptChambreP",
+                  "op": {
+                    "type": "integer",
+                    "value": "1"
+                  }
+                },
+                "children": [],
+                "id": "7490432b-6827-46e0-ba15-ffbfdff5340e",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptChambreT",
+                  "op": {
+                    "type": "string",
+                    "value": ""
+                  }
+                },
+                "children": [],
+                "id": "7c91a6ec-3922-4494-854a-6140c7c2a879",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptChambreW",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "705b8bfa-8ebc-4fcc-9c8c-f0929be4284e",
+                "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptChambreC",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "2202c988-0309-4ebd-ba57-e374b15520eb",
+                "type": "set"
+              }
+            ],
+            "id": "5e5bf1ec-51e4-44ab-b7d8-8fce73e72c82",
+            "type": "sequence"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "destination": "InitPhase",
+              "op": {
+                "type": "boolean",
+                "value": "true"
+              }
+            },
+            "children": [],
+            "id": "737595f4-a5d5-4d67-ac44-1b63bf858a0e",
+            "type": "set"
           }
         ],
-        "id": "e506e426-0e81-48b9-89fd-ea16b883add3",
+        "id": "0188f464-1df0-4a65-93c6-8248d0b29031",
         "type": "sequence"
       }
     ],
-    "id": "a5855002-d373-4eee-ae55-d15256fa3d55"
+    "id": "95801ccb-feef-4a40-bfed-e21f77198e26"
   }
 ]
