@@ -74,7 +74,7 @@
             "type": "action"
           },
           {
-            "activated": true,
+            "activated": false,
             "metadata": {
               "label": ""
             },
@@ -108,7 +108,7 @@
             "type": "action"
           },
           {
-            "activated": true,
+            "activated": false,
             "metadata": {
               "label": ""
             },
@@ -385,7 +385,7 @@
             "type": "sequence"
           },
           {
-            "activated": false,
+            "activated": true,
             "metadata": {
               "label": ""
             },
@@ -409,7 +409,7 @@
                 "properties": {},
                 "children": [
                   {
-                    "activated": false,
+                    "activated": true,
                     "metadata": {
                       "label": ""
                     },
@@ -445,7 +445,7 @@
                     "type": "embedded"
                   },
                   {
-                    "activated": false,
+                    "activated": true,
                     "metadata": {
                       "label": ""
                     },
@@ -481,7 +481,7 @@
                     "type": "embedded"
                   },
                   {
-                    "activated": false,
+                    "activated": true,
                     "metadata": {
                       "label": ""
                     },
@@ -517,7 +517,7 @@
                     "type": "embedded"
                   },
                   {
-                    "activated": false,
+                    "activated": true,
                     "metadata": {
                       "label": ""
                     },
@@ -553,7 +553,7 @@
                     "type": "embedded"
                   },
                   {
-                    "activated": false,
+                    "activated": true,
                     "metadata": {
                       "label": ""
                     },
@@ -589,7 +589,7 @@
                     "type": "embedded"
                   },
                   {
-                    "activated": false,
+                    "activated": true,
                     "metadata": {
                       "label": ""
                     },
@@ -625,7 +625,7 @@
                     "type": "embedded"
                   },
                   {
-                    "activated": false,
+                    "activated": true,
                     "metadata": {
                       "label": ""
                     },
@@ -661,7 +661,7 @@
                     "type": "embedded"
                   },
                   {
-                    "activated": false,
+                    "activated": true,
                     "metadata": {
                       "label": ""
                     },
@@ -697,7 +697,7 @@
                     "type": "embedded"
                   },
                   {
-                    "activated": false,
+                    "activated": true,
                     "metadata": {
                       "label": ""
                     },
