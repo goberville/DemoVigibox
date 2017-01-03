@@ -19,109 +19,10 @@
           {
             "activated": true,
             "metadata": {
-              "label": ""
+              "label": "CTRL si Periode Activity Reveil"
             },
             "properties": {
-              "op1": {
-                "type": "entityKnowledge",
-                "value": "InitPhase"
-              },
-              "op2": {
-                "type": "boolean",
-                "value": "false"
-              },
-              "op": "=="
-            },
-            "children": [
-              {
-                "activated": true,
-                "metadata": {
-                  "label": "Init"
-                },
-                "properties": {
-                  "behavior": {
-                    "type": "uriPath",
-                    "value": "bts/boxinit.bt"
-                  },
-                  "inputParams": []
-                },
-                "children": [],
-                "id": "824c535e-dc08-499b-b7e6-dbf4a1e8c165",
-                "type": "embedded"
-              }
-            ],
-            "id": "780fd3a0-cd8d-49c0-887e-e19356465cd2",
-            "type": "condition"
-          },
-          {
-            "activated": true,
-            "metadata": {
-              "label": ""
-            },
-            "properties": {
-              "name": "Log",
-              "inputParams": [
-                {
-                  "key": "MessageLog",
-                  "type": "string",
-                  "value": "Initi terminé"
-                }
-              ],
-              "outputParams": []
-            },
-            "children": [],
-            "id": "018173d2-0a5d-4eb2-94f4-b05945907412",
-            "type": "action"
-          },
-          {
-            "activated": false,
-            "metadata": {
-              "label": ""
-            },
-            "properties": {
-              "name": "InitTreeDecision",
-              "inputParams": [],
-              "outputParams": []
-            },
-            "children": [],
-            "id": "3aaf6e34-2002-48d0-9d2c-8359d39f3524",
-            "type": "action"
-          },
-          {
-            "activated": true,
-            "metadata": {
-              "label": ""
-            },
-            "properties": {
-              "name": "Log",
-              "inputParams": [
-                {
-                  "key": "MessageLog",
-                  "type": "string",
-                  "value": "Init Tree Decision OK"
-                }
-              ],
-              "outputParams": []
-            },
-            "children": [],
-            "id": "d9c47632-baaf-4f42-9736-c7a76b76d58b",
-            "type": "action"
-          },
-          {
-            "activated": false,
-            "metadata": {
-              "label": ""
-            },
-            "properties": {
-              "op1": {
-                "type": "boolean",
-                "value": "false"
-              },
-              "op2": {
-                "type": "boolean",
-                "value": "true"
-              },
-              "op": "=="
+              "active": "false"
             },
             "children": [
               {
@@ -130,18 +31,23 @@
                   "label": ""
                 },
                 "properties": {
-                  "statusCondition": "failsIfAnyFails",
-                  "retryPolicy": "propagateToAll"
+                  "op1": {
+                    "type": "entityKnowledge",
+                    "value": "Time"
+                  },
+                  "op2": {
+                    "type": "entityKnowledge",
+                    "value": "Time_Reveil_Min[0]"
+                  },
+                  "op": "<"
                 },
                 "children": [
                   {
-                    "activated": false,
+                    "activated": true,
                     "metadata": {
-                      "label": "CTRL si Date du jour Modifier"
+                      "label": ""
                     },
-                    "properties": {
-                      "active": "false"
-                    },
+                    "properties": {},
                     "children": [
                       {
                         "activated": true,
@@ -149,148 +55,62 @@
                           "label": ""
                         },
                         "properties": {
-                          "op1": {
-                            "type": "entityKnowledge",
-                            "value": "Day"
-                          },
-                          "op2": {
-                            "type": "entityKnowledge",
-                            "value": "Day_Current"
-                          },
-                          "op": "=="
+                          "name": "Log",
+                          "inputParams": [
+                            {
+                              "key": "MessageLog",
+                              "type": "string",
+                              "value": "Pas Activité Reveil"
+                            }
+                          ],
+                          "outputParams": []
                         },
                         "children": [],
-                        "id": "9533d293-7456-477f-9b27-52eb633d9810",
-                        "type": "condition"
+                        "id": "c877c67c-624b-4922-9801-46ea5ed82062",
+                        "type": "action"
                       },
                       {
                         "activated": true,
                         "metadata": {
                           "label": ""
                         },
-                        "properties": {},
-                        "children": [
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {
-                              "behavior": {
-                                "type": "uriPath",
-                                "value": "bts/LoadActivitiesOfDay.bt"
-                              },
-                              "inputParams": []
-                            },
-                            "children": [],
-                            "id": "6f3c8b48-6f58-4674-a5d8-3978974a9902",
-                            "type": "embedded"
-                          },
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {
-                              "destination": "Day_Current",
-                              "op": {
-                                "type": "entityKnowledge",
-                                "value": "Day"
-                              }
-                            },
-                            "children": [],
-                            "id": "9333a3fd-6312-4cfb-8878-adff26906cf4",
-                            "type": "set"
+                        "properties": {
+                          "destination": "TaskActivityReveil",
+                          "op": {
+                            "type": "integer",
+                            "value": "0"
                           }
-                        ],
-                        "id": "d02e113f-5216-41fa-b571-e4fe24cb26e7",
-                        "type": "sequence"
+                        },
+                        "children": [],
+                        "id": "fd2ba51f-98e7-4314-ab60-b4fb372ed98d",
+                        "type": "set"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "Check_Reveil"
+                        },
+                        "properties": {
+                          "destination": "Check_Reveil",
+                          "op": {
+                            "type": "boolean",
+                            "value": "false"
+                          }
+                        },
+                        "children": [],
+                        "id": "086072a8-f816-4888-beab-54c92b5f90ea",
+                        "type": "set"
                       }
                     ],
-                    "id": "9819629b-c923-4437-82cc-f7857f55b45f",
-                    "type": "priority"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": "Check Activité Personne"
-                    },
-                    "properties": {
-                      "behavior": {
-                        "type": "uriPath",
-                        "value": "bts/checkActivity.bt"
-                      },
-                      "inputParams": []
-                    },
-                    "children": [],
-                    "id": "481888e8-31b5-44d9-9a5f-efa1087185e7",
-                    "type": "embedded"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": "Check Activité Securite "
-                    },
-                    "properties": {
-                      "behavior": {
-                        "type": "uriPath",
-                        "value": "bts/checkActivitySecurity.bt"
-                      },
-                      "inputParams": []
-                    },
-                    "children": [],
-                    "id": "f105d183-0785-4af7-97a4-bfdbfa972112",
-                    "type": "embedded"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": "Check Activite Maintenance"
-                    },
-                    "properties": {
-                      "behavior": {
-                        "type": "uriPath",
-                        "value": "bts/checkActivityMaintenance.bt"
-                      },
-                      "inputParams": []
-                    },
-                    "children": [],
-                    "id": "fe7724c8-ce3f-48d7-adf4-bed6adfca598",
-                    "type": "embedded"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "behavior": {
-                        "type": "uriPath",
-                        "value": "bts/MajCurrentCapteurP.bt"
-                      },
-                      "inputParams": []
-                    },
-                    "children": [],
-                    "id": "68756048-2228-4d76-8d8f-2043d12acae3",
-                    "type": "embedded"
+                    "id": "d04624ba-4d9e-4359-8c6e-dafd80b4b0fb",
+                    "type": "sequence"
                   }
                 ],
-                "id": "75a0f639-7074-4130-bb28-f3821e60c883",
-                "type": "parallel"
-              }
-            ],
-            "id": "7be7751a-66dd-48bd-b1d9-1fda3364d5f0",
-            "type": "until"
-          },
-          {
-            "activated": false,
-            "metadata": {
-              "label": ""
-            },
-            "properties": {},
-            "children": [
+                "id": "a4dc07a7-3fbe-4e4f-b7aa-e6ccab13c17d",
+                "type": "condition"
+              },
               {
-                "activated": false,
+                "activated": true,
                 "metadata": {
                   "label": ""
                 },
@@ -306,13 +126,13 @@
                     "properties": {
                       "op1": {
                         "type": "entityKnowledge",
-                        "value": "TraitementMajCapt"
+                        "value": "Time"
                       },
                       "op2": {
-                        "type": "boolean",
-                        "value": "false"
+                        "type": "entityKnowledge",
+                        "value": "Time_Reveil_Max[0]"
                       },
-                      "op": "=="
+                      "op": "<"
                     },
                     "children": [
                       {
@@ -323,7 +143,107 @@
                         "properties": {},
                         "children": [
                           {
-                            "activated": false,
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "op1": {
+                                "type": "entityKnowledge",
+                                "value": "TaskActivityReveil"
+                              },
+                              "op2": {
+                                "type": "integer",
+                                "value": "0"
+                              },
+                              "op": "=="
+                            },
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "activated": false,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "Log",
+                                      "inputParams": [
+                                        {
+                                          "key": "MessageLog",
+                                          "type": "string",
+                                          "value": "Debut Activité Reveil"
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "86b2d634-c8ab-4baf-b8eb-d99ee9067994",
+                                    "type": "action"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "destination": "TaskActivityReveil",
+                                      "op": {
+                                        "type": "integer",
+                                        "value": "1"
+                                      }
+                                    },
+                                    "children": [],
+                                    "id": "ea3dc37d-4cd3-451e-932c-b6ad329ab846",
+                                    "type": "set"
+                                  }
+                                ],
+                                "id": "644ab51a-4860-4da6-a8c4-ff6976a071db",
+                                "type": "sequence"
+                              }
+                            ],
+                            "id": "9125a7a8-c86d-4832-a739-df81146204b5",
+                            "type": "condition"
+                          }
+                        ],
+                        "id": "2234a6ca-5976-492e-b114-ae51e164d637",
+                        "type": "sequence"
+                      }
+                    ],
+                    "id": "7d31e307-5012-427c-9246-17a52e24f1ce",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "entityKnowledge",
+                        "value": "Time"
+                      },
+                      "op2": {
+                        "type": "entityKnowledge",
+                        "value": "Time_Reveil_Max[0]"
+                      },
+                      "op": ">"
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "activated": true,
                             "metadata": {
                               "label": ""
                             },
@@ -333,13 +253,13 @@
                                 {
                                   "key": "MessageLog",
                                   "type": "string",
-                                  "value": "Fait une mise à jour capteur"
+                                  "value": "Temps activite reveil terminé"
                                 }
                               ],
                               "outputParams": []
                             },
                             "children": [],
-                            "id": "b099a344-45ef-405a-a437-36c6c160c5fc",
+                            "id": "032966b4-aec8-41c6-976a-04d35ba54022",
                             "type": "action"
                           },
                           {
@@ -348,22 +268,74 @@
                               "label": ""
                             },
                             "properties": {
-                              "behavior": {
-                                "type": "uriPath",
-                                "value": "bts/MajCurrentCapteurP.bt"
+                              "op1": {
+                                "type": "entityKnowledge",
+                                "value": "TaskActivityReveil"
                               },
-                              "inputParams": []
+                              "op2": {
+                                "type": "integer",
+                                "value": "1"
+                              },
+                              "op": "=="
                             },
-                            "children": [],
-                            "id": "cfa6d293-5738-4772-8804-018e5c39410e",
-                            "type": "embedded"
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "activated": false,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "Log",
+                                      "inputParams": [
+                                        {
+                                          "key": "MessageLog",
+                                          "type": "string",
+                                          "value": "Fin Activité Reveil"
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "62ccf83e-3ed9-4db3-b0fd-9ce9beb6cdac",
+                                    "type": "action"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "destination": "TaskActivityReveil",
+                                      "op": {
+                                        "type": "integer",
+                                        "value": "2"
+                                      }
+                                    },
+                                    "children": [],
+                                    "id": "02ff3663-1367-4cd1-ac99-7cae7086ec84",
+                                    "type": "set"
+                                  }
+                                ],
+                                "id": "b35be07f-93ee-4073-95ae-23500ed1a039",
+                                "type": "sequence"
+                              }
+                            ],
+                            "id": "d7bf0157-8e54-45b7-9665-acd2fe0ec027",
+                            "type": "condition"
                           }
                         ],
-                        "id": "d5986166-1293-4531-ac3d-41da64be245b",
+                        "id": "31cce75d-cf09-40b2-85b4-dcccf8a8e4e4",
                         "type": "sequence"
                       }
                     ],
-                    "id": "5301f6ff-d6c0-4862-9e8b-4b2eb107c93e",
+                    "id": "7ae1218c-3ead-4ac8-b3b4-604fd02b0d98",
                     "type": "condition"
                   },
                   {
@@ -373,16 +345,26 @@
                     },
                     "properties": {},
                     "children": [],
-                    "id": "3ab9d230-6cf0-459b-a9c9-c0118011f124",
+                    "id": "85e7b48d-e417-4164-9fde-a8b9c8fc4c62",
                     "type": "success"
                   }
                 ],
-                "id": "c4f373c5-b1a7-49eb-a3e3-2c4a1d72e956",
+                "id": "e58950a0-edf1-4f6a-b527-bdde8ea69119",
                 "type": "priority"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {},
+                "children": [],
+                "id": "f56bd027-d0b3-4566-b2dd-d37cc31cc471",
+                "type": "success"
               }
             ],
-            "id": "0ab0744f-d7e6-4549-8314-9bb229f0b421",
-            "type": "sequence"
+            "id": "884c216e-6309-4d7c-9667-dc20a3ce01f5",
+            "type": "priority"
           },
           {
             "activated": true,
@@ -390,15 +372,7 @@
               "label": ""
             },
             "properties": {
-              "op1": {
-                "type": "boolean",
-                "value": "false"
-              },
-              "op2": {
-                "type": "boolean",
-                "value": "true"
-              },
-              "op": "=="
+              "active": "false"
             },
             "children": [
               {
@@ -406,7 +380,17 @@
                 "metadata": {
                   "label": ""
                 },
-                "properties": {},
+                "properties": {
+                  "op1": {
+                    "type": "entityKnowledge",
+                    "value": "TaskActivityReveil"
+                  },
+                  "op2": {
+                    "type": "integer",
+                    "value": "1"
+                  },
+                  "op": "=="
+                },
                 "children": [
                   {
                     "activated": true,
@@ -414,321 +398,562 @@
                       "label": ""
                     },
                     "properties": {
-                      "name": "Log",
-                      "inputParams": [
-                        {
-                          "key": "MessageLog",
-                          "type": "string",
-                          "value": "start sequence"
-                        }
-                      ],
-                      "outputParams": []
+                      "active": "false"
                     },
-                    "children": [],
-                    "id": "fae653d3-aaeb-40bf-8486-185497735a33",
-                    "type": "action"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "behavior": {
-                        "type": "uriPath",
-                        "value": "bts/activityreveil.bt"
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "Si pas present dans la chambre"
+                        },
+                        "properties": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "current_CaptChambreP"
+                          },
+                          "op2": {
+                            "type": "integer",
+                            "value": "1"
+                          },
+                          "op": "!="
+                        },
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {},
+                            "children": [
+                              {
+                                "activated": false,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "name": "Log",
+                                  "inputParams": [
+                                    {
+                                      "key": "MessageLog",
+                                      "type": "string",
+                                      "value": "Personne dans la chambre"
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "c76ca8ad-e76b-4973-9fea-525980c4906f",
+                                "type": "action"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "destination": "TaskActivityReveil",
+                                  "op": {
+                                    "type": "integer",
+                                    "value": "3"
+                                  }
+                                },
+                                "children": [],
+                                "id": "3d04e7b6-f07e-4cc8-b71b-6a7af2b2fd2b",
+                                "type": "set"
+                              }
+                            ],
+                            "id": "a471e78f-0e3d-40b0-bbd2-a7d76774c4d6",
+                            "type": "sequence"
+                          }
+                        ],
+                        "id": "cdfc34a7-f919-4dd0-a914-499f0d80a584",
+                        "type": "condition"
                       },
-                      "inputParams": []
-                    },
-                    "children": [],
-                    "id": "ac51e37f-b272-479f-9296-a7522e3314c8",
-                    "type": "embedded"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "name": "Log",
-                      "inputParams": [
-                        {
-                          "key": "MessageLog",
-                          "type": "string",
-                          "value": "reveil"
-                        }
-                      ],
-                      "outputParams": []
-                    },
-                    "children": [],
-                    "id": "557bc1ef-32a3-4eec-97d7-8de9842a4c4a",
-                    "type": "action"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "behavior": {
-                        "type": "uriPath",
-                        "value": "bts/activityPetitDejeuner.bt"
-                      },
-                      "inputParams": []
-                    },
-                    "children": [],
-                    "id": "39c883be-0afb-469b-a69d-f3193fcefda2",
-                    "type": "embedded"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "name": "Log",
-                      "inputParams": [
-                        {
-                          "key": "MessageLog",
-                          "type": "string",
-                          "value": "petit dej"
-                        }
-                      ],
-                      "outputParams": []
-                    },
-                    "children": [],
-                    "id": "2c261799-a33d-4158-877a-44c10a1fa417",
-                    "type": "action"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "behavior": {
-                        "type": "uriPath",
-                        "value": "bts/activitydouche.bt"
-                      },
-                      "inputParams": []
-                    },
-                    "children": [],
-                    "id": "4980d24d-5107-489a-8045-3b9c7f8a300e",
-                    "type": "embedded"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "name": "Log",
-                      "inputParams": [
-                        {
-                          "key": "MessageLog",
-                          "type": "string",
-                          "value": "douche"
-                        }
-                      ],
-                      "outputParams": []
-                    },
-                    "children": [],
-                    "id": "d165708c-589c-49d7-b382-bd56d04131e0",
-                    "type": "action"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "behavior": {
-                        "type": "uriPath",
-                        "value": "bts/activityDejeuner.bt"
-                      },
-                      "inputParams": []
-                    },
-                    "children": [],
-                    "id": "f0e7151b-93b4-408d-bbe9-a76567c2e9a6",
-                    "type": "embedded"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "name": "Log",
-                      "inputParams": [
-                        {
-                          "key": "MessageLog",
-                          "type": "string",
-                          "value": "dej"
-                        }
-                      ],
-                      "outputParams": []
-                    },
-                    "children": [],
-                    "id": "6b19349e-aa56-4f80-b9b4-be88d3296d4f",
-                    "type": "action"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "behavior": {
-                        "type": "uriPath",
-                        "value": "bts/activitySieste.bt"
-                      },
-                      "inputParams": []
-                    },
-                    "children": [],
-                    "id": "954e30ac-a93a-4e19-b1c6-2f1e882cb06c",
-                    "type": "embedded"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "name": "Log",
-                      "inputParams": [
-                        {
-                          "key": "MessageLog",
-                          "type": "string",
-                          "value": "sieste"
-                        }
-                      ],
-                      "outputParams": []
-                    },
-                    "children": [],
-                    "id": "d36b63d8-d7f1-454e-bafd-63c90091bdc6",
-                    "type": "action"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "behavior": {
-                        "type": "uriPath",
-                        "value": "bts/activityDiner.bt"
-                      },
-                      "inputParams": []
-                    },
-                    "children": [],
-                    "id": "115d0448-04b8-45bd-b63b-9c0cdd0bb452",
-                    "type": "embedded"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "name": "Log",
-                      "inputParams": [
-                        {
-                          "key": "MessageLog",
-                          "type": "string",
-                          "value": "diner"
-                        }
-                      ],
-                      "outputParams": []
-                    },
-                    "children": [],
-                    "id": "f206024e-86ef-4974-ae11-eca3501fbcc5",
-                    "type": "action"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "behavior": {
-                        "type": "uriPath",
-                        "value": "bts/activityCoucher.bt"
-                      },
-                      "inputParams": []
-                    },
-                    "children": [],
-                    "id": "6ba0031e-beeb-4c89-adb2-e4ecd933f5ef",
-                    "type": "embedded"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "name": "Log",
-                      "inputParams": [
-                        {
-                          "key": "MessageLog",
-                          "type": "string",
-                          "value": "coucher"
-                        }
-                      ],
-                      "outputParams": []
-                    },
-                    "children": [],
-                    "id": "7513b02e-93af-474f-ae8d-764791d9d834",
-                    "type": "action"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "behavior": {
-                        "type": "uriPath",
-                        "value": "bts/MajCurrentCapteurP.bt"
-                      },
-                      "inputParams": []
-                    },
-                    "children": [],
-                    "id": "5fd9a4d4-5316-4603-8bdd-9dc1b21425c2",
-                    "type": "embedded"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "name": "Log",
-                      "inputParams": [
-                        {
-                          "key": "MessageLog",
-                          "type": "string",
-                          "value": "maj"
-                        }
-                      ],
-                      "outputParams": []
-                    },
-                    "children": [],
-                    "id": "3c09b3f1-d41d-4eef-8ed9-746bf6bc1d1a",
-                    "type": "action"
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "Si Periode Activity Reveil "
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": "Si capteur chambre à changé d'état"
+                            },
+                            "properties": {
+                              "op1": {
+                                "type": "entityKnowledge",
+                                "value": "current_CaptChambreP"
+                              },
+                              "op2": {
+                                "type": "entityKnowledge",
+                                "value": "actuator_CaptChambreP"
+                              },
+                              "op": "!="
+                            },
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "activated": false,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "Log",
+                                      "inputParams": [
+                                        {
+                                          "key": "MessageLog",
+                                          "type": "string",
+                                          "value": "Capteur chambre à changer 1 à 0"
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "a80cb09f-efe8-4598-b08f-5b052c98114b",
+                                    "type": "action"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "destination": "current_CaptChambreP",
+                                      "op": {
+                                        "type": "entityKnowledge",
+                                        "value": "actuator_CaptChambreP"
+                                      }
+                                    },
+                                    "children": [],
+                                    "id": "4b8176a5-5653-4873-bc4a-cdd8497d784d",
+                                    "type": "set"
+                                  }
+                                ],
+                                "id": "ba5657af-0df7-4916-8602-ee8f1fbf884f",
+                                "type": "sequence"
+                              }
+                            ],
+                            "id": "13bc80c4-2771-41df-bb4c-7b87d3e6308c",
+                            "type": "condition"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": "Check_Reveil"
+                            },
+                            "properties": {
+                              "destination": "Check_Reveil",
+                              "op": {
+                                "type": "boolean",
+                                "value": "true"
+                              }
+                            },
+                            "children": [],
+                            "id": "2a0a054e-0ead-4a7e-a0e4-9a514a0f9984",
+                            "type": "set"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": "Ctrl si un autre capteur est passé en Presence"
+                            },
+                            "properties": {
+                              "active": "false"
+                            },
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": "Si capteur chambre à changé d'état"
+                                },
+                                "properties": {
+                                  "op1": {
+                                    "type": "entityKnowledge",
+                                    "value": "current_CaptCouloirP"
+                                  },
+                                  "op2": {
+                                    "type": "entityKnowledge",
+                                    "value": "actuator_CaptCouloirP"
+                                  },
+                                  "op": "!="
+                                },
+                                "children": [
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {},
+                                    "children": [
+                                      {
+                                        "activated": false,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {
+                                          "name": "Log",
+                                          "inputParams": [
+                                            {
+                                              "key": "MessageLog",
+                                              "type": "string",
+                                              "value": "Capteur couloir à changer 0 à 1"
+                                            }
+                                          ],
+                                          "outputParams": []
+                                        },
+                                        "children": [],
+                                        "id": "1532a6da-15d6-4409-b1a0-f14dcb5369a3",
+                                        "type": "action"
+                                      },
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {
+                                          "destination": "current_CaptCouloirP",
+                                          "op": {
+                                            "type": "entityKnowledge",
+                                            "value": "actuator_CaptCouloirP"
+                                          }
+                                        },
+                                        "children": [],
+                                        "id": "de5f3414-3462-4d0e-adcc-4673bdea0824",
+                                        "type": "set"
+                                      }
+                                    ],
+                                    "id": "69f0e101-2486-4c45-84d1-8776d2386d1a",
+                                    "type": "sequence"
+                                  }
+                                ],
+                                "id": "b8c5c50e-d986-4cb3-a7c9-27db6d91c956",
+                                "type": "condition"
+                              },
+                              {
+                                "activated": false,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "behavior": {
+                                    "type": "uriPath",
+                                    "value": "bts/MajCurrentCapteurP.bt"
+                                  },
+                                  "inputParams": []
+                                },
+                                "children": [],
+                                "id": "c1e63272-c3ce-4117-8457-60389eed1c62",
+                                "type": "embedded"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "destination": "MessageAlerte",
+                                      "op": {
+                                        "type": "string",
+                                        "value": "06010100030120"
+                                      }
+                                    },
+                                    "children": [],
+                                    "id": "7d052138-0298-4be1-84da-d2449fb39d1c",
+                                    "type": "set"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "destination": "BoolAlerteMessage",
+                                      "op": {
+                                        "type": "boolean",
+                                        "value": "true"
+                                      }
+                                    },
+                                    "children": [],
+                                    "id": "6fa691b7-4643-418b-b980-94de0150c218",
+                                    "type": "set"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "behavior": {
+                                        "type": "uriPath",
+                                        "value": "bts/SendAlerteSigfox.bt"
+                                      },
+                                      "inputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "8688580c-17d9-4f4a-a55e-ee4f4d379dbe",
+                                    "type": "embedded"
+                                  }
+                                ],
+                                "id": "07953778-1176-412c-b0e3-29bac6f34a38",
+                                "type": "sequence"
+                              }
+                            ],
+                            "id": "4cbe9888-985f-49f2-a7ad-0536844f101b",
+                            "type": "priority"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "Log",
+                              "inputParams": [
+                                {
+                                  "key": "MessageLog",
+                                  "type": "string",
+                                  "value": "Mamie est reveillée"
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "9857f4d2-a4f4-40b8-8907-3fbdd664b0c5",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "destination": "TaskActivityReveil",
+                              "op": {
+                                "type": "integer",
+                                "value": "2"
+                              }
+                            },
+                            "children": [],
+                            "id": "c04598f6-2353-44bc-8498-2b5452061dc9",
+                            "type": "set"
+                          }
+                        ],
+                        "id": "045764b1-c48d-4956-9d3b-6d52f8eca531",
+                        "type": "sequence"
+                      }
+                    ],
+                    "id": "a305180e-b148-460f-8f09-09c013d82a11",
+                    "type": "priority"
                   }
                 ],
-                "id": "11a6d121-5310-4d02-81cb-c36f00536129",
-                "type": "sequence"
+                "id": "0ff1a164-ec05-4c15-a57e-c5c13462d52e",
+                "type": "condition"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "op1": {
+                    "type": "entityKnowledge",
+                    "value": "TaskActivityReveil"
+                  },
+                  "op2": {
+                    "type": "integer",
+                    "value": "2"
+                  },
+                  "op": "=="
+                },
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "Gestion alerte "
+                    },
+                    "properties": {},
+                    "children": [
+                      {
+                        "activated": false,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "name": "Log",
+                          "inputParams": [
+                            {
+                              "key": "MessageLog",
+                              "type": "string",
+                              "value": "Task Reveille terminée"
+                            }
+                          ],
+                          "outputParams": []
+                        },
+                        "children": [],
+                        "id": "0349e0df-9fe6-4cb5-ac0c-95edc7448990",
+                        "type": "action"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "destination": "TaskActivityReveil",
+                          "op": {
+                            "type": "integer",
+                            "value": "3"
+                          }
+                        },
+                        "children": [],
+                        "id": "26e4f877-9173-424e-980a-b8727b7ed13d",
+                        "type": "set"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "active": "false"
+                        },
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "op1": {
+                                "type": "entityKnowledge",
+                                "value": "Check_Reveil"
+                              },
+                              "op2": {
+                                "type": "boolean",
+                                "value": "false"
+                              },
+                              "op": "=="
+                            },
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "destination": "MessageAlerte",
+                                      "op": {
+                                        "type": "string",
+                                        "value": "04010100040103"
+                                      }
+                                    },
+                                    "children": [],
+                                    "id": "8ea887e7-5f6b-4093-a9f6-d1b685fbcdcd",
+                                    "type": "set"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "destination": "BoolAlerteMessage",
+                                      "op": {
+                                        "type": "boolean",
+                                        "value": "true"
+                                      }
+                                    },
+                                    "children": [],
+                                    "id": "bb3f94d4-3847-4233-aeb6-26102919d46a",
+                                    "type": "set"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "behavior": {
+                                        "type": "uriPath",
+                                        "value": "bts/SendAlerteSigfox.bt"
+                                      },
+                                      "inputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "b3c17760-823c-4980-8a19-9f435f540508",
+                                    "type": "embedded"
+                                  }
+                                ],
+                                "id": "2c3e27db-40a7-432c-b47c-8bfa65b7658e",
+                                "type": "sequence"
+                              }
+                            ],
+                            "id": "d5cb9276-2b13-4262-8b12-31eb8f6d15d0",
+                            "type": "condition"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {},
+                            "children": [],
+                            "id": "c50a028f-e9db-4544-a444-9f50912d58b3",
+                            "type": "success"
+                          }
+                        ],
+                        "id": "0c0616df-d387-4aef-95ef-ee3774621149",
+                        "type": "priority"
+                      }
+                    ],
+                    "id": "7c053205-95c1-446a-a3cd-494cd220908f",
+                    "type": "sequence"
+                  }
+                ],
+                "id": "fe6f566f-a502-4ccd-9309-536b0a57219b",
+                "type": "condition"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {},
+                "children": [],
+                "id": "5539d590-1070-401f-abd7-7ad56290841e",
+                "type": "success"
               }
             ],
-            "id": "0974231f-d2f2-4a76-adeb-b102fb156219",
-            "type": "until"
+            "id": "d14344bf-ef45-4840-8581-8e539d7c5878",
+            "type": "priority"
           }
         ],
-        "id": "850b1858-3207-4e4c-a0be-71e26bb42c6f",
+        "id": "e506e426-0e81-48b9-89fd-ea16b883add3",
         "type": "sequence"
       }
     ],
-    "id": "218463bd-dca2-4d47-a431-6994e66b3533"
+    "id": "a5855002-d373-4eee-ae55-d15256fa3d55"
   }
 ]
