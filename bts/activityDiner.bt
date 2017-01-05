@@ -167,17 +167,17 @@
                                 "properties": {},
                                 "children": [
                                   {
-                                    "activated": false,
+                                    "activated": true,
                                     "metadata": {
                                       "label": ""
                                     },
                                     "properties": {
-                                      "name": "Log",
+                                      "name": "Activite",
                                       "inputParams": [
                                         {
                                           "key": "MessageLog",
                                           "type": "string",
-                                          "value": "Debut Activité Diner"
+                                          "value": "Diner;start;ok"
                                         }
                                       ],
                                       "outputParams": []
@@ -681,7 +681,7 @@
                                 {
                                   "key": "MessageLog",
                                   "type": "string",
-                                  "value": "Mamie a pris son diner"
+                                  "value": "Pepette a pris son diner;1"
                                 }
                               ],
                               "outputParams": []
@@ -749,26 +749,6 @@
                         },
                         "properties": {},
                         "children": [
-                          {
-                            "activated": false,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {
-                              "name": "Log",
-                              "inputParams": [
-                                {
-                                  "key": "MessageLog",
-                                  "type": "string",
-                                  "value": "Task Dinerle terminée"
-                                }
-                              ],
-                              "outputParams": []
-                            },
-                            "children": [],
-                            "id": "0349e0df-9fe6-4cb5-ac0c-95edc7448990",
-                            "type": "action"
-                          },
                           {
                             "activated": true,
                             "metadata": {
@@ -856,6 +836,46 @@
                                           "label": ""
                                         },
                                         "properties": {
+                                          "name": "Log",
+                                          "inputParams": [
+                                            {
+                                              "key": "MessageLog",
+                                              "type": "string",
+                                              "value": "Pepette n'a pris son diner;3"
+                                            }
+                                          ],
+                                          "outputParams": []
+                                        },
+                                        "children": [],
+                                        "id": "5dcfae84-0614-4fc2-98eb-aee9b5a38ae6",
+                                        "type": "action"
+                                      },
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {
+                                          "name": "Activite",
+                                          "inputParams": [
+                                            {
+                                              "key": "MessageLog",
+                                              "type": "string",
+                                              "value": "Diner;end;nok"
+                                            }
+                                          ],
+                                          "outputParams": []
+                                        },
+                                        "children": [],
+                                        "id": "effd2290-a3c9-473f-b4e0-1bd67af398f0",
+                                        "type": "action"
+                                      },
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {
                                           "behavior": {
                                             "type": "uriPath",
                                             "value": "bts/SendAlerteSigfox.bt"
@@ -891,6 +911,26 @@
                                 },
                                 "properties": {},
                                 "children": [
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "Activite",
+                                      "inputParams": [
+                                        {
+                                          "key": "MessageLog",
+                                          "type": "string",
+                                          "value": "Diner;end;ok"
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "0349e0df-9fe6-4cb5-ac0c-95edc7448990",
+                                    "type": "action"
+                                  },
                                   {
                                     "activated": true,
                                     "metadata": {
