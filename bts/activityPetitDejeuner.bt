@@ -172,12 +172,12 @@
                                       "label": ""
                                     },
                                     "properties": {
-                                      "name": "Log",
+                                      "name": "Activite",
                                       "inputParams": [
                                         {
                                           "key": "MessageLog",
                                           "type": "string",
-                                          "value": "Debut Activité PetitDejeuner"
+                                          "value": "PetitDejeuner;start;ok"
                                         }
                                       ],
                                       "outputParams": []
@@ -303,7 +303,7 @@
                                 "properties": {},
                                 "children": [
                                   {
-                                    "activated": true,
+                                    "activated": false,
                                     "metadata": {
                                       "label": ""
                                     },
@@ -455,7 +455,7 @@
                                 "properties": {},
                                 "children": [
                                   {
-                                    "activated": true,
+                                    "activated": false,
                                     "metadata": {
                                       "label": ""
                                     },
@@ -548,7 +548,7 @@
                                     "properties": {},
                                     "children": [
                                       {
-                                        "activated": true,
+                                        "activated": false,
                                         "metadata": {
                                           "label": ""
                                         },
@@ -681,7 +681,7 @@
                                 {
                                   "key": "MessageLog",
                                   "type": "string",
-                                  "value": "Mamie a pris son petit dejeuné"
+                                  "value": "Pepette a pris son petit dejeuner"
                                 }
                               ],
                               "outputParams": []
@@ -749,26 +749,6 @@
                         },
                         "properties": {},
                         "children": [
-                          {
-                            "activated": false,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {
-                              "name": "Log",
-                              "inputParams": [
-                                {
-                                  "key": "MessageLog",
-                                  "type": "string",
-                                  "value": "Task PetitDejeunerle terminée"
-                                }
-                              ],
-                              "outputParams": []
-                            },
-                            "children": [],
-                            "id": "0349e0df-9fe6-4cb5-ac0c-95edc7448990",
-                            "type": "action"
-                          },
                           {
                             "activated": true,
                             "metadata": {
@@ -856,6 +836,46 @@
                                           "label": ""
                                         },
                                         "properties": {
+                                          "name": "Log",
+                                          "inputParams": [
+                                            {
+                                              "key": "MessageLog",
+                                              "type": "string",
+                                              "value": "Pepette n'a pris son petit dejeuner"
+                                            }
+                                          ],
+                                          "outputParams": []
+                                        },
+                                        "children": [],
+                                        "id": "6343ecfc-1b3b-4ed0-8d4a-58f9d7ccf5ce",
+                                        "type": "action"
+                                      },
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {
+                                          "name": "Activite",
+                                          "inputParams": [
+                                            {
+                                              "key": "MessageLog",
+                                              "type": "string",
+                                              "value": "PetitDejeuner;end;nok"
+                                            }
+                                          ],
+                                          "outputParams": []
+                                        },
+                                        "children": [],
+                                        "id": "141c4562-10c2-41fd-851e-edb994e9721a",
+                                        "type": "action"
+                                      },
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {
                                           "behavior": {
                                             "type": "uriPath",
                                             "value": "bts/SendAlerteSigfox.bt"
@@ -881,6 +901,26 @@
                                 },
                                 "properties": {},
                                 "children": [
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "Activite",
+                                      "inputParams": [
+                                        {
+                                          "key": "MessageLog",
+                                          "type": "string",
+                                          "value": "PetitDejeuner;end;ok"
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "0349e0df-9fe6-4cb5-ac0c-95edc7448990",
+                                    "type": "action"
+                                  },
                                   {
                                     "activated": true,
                                     "metadata": {
