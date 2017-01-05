@@ -172,12 +172,12 @@
                                       "label": ""
                                     },
                                     "properties": {
-                                      "name": "Log",
+                                      "name": "Activite",
                                       "inputParams": [
                                         {
                                           "key": "MessageLog",
                                           "type": "string",
-                                          "value": "Debut Activité Toilette;4"
+                                          "value": "Toilette;start;ok"
                                         }
                                       ],
                                       "outputParams": []
@@ -824,12 +824,12 @@
                                           "label": ""
                                         },
                                         "properties": {
-                                          "name": "Log",
+                                          "name": "Activite",
                                           "inputParams": [
                                             {
                                               "key": "MessageLog",
                                               "type": "string",
-                                              "value": "toilette;fin;nok;4"
+                                              "value": "toilette;fin;nok"
                                             }
                                           ],
                                           "outputParams": []
@@ -869,12 +869,12 @@
                                       "label": ""
                                     },
                                     "properties": {
-                                      "name": "Log",
+                                      "name": "Activite",
                                       "inputParams": [
                                         {
                                           "key": "MessageLog",
                                           "type": "string",
-                                          "value": "toilette;fin;ok;4"
+                                          "value": "toilette;fin;ok"
                                         }
                                       ],
                                       "outputParams": []
