@@ -64,7 +64,7 @@
                 {
                   "key": "MessageLog",
                   "type": "string",
-                  "value": "Initi terminé"
+                  "value": "Initi terminé;2"
                 }
               ],
               "outputParams": []
@@ -98,7 +98,7 @@
                 {
                   "key": "MessageLog",
                   "type": "string",
-                  "value": "Init Tree Decision OK"
+                  "value": "Init Tree Decision OK;2"
                 }
               ],
               "outputParams": []
@@ -409,7 +409,7 @@
                 "properties": {},
                 "children": [
                   {
-                    "activated": true,
+                    "activated": false,
                     "metadata": {
                       "label": ""
                     },
@@ -419,7 +419,7 @@
                         {
                           "key": "MessageLog",
                           "type": "string",
-                          "value": "start sequence"
+                          "value": "start sequence;2"
                         }
                       ],
                       "outputParams": []
@@ -445,7 +445,7 @@
                     "type": "embedded"
                   },
                   {
-                    "activated": true,
+                    "activated": false,
                     "metadata": {
                       "label": ""
                     },
@@ -481,7 +481,7 @@
                     "type": "embedded"
                   },
                   {
-                    "activated": true,
+                    "activated": false,
                     "metadata": {
                       "label": ""
                     },
@@ -517,7 +517,7 @@
                     "type": "embedded"
                   },
                   {
-                    "activated": true,
+                    "activated": false,
                     "metadata": {
                       "label": ""
                     },
@@ -553,7 +553,7 @@
                     "type": "embedded"
                   },
                   {
-                    "activated": true,
+                    "activated": false,
                     "metadata": {
                       "label": ""
                     },
@@ -589,7 +589,7 @@
                     "type": "embedded"
                   },
                   {
-                    "activated": true,
+                    "activated": false,
                     "metadata": {
                       "label": ""
                     },
@@ -625,7 +625,7 @@
                     "type": "embedded"
                   },
                   {
-                    "activated": true,
+                    "activated": false,
                     "metadata": {
                       "label": ""
                     },
@@ -661,7 +661,7 @@
                     "type": "embedded"
                   },
                   {
-                    "activated": true,
+                    "activated": false,
                     "metadata": {
                       "label": ""
                     },
@@ -697,7 +697,7 @@
                     "type": "embedded"
                   },
                   {
-                    "activated": true,
+                    "activated": false,
                     "metadata": {
                       "label": ""
                     },
