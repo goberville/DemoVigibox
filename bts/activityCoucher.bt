@@ -167,17 +167,17 @@
                                 "properties": {},
                                 "children": [
                                   {
-                                    "activated": false,
+                                    "activated": true,
                                     "metadata": {
                                       "label": ""
                                     },
                                     "properties": {
-                                      "name": "Log",
+                                      "name": "Activite",
                                       "inputParams": [
                                         {
                                           "key": "MessageLog",
                                           "type": "string",
-                                          "value": "Debut Activité Coucher"
+                                          "value": "Coucher;start;ok"
                                         }
                                       ],
                                       "outputParams": []
@@ -649,7 +649,7 @@
                                 {
                                   "key": "MessageLog",
                                   "type": "string",
-                                  "value": "Mamie est couchée"
+                                  "value": "Pepette est couchée;1"
                                 }
                               ],
                               "outputParams": []
@@ -717,26 +717,6 @@
                         },
                         "properties": {},
                         "children": [
-                          {
-                            "activated": false,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {
-                              "name": "Log",
-                              "inputParams": [
-                                {
-                                  "key": "MessageLog",
-                                  "type": "string",
-                                  "value": "Task Coucherle terminée"
-                                }
-                              ],
-                              "outputParams": []
-                            },
-                            "children": [],
-                            "id": "0349e0df-9fe6-4cb5-ac0c-95edc7448990",
-                            "type": "action"
-                          },
                           {
                             "activated": true,
                             "metadata": {
@@ -824,6 +804,46 @@
                                           "label": ""
                                         },
                                         "properties": {
+                                          "name": "Log",
+                                          "inputParams": [
+                                            {
+                                              "key": "MessageLog",
+                                              "type": "string",
+                                              "value": "Pepette n'est pas couchée;3"
+                                            }
+                                          ],
+                                          "outputParams": []
+                                        },
+                                        "children": [],
+                                        "id": "d0685abe-344c-4fb6-91b5-503666194753",
+                                        "type": "action"
+                                      },
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {
+                                          "name": "Avtivite",
+                                          "inputParams": [
+                                            {
+                                              "key": "MessageLog",
+                                              "type": "string",
+                                              "value": "Coucher,end;nok"
+                                            }
+                                          ],
+                                          "outputParams": []
+                                        },
+                                        "children": [],
+                                        "id": "92715214-1816-470d-80d1-b827d2f2cd75",
+                                        "type": "action"
+                                      },
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {
                                           "behavior": {
                                             "type": "uriPath",
                                             "value": "bts/SendAlerteSigfox.bt"
@@ -852,22 +872,53 @@
                                   {
                                     "activated": true,
                                     "metadata": {
-                                      "label": "Check_Coucher"
+                                      "label": ""
                                     },
                                     "properties": {
-                                      "destination": "Check_Coucher",
-                                      "op": {
-                                        "type": "boolean",
-                                        "value": "false"
-                                      }
+                                      "name": "Avtivite",
+                                      "inputParams": [
+                                        {
+                                          "key": "MessageLog",
+                                          "type": "string",
+                                          "value": "Coucher,end;ok"
+                                        }
+                                      ],
+                                      "outputParams": []
                                     },
                                     "children": [],
-                                    "id": "d2f8780a-36fa-49e4-b4e1-8ef658e5822c",
-                                    "type": "set"
+                                    "id": "0349e0df-9fe6-4cb5-ac0c-95edc7448990",
+                                    "type": "action"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {},
+                                    "children": [
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": "Check_Coucher"
+                                        },
+                                        "properties": {
+                                          "destination": "Check_Coucher",
+                                          "op": {
+                                            "type": "boolean",
+                                            "value": "false"
+                                          }
+                                        },
+                                        "children": [],
+                                        "id": "d2f8780a-36fa-49e4-b4e1-8ef658e5822c",
+                                        "type": "set"
+                                      }
+                                    ],
+                                    "id": "c50a028f-e9db-4544-a444-9f50912d58b3",
+                                    "type": "success"
                                   }
                                 ],
-                                "id": "c50a028f-e9db-4544-a444-9f50912d58b3",
-                                "type": "success"
+                                "id": "dcc04f55-9a5e-4fff-9eb4-6a62c1ba3f5b",
+                                "type": "sequence"
                               }
                             ],
                             "id": "0c0616df-d387-4aef-95ef-ee3774621149",
