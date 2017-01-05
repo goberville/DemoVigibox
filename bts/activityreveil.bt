@@ -167,7 +167,7 @@
                                 "properties": {},
                                 "children": [
                                   {
-                                    "activated": false,
+                                    "activated": true,
                                     "metadata": {
                                       "label": ""
                                     },
@@ -177,7 +177,7 @@
                                         {
                                           "key": "MessageLog",
                                           "type": "string",
-                                          "value": "Debut Activité Reveil"
+                                          "value": "Debut Activité Reveil;4"
                                         }
                                       ],
                                       "outputParams": []
@@ -287,7 +287,7 @@
                                 "properties": {},
                                 "children": [
                                   {
-                                    "activated": false,
+                                    "activated": true,
                                     "metadata": {
                                       "label": ""
                                     },
@@ -297,7 +297,7 @@
                                         {
                                           "key": "MessageLog",
                                           "type": "string",
-                                          "value": "Fin Activité Reveil"
+                                          "value": "Fin Activité Reveil;4"
                                         }
                                       ],
                                       "outputParams": []
@@ -727,7 +727,7 @@
                                 {
                                   "key": "MessageLog",
                                   "type": "string",
-                                  "value": "Mamie est reveillée"
+                                  "value": "Pepette est reveillée;1"
                                 }
                               ],
                               "outputParams": []
@@ -888,6 +888,26 @@
                                     "children": [],
                                     "id": "bb3f94d4-3847-4233-aeb6-26102919d46a",
                                     "type": "set"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "Log",
+                                      "inputParams": [
+                                        {
+                                          "key": "MessageLog",
+                                          "type": "string",
+                                          "value": "Pepette n'est pas réveillée;3"
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "fbe2eb1d-6921-4363-adbf-e7e015fc6b17",
+                                    "type": "action"
                                   },
                                   {
                                     "activated": true,
