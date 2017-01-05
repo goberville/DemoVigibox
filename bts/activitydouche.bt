@@ -167,7 +167,7 @@
                                 "properties": {},
                                 "children": [
                                   {
-                                    "activated": false,
+                                    "activated": true,
                                     "metadata": {
                                       "label": ""
                                     },
@@ -177,7 +177,7 @@
                                         {
                                           "key": "MessageLog",
                                           "type": "string",
-                                          "value": "Debut Activité Douche"
+                                          "value": "Debut Activité Toilette;4"
                                         }
                                       ],
                                       "outputParams": []
@@ -297,7 +297,7 @@
                                         {
                                           "key": "MessageLog",
                                           "type": "string",
-                                          "value": "Fin Activité Douche"
+                                          "value": "Fin Activité Toilette;4"
                                         }
                                       ],
                                       "outputParams": []
@@ -423,7 +423,7 @@
                                 "properties": {},
                                 "children": [
                                   {
-                                    "activated": true,
+                                    "activated": false,
                                     "metadata": {
                                       "label": ""
                                     },
@@ -499,11 +499,11 @@
                                 "properties": {
                                   "op1": {
                                     "type": "entityKnowledge",
-                                    "value": "current_CaptCuisineP"
+                                    "value": "current_CaptCouloirP"
                                   },
                                   "op2": {
                                     "type": "entityKnowledge",
-                                    "value": "actuator_CaptCuisineP"
+                                    "value": "actuator_CaptCouloirP"
                                   },
                                   "op": "!="
                                 },
@@ -516,7 +516,7 @@
                                     "properties": {},
                                     "children": [
                                       {
-                                        "activated": true,
+                                        "activated": false,
                                         "metadata": {
                                           "label": ""
                                         },
@@ -541,10 +541,10 @@
                                           "label": ""
                                         },
                                         "properties": {
-                                          "destination": "current_CaptCuisineP",
+                                          "destination": "current_CaptCouloirP",
                                           "op": {
                                             "type": "entityKnowledge",
-                                            "value": "actuator_CaptCuisineP"
+                                            "value": "actuator_CaptCouloirP"
                                           }
                                         },
                                         "children": [],
@@ -633,7 +633,7 @@
                                 {
                                   "key": "MessageLog",
                                   "type": "string",
-                                  "value": "Mamie a fait sa toilette"
+                                  "value": "Pepette a fait sa toilette;1"
                                 }
                               ],
                               "outputParams": []
@@ -718,26 +718,6 @@
                             "type": "set"
                           },
                           {
-                            "activated": false,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {
-                              "name": "Log",
-                              "inputParams": [
-                                {
-                                  "key": "MessageLog",
-                                  "type": "string",
-                                  "value": "Task Douche terminée"
-                                }
-                              ],
-                              "outputParams": []
-                            },
-                            "children": [],
-                            "id": "0349e0df-9fe6-4cb5-ac0c-95edc7448990",
-                            "type": "action"
-                          },
-                          {
                             "activated": true,
                             "metadata": {
                               "label": ""
@@ -808,6 +788,26 @@
                                           "label": ""
                                         },
                                         "properties": {
+                                          "name": "Log",
+                                          "inputParams": [
+                                            {
+                                              "key": "MessageLog",
+                                              "type": "string",
+                                              "value": "Pepette n'a fait sa toilette;3"
+                                            }
+                                          ],
+                                          "outputParams": []
+                                        },
+                                        "children": [],
+                                        "id": "55a0195d-3dc0-4941-a3e4-3e57f7dafc33",
+                                        "type": "action"
+                                      },
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {
                                           "behavior": {
                                             "type": "uriPath",
                                             "value": "bts/SendAlerteSigfox.bt"
@@ -817,6 +817,26 @@
                                         "children": [],
                                         "id": "b3c17760-823c-4980-8a19-9f435f540508",
                                         "type": "embedded"
+                                      },
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {
+                                          "name": "Log",
+                                          "inputParams": [
+                                            {
+                                              "key": "MessageLog",
+                                              "type": "string",
+                                              "value": "toilette;fin;nok;4"
+                                            }
+                                          ],
+                                          "outputParams": []
+                                        },
+                                        "children": [],
+                                        "id": "0349e0df-9fe6-4cb5-ac0c-95edc7448990",
+                                        "type": "action"
                                       },
                                       {
                                         "activated": true,
@@ -854,7 +874,7 @@
                                         {
                                           "key": "MessageLog",
                                           "type": "string",
-                                          "value": "Task Douche terminée check douche à true"
+                                          "value": "toilette;fin;ok;4"
                                         }
                                       ],
                                       "outputParams": []
