@@ -172,12 +172,12 @@
                                       "label": ""
                                     },
                                     "properties": {
-                                      "name": "Log",
+                                      "name": "Activite",
                                       "inputParams": [
                                         {
                                           "key": "MessageLog",
                                           "type": "string",
-                                          "value": "Debut Activité Reveil;4"
+                                          "value": "Reveil;start;ok;4"
                                         }
                                       ],
                                       "outputParams": []
@@ -287,7 +287,7 @@
                                 "properties": {},
                                 "children": [
                                   {
-                                    "activated": true,
+                                    "activated": false,
                                     "metadata": {
                                       "label": ""
                                     },
@@ -727,7 +727,7 @@
                                 {
                                   "key": "MessageLog",
                                   "type": "string",
-                                  "value": "Pepette est reveillée;1"
+                                  "value": "Pepette est reveillée;ok;1"
                                 }
                               ],
                               "outputParams": []
@@ -788,26 +788,6 @@
                     },
                     "properties": {},
                     "children": [
-                      {
-                        "activated": false,
-                        "metadata": {
-                          "label": ""
-                        },
-                        "properties": {
-                          "name": "Log",
-                          "inputParams": [
-                            {
-                              "key": "MessageLog",
-                              "type": "string",
-                              "value": "Task Reveille terminée"
-                            }
-                          ],
-                          "outputParams": []
-                        },
-                        "children": [],
-                        "id": "0349e0df-9fe6-4cb5-ac0c-95edc7448990",
-                        "type": "action"
-                      },
                       {
                         "activated": true,
                         "metadata": {
@@ -900,7 +880,7 @@
                                         {
                                           "key": "MessageLog",
                                           "type": "string",
-                                          "value": "Pepette n'est pas réveillée;3"
+                                          "value": "Pepette n'est pas réveillée;nok;3"
                                         }
                                       ],
                                       "outputParams": []
@@ -924,6 +904,26 @@
                                     "children": [],
                                     "id": "b3c17760-823c-4980-8a19-9f435f540508",
                                     "type": "embedded"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "Activite",
+                                      "inputParams": [
+                                        {
+                                          "key": "MessageLog",
+                                          "type": "string",
+                                          "value": "reveil;fin;nok;4"
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "ef582a48-ce6e-4bd7-94da-6f009c3caf75",
+                                    "type": "action"
                                   }
                                 ],
                                 "id": "2c3e27db-40a7-432c-b47c-8bfa65b7658e",
@@ -939,7 +939,28 @@
                               "label": ""
                             },
                             "properties": {},
-                            "children": [],
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "name": "Activite",
+                                  "inputParams": [
+                                    {
+                                      "key": "MessageLog",
+                                      "type": "string",
+                                      "value": "reveil;fin;ok;4"
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "0349e0df-9fe6-4cb5-ac0c-95edc7448990",
+                                "type": "action"
+                              }
+                            ],
                             "id": "c50a028f-e9db-4544-a444-9f50912d58b3",
                             "type": "success"
                           }
