@@ -48,7 +48,7 @@
                     "properties": {
                       "op1": {
                         "type": "entityKnowledge",
-                        "value": "current_CaptChambre"
+                        "value": "current_CaptChambreP"
                       },
                       "op2": {
                         "type": "integer",
@@ -89,7 +89,7 @@
                     "properties": {
                       "op1": {
                         "type": "entityKnowledge",
-                        "value": "current_CaptSalon"
+                        "value": "current_CaptSalonP"
                       },
                       "op2": {
                         "type": "integer",
@@ -130,7 +130,7 @@
                     "properties": {
                       "op1": {
                         "type": "entityKnowledge",
-                        "value": "current_CaptCuisine"
+                        "value": "current_CaptCuisineP"
                       },
                       "op2": {
                         "type": "integer",
@@ -182,7 +182,28 @@
                               },
                               "op": "=="
                             },
-                            "children": [],
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "name": "Log",
+                                  "inputParams": [
+                                    {
+                                      "key": "MessageLog",
+                                      "type": "string",
+                                      "value": "Le repas de Pepette est sur le feu , Coupure automatiquement ;4"
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "53888f36-06a9-47e9-a326-21988bee784c",
+                                "type": "action"
+                              }
+                            ],
                             "id": "8e6dbd82-950e-4305-aed3-1024da3bc5a8",
                             "type": "condition"
                           }
@@ -202,7 +223,7 @@
                     "properties": {
                       "op1": {
                         "type": "entityKnowledge",
-                        "value": "current_CaptCouloir"
+                        "value": "current_CaptCouloirP"
                       },
                       "op2": {
                         "type": "integer",
@@ -243,7 +264,7 @@
                     "properties": {
                       "op1": {
                         "type": "entityKnowledge",
-                        "value": "current_CaptSDB"
+                        "value": "current_CaptSDBP"
                       },
                       "op2": {
                         "type": "integer",
