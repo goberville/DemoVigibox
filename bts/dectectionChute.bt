@@ -27,12 +27,64 @@
                 "value": "actuator_CaptCamSimuChute"
               },
               "op2": {
-                "type": "entityKnowledge",
-                "value": "actuator_CaptCamSimuChute"
+                "type": "integer",
+                "value": "1"
               },
               "op": "=="
             },
-            "children": [],
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "entityKnowledge",
+                        "value": "current_CaptChambre"
+                      },
+                      "op2": {
+                        "type": "integer",
+                        "value": "1"
+                      },
+                      "op": "=="
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "name": "Log",
+                          "inputParams": [
+                            {
+                              "type": "string",
+                              "value": ""
+                            }
+                          ],
+                          "outputParams": []
+                        },
+                        "children": [],
+                        "id": "5cf16f08-4359-41bf-ae5e-113ae6861204",
+                        "type": "action"
+                      }
+                    ],
+                    "id": "45b19f40-36ae-410a-b101-432d87bcbb90",
+                    "type": "condition"
+                  }
+                ],
+                "id": "702d5617-4fbf-4f3b-975d-0e3dc949f10b",
+                "type": "sequence"
+              }
+            ],
             "id": "5680ec8d-60c8-4194-925e-042e9720e7d9",
             "type": "condition"
           }
