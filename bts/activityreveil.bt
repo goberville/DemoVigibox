@@ -126,13 +126,13 @@
                     "properties": {
                       "op1": {
                         "type": "entityKnowledge",
-                        "value": "Time"
+                        "value": "Time_Reveil_Min"
                       },
                       "op2": {
                         "type": "entityKnowledge",
-                        "value": "Time_Reveil_Max"
+                        "value": "Time"
                       },
-                      "op": "<"
+                      "op": ">="
                     },
                     "children": [
                       {
