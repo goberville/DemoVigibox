@@ -1060,6 +1060,22 @@
                 "children": [],
                 "id": "3cd0e445-7297-4fe6-81dc-4d840f8515c1",
                 "type": "set"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "destination": "current_CaptCamSimuChute",
+                  "op": {
+                    "type": "integer",
+                    "value": "0"
+                  }
+                },
+                "children": [],
+                "id": "4fe4a951-b219-4e6d-942b-9f078458f15b",
+                "type": "set"
               }
             ],
             "id": "5e5bf1ec-51e4-44ab-b7d8-8fce73e72c82",
