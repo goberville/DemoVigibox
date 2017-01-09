@@ -8,7 +8,39 @@
       "label": ""
     },
     "properties": {},
-    "children": [],
+    "children": [
+      {
+        "activated": true,
+        "metadata": {
+          "label": ""
+        },
+        "properties": {},
+        "children": [
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "op1": {
+                "type": "globalKnowledge",
+                "value": "true"
+              },
+              "op2": {
+                "type": "integer",
+                "value": "1"
+              },
+              "op": "=="
+            },
+            "children": [],
+            "id": "5680ec8d-60c8-4194-925e-042e9720e7d9",
+            "type": "condition"
+          }
+        ],
+        "id": "4764a95f-3162-4f9a-9a08-1bcb8ef0e6cd",
+        "type": "sequence"
+      }
+    ],
     "id": "7f8c39da-8b54-4a2b-a84b-7abca918117d"
   }
 ]
