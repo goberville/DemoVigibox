@@ -22,26 +22,6 @@
               "label": ""
             },
             "properties": {
-              "name": "Log",
-              "inputParams": [
-                {
-                  "key": "MessageLog",
-                  "type": "string",
-                  "value": "Rentre dans détection chute;4"
-                }
-              ],
-              "outputParams": []
-            },
-            "children": [],
-            "id": "57c5e833-1b3a-4462-b36d-4ebf53feb756",
-            "type": "action"
-          },
-          {
-            "activated": true,
-            "metadata": {
-              "label": ""
-            },
-            "properties": {
               "op1": {
                 "type": "entityKnowledge",
                 "value": "actuator_CaptCamSimuChute"
@@ -60,6 +40,26 @@
                 },
                 "properties": {},
                 "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "name": "Log",
+                      "inputParams": [
+                        {
+                          "key": "MessageLog",
+                          "type": "string",
+                          "value": "Rentre dans détection chute;4"
+                        }
+                      ],
+                      "outputParams": []
+                    },
+                    "children": [],
+                    "id": "57c5e833-1b3a-4462-b36d-4ebf53feb756",
+                    "type": "action"
+                  },
                   {
                     "activated": true,
                     "metadata": {
