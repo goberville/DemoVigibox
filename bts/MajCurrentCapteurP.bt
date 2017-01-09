@@ -381,7 +381,7 @@
                             {
                               "key": "MessageLog",
                               "type": "string",
-                              "value": "Current SBD== actuator SDB"
+                              "value": "Current SBD passe de 1 a 0;3"
                             }
                           ],
                           "outputParams": []
