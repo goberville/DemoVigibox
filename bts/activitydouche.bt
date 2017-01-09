@@ -423,7 +423,7 @@
                                 "properties": {},
                                 "children": [
                                   {
-                                    "activated": false,
+                                    "activated": true,
                                     "metadata": {
                                       "label": ""
                                     },
@@ -433,7 +433,7 @@
                                         {
                                           "key": "MessageLog",
                                           "type": "string",
-                                          "value": "Capteur Salle de bain à changer 0 à 1"
+                                          "value": "Capteur Salle de bain à changer 0 à 1;2"
                                         }
                                       ],
                                       "outputParams": []
