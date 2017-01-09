@@ -126,13 +126,13 @@
                     "properties": {
                       "op1": {
                         "type": "entityKnowledge",
-                        "value": "Time"
+                        "value": "Time_Toilette_Min"
                       },
                       "op2": {
                         "type": "entityKnowledge",
-                        "value": "Time_Toilette_Max"
+                        "value": "Time"
                       },
-                      "op": "<="
+                      "op": ">="
                     },
                     "children": [
                       {
