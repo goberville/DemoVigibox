@@ -418,7 +418,7 @@
                     "properties": {
                       "behavior": {
                         "type": "uriPath",
-                        "value": "bts/dectectionChute"
+                        "value": "bts/dectectionChute.bt"
                       },
                       "inputParams": []
                     },
