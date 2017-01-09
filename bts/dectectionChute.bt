@@ -66,8 +66,9 @@
                           "name": "Log",
                           "inputParams": [
                             {
+                              "key": "MessageLog",
                               "type": "string",
-                              "value": ""
+                              "value": "Pepette est tombée dans la chambre;4"
                             }
                           ],
                           "outputParams": []
@@ -78,6 +79,201 @@
                       }
                     ],
                     "id": "45b19f40-36ae-410a-b101-432d87bcbb90",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "entityKnowledge",
+                        "value": "current_CaptSalon"
+                      },
+                      "op2": {
+                        "type": "integer",
+                        "value": "1"
+                      },
+                      "op": "=="
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "name": "Log",
+                          "inputParams": [
+                            {
+                              "key": "MessageLog",
+                              "type": "string",
+                              "value": "Pepette est tombée dans le salon;4"
+                            }
+                          ],
+                          "outputParams": []
+                        },
+                        "children": [],
+                        "id": "d474a4b7-a09e-43ae-8a39-7df9604be5c6",
+                        "type": "action"
+                      }
+                    ],
+                    "id": "4751dd75-589d-4edb-b7e1-1753555f93b4",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "entityKnowledge",
+                        "value": "current_CaptCuisine"
+                      },
+                      "op2": {
+                        "type": "integer",
+                        "value": "1"
+                      },
+                      "op": "=="
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "Log",
+                              "inputParams": [
+                                {
+                                  "key": "MessageLog",
+                                  "type": "string",
+                                  "value": "Pepette est tombée dans la cuisine;4"
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "1afd8fa2-f0b0-48fa-a482-27c603e0b573",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "op1": {
+                                "type": "entityKnowledge",
+                                "value": "current_CaptCuisineE"
+                              },
+                              "op2": {
+                                "type": "integer",
+                                "value": "1"
+                              },
+                              "op": "=="
+                            },
+                            "children": [],
+                            "id": "8e6dbd82-950e-4305-aed3-1024da3bc5a8",
+                            "type": "condition"
+                          }
+                        ],
+                        "id": "7c46857b-cfec-4303-a24b-ec15444bb798",
+                        "type": "sequence"
+                      }
+                    ],
+                    "id": "c4571229-5750-499a-9c03-d061ecf4fb70",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "entityKnowledge",
+                        "value": "current_CaptCouloir"
+                      },
+                      "op2": {
+                        "type": "integer",
+                        "value": "1"
+                      },
+                      "op": "=="
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "name": "Log",
+                          "inputParams": [
+                            {
+                              "key": "MessageLog",
+                              "type": "string",
+                              "value": "Pepette est tombée dans le couloir;4"
+                            }
+                          ],
+                          "outputParams": []
+                        },
+                        "children": [],
+                        "id": "a249f4a3-c725-4b56-9aad-a7c96a6b642d",
+                        "type": "action"
+                      }
+                    ],
+                    "id": "8433e0a8-692b-4c68-90e3-151effe96c30",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "entityKnowledge",
+                        "value": "current_CaptSDB"
+                      },
+                      "op2": {
+                        "type": "integer",
+                        "value": "1"
+                      },
+                      "op": "=="
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "name": "Log",
+                          "inputParams": [
+                            {
+                              "key": "MessageLog",
+                              "type": "string",
+                              "value": "Pepette est tombée dans la salle de bain;4"
+                            }
+                          ],
+                          "outputParams": []
+                        },
+                        "children": [],
+                        "id": "faa7604e-b044-41f6-b2cb-c470d451f85a",
+                        "type": "action"
+                      }
+                    ],
+                    "id": "8840e8cf-4944-4c6c-9b42-41d431a32585",
                     "type": "condition"
                   }
                 ],
