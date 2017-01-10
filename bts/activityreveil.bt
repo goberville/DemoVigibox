@@ -968,6 +968,16 @@
             ],
             "id": "8782e442-dc90-4097-bdb9-77965ff6f825",
             "type": "condition"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {},
+            "children": [],
+            "id": "678d6d97-ec1e-4b10-a37e-1e1f4ac734e3",
+            "type": "success"
           }
         ],
         "id": "93bd32ff-d345-402f-a8c7-0e2b1e1eedaa",
