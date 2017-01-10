@@ -162,16 +162,6 @@
                                 "children": [],
                                 "id": "6b76d1ca-2054-4afb-8622-030f8707b6f4",
                                 "type": "action"
-                              },
-                              {
-                                "activated": false,
-                                "metadata": {
-                                  "label": ""
-                                },
-                                "properties": {},
-                                "children": [],
-                                "id": "a7ea581f-7e1c-4673-ad8f-18ee008e6399",
-                                "type": "success"
                               }
                             ],
                             "id": "2268178b-9a3e-4f79-9370-70384ec73994",
@@ -223,16 +213,6 @@
                             "children": [],
                             "id": "935d294e-e4da-4c27-9d3a-9299b9499212",
                             "type": "set"
-                          },
-                          {
-                            "activated": false,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {},
-                            "children": [],
-                            "id": "d707a5d5-99b1-4514-954e-697f7aa5e3f9",
-                            "type": "success"
                           }
                         ],
                         "id": "88fc7808-40e1-4d78-8b65-dbf0bf279ab2",
