@@ -429,26 +429,6 @@
                           "label": ""
                         },
                         "properties": {
-                          "name": "Log",
-                          "inputParams": [
-                            {
-                              "key": "MessageLog",
-                              "type": "string",
-                              "value": "Activite reveil en cours de traitement;2"
-                            }
-                          ],
-                          "outputParams": []
-                        },
-                        "children": [],
-                        "id": "44c31077-175f-4f7a-84e9-1b7b4cb8746a",
-                        "type": "action"
-                      },
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": ""
-                        },
-                        "properties": {
                           "op1": {
                             "type": "entityKnowledge",
                             "value": "TaskActivityReveil"
@@ -547,6 +527,26 @@
                                   {
                                     "activated": true,
                                     "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "Log",
+                                      "inputParams": [
+                                        {
+                                          "key": "MessageLog",
+                                          "type": "string",
+                                          "value": "Activite reveil en cours de traitement;2"
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "44c31077-175f-4f7a-84e9-1b7b4cb8746a",
+                                    "type": "action"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
                                       "label": "Si capteur chambre à changé d'état"
                                     },
                                     "properties": {
@@ -611,6 +611,26 @@
                                     ],
                                     "id": "baa18842-1ad8-4842-9558-3e9b4b9a3b13",
                                     "type": "condition"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "Log",
+                                      "inputParams": [
+                                        {
+                                          "key": "MessageLog",
+                                          "type": "string",
+                                          "value": "Activite reveil suite en cours de traitement;2"
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "67360f24-601d-41ee-8bd3-8d6d709e01ae",
+                                    "type": "action"
                                   },
                                   {
                                     "activated": true,
