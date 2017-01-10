@@ -201,6 +201,26 @@
                           {
                             "activated": true,
                             "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "Log",
+                              "inputParams": [
+                                {
+                                  "key": "MessageLog",
+                                  "type": "string",
+                                  "value": "Pepette est reveillée;1"
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "feeaeb3c-2022-4153-95f2-443d6711b500",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
                               "label": "Check_Reveil"
                             },
                             "properties": {
@@ -479,7 +499,7 @@
                               {
                                 "activated": true,
                                 "metadata": {
-                                  "label": "Si capteur chambre à changé d'état"
+                                  "label": "Si capteur couloir changé d'état"
                                 },
                                 "properties": {
                                   "op1": {
@@ -559,26 +579,6 @@
                                 "children": [],
                                 "id": "005abca0-ecc7-42bc-8d98-62a06e39d569",
                                 "type": "set"
-                              },
-                              {
-                                "activated": true,
-                                "metadata": {
-                                  "label": ""
-                                },
-                                "properties": {
-                                  "name": "Log",
-                                  "inputParams": [
-                                    {
-                                      "key": "MessageLog",
-                                      "type": "string",
-                                      "value": "Pepette est reveillée;1"
-                                    }
-                                  ],
-                                  "outputParams": []
-                                },
-                                "children": [],
-                                "id": "feeaeb3c-2022-4153-95f2-443d6711b500",
-                                "type": "action"
                               },
                               {
                                 "activated": true,
