@@ -463,7 +463,7 @@
                                 "properties": {},
                                 "children": [
                                   {
-                                    "activated": false,
+                                    "activated": true,
                                     "metadata": {
                                       "label": ""
                                     },
@@ -473,7 +473,7 @@
                                         {
                                           "key": "MessageLog",
                                           "type": "string",
-                                          "value": "Capteur cuisine  à changer 1 à 0"
+                                          "value": "Capteur couloir à changer 0 à 1;2"
                                         }
                                       ],
                                       "outputParams": []
@@ -505,78 +505,6 @@
                             ],
                             "id": "a02afe60-4418-46a2-bd1c-b93799a4cae1",
                             "type": "condition"
-                          },
-                          {
-                            "activated": false,
-                            "metadata": {
-                              "label": "Ctrl si un autre capteur est passé en Presence"
-                            },
-                            "properties": {
-                              "active": "false"
-                            },
-                            "children": [
-                              {
-                                "activated": true,
-                                "metadata": {
-                                  "label": ""
-                                },
-                                "properties": {},
-                                "children": [
-                                  {
-                                    "activated": true,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {
-                                      "destination": "MessageAlerte",
-                                      "op": {
-                                        "type": "string",
-                                        "value": "01010100030120"
-                                      }
-                                    },
-                                    "children": [],
-                                    "id": "bc4a23c5-ca70-4fcc-a7cc-6adfed2c113c",
-                                    "type": "set"
-                                  },
-                                  {
-                                    "activated": true,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {
-                                      "destination": "BoolAlerteMessage",
-                                      "op": {
-                                        "type": "boolean",
-                                        "value": "true"
-                                      }
-                                    },
-                                    "children": [],
-                                    "id": "72368b36-9805-4a9b-8192-1002ab7c09da",
-                                    "type": "set"
-                                  },
-                                  {
-                                    "activated": true,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {
-                                      "behavior": {
-                                        "type": "uriPath",
-                                        "value": "bts/SendAlerteSigfox.bt"
-                                      },
-                                      "inputParams": []
-                                    },
-                                    "children": [],
-                                    "id": "827b5048-1ab9-4de5-866c-b22736980742",
-                                    "type": "embedded"
-                                  }
-                                ],
-                                "id": "25e031a2-c46b-4fac-b542-e14cde062975",
-                                "type": "sequence"
-                              }
-                            ],
-                            "id": "3758e16b-030e-4fc2-a593-ffeeddca34dc",
-                            "type": "priority"
                           },
                           {
                             "activated": true,
