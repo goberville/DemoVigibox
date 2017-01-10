@@ -162,6 +162,22 @@
                                 "children": [],
                                 "id": "6b76d1ca-2054-4afb-8622-030f8707b6f4",
                                 "type": "action"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "destination": "TaskActivityToilette",
+                                  "op": {
+                                    "type": "integer",
+                                    "value": "3"
+                                  }
+                                },
+                                "children": [],
+                                "id": "7445ec8d-5ead-43a4-8fae-c0fa7d7c024b",
+                                "type": "set"
                               }
                             ],
                             "id": "2268178b-9a3e-4f79-9370-70384ec73994",
@@ -213,6 +229,22 @@
                             "children": [],
                             "id": "935d294e-e4da-4c27-9d3a-9299b9499212",
                             "type": "set"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "destination": "TaskActivityToilette",
+                              "op": {
+                                "type": "integer",
+                                "value": "3"
+                              }
+                            },
+                            "children": [],
+                            "id": "20f0c531-bd4d-4e9b-a346-482877b93a64",
+                            "type": "set"
                           }
                         ],
                         "id": "88fc7808-40e1-4d78-8b65-dbf0bf279ab2",
@@ -221,22 +253,6 @@
                     ],
                     "id": "67c5d5de-fb6a-46b3-8d04-cf51c459f35c",
                     "type": "priority"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "destination": "TaskActivityToilette",
-                      "op": {
-                        "type": "integer",
-                        "value": "3"
-                      }
-                    },
-                    "children": [],
-                    "id": "20f0c531-bd4d-4e9b-a346-482877b93a64",
-                    "type": "set"
                   }
                 ],
                 "id": "fcf76215-4bc6-4fba-a0d6-7ade978a76e5",
@@ -762,6 +778,16 @@
             ],
             "id": "ed52f342-f2bd-444f-9213-bf0139ecff8e",
             "type": "condition"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {},
+            "children": [],
+            "id": "dfbcfb68-2228-47a5-8293-b733a0e96b83",
+            "type": "success"
           }
         ],
         "id": "eeb10db7-c9cf-4cbc-9633-1d634a36e4a8",
