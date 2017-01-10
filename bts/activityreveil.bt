@@ -162,6 +162,22 @@
                                 "children": [],
                                 "id": "743c29a9-93d3-488b-8ce3-b481a7836087",
                                 "type": "action"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "destination": "TaskActivityReveil",
+                                  "op": {
+                                    "type": "integer",
+                                    "value": "3"
+                                  }
+                                },
+                                "children": [],
+                                "id": "f02998b4-6c66-4ad8-83b4-2a18fac16644",
+                                "type": "set"
                               }
                             ],
                             "id": "285b52d8-29e9-427d-a77a-07a4bba938f9",
@@ -233,6 +249,22 @@
                             "children": [],
                             "id": "edb3bf02-600e-4257-ac27-5b199d65d3ff",
                             "type": "set"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "destination": "TaskActivityReveil",
+                              "op": {
+                                "type": "integer",
+                                "value": "3"
+                              }
+                            },
+                            "children": [],
+                            "id": "a216f476-8d76-4d8d-9d46-9b03fb59a7ee",
+                            "type": "set"
                           }
                         ],
                         "id": "7924c7b5-fba1-4376-b2be-d60b4c9e7f21",
@@ -241,22 +273,6 @@
                     ],
                     "id": "189bb462-5567-4771-9167-f1e037f71be4",
                     "type": "priority"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "destination": "TaskActivityReveil",
-                      "op": {
-                        "type": "integer",
-                        "value": "3"
-                      }
-                    },
-                    "children": [],
-                    "id": "a216f476-8d76-4d8d-9d46-9b03fb59a7ee",
-                    "type": "set"
                   }
                 ],
                 "id": "a645e323-1ea8-49e4-b34d-eb4796b8e7ce",
@@ -382,35 +398,67 @@
                           "label": ""
                         },
                         "properties": {
-                          "name": "Activite",
-                          "inputParams": [
-                            {
-                              "key": "MessageLog",
-                              "type": "string",
-                              "value": "Reveil;start;ok"
-                            }
-                          ],
-                          "outputParams": []
-                        },
-                        "children": [],
-                        "id": "00524b9c-046c-4bc6-9e16-81e4561f4422",
-                        "type": "action"
-                      },
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": ""
-                        },
-                        "properties": {
-                          "destination": "TaskActivityReveil",
-                          "op": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "TaskActivityReveil"
+                          },
+                          "op2": {
                             "type": "integer",
-                            "value": "1"
-                          }
+                            "value": "0"
+                          },
+                          "op": "=="
                         },
-                        "children": [],
-                        "id": "1768d27c-791b-48ce-abc1-f2a022e4233c",
-                        "type": "set"
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {},
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "name": "Activite",
+                                  "inputParams": [
+                                    {
+                                      "key": "MessageLog",
+                                      "type": "string",
+                                      "value": "Reveil;start;ok"
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "00524b9c-046c-4bc6-9e16-81e4561f4422",
+                                "type": "action"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "destination": "TaskActivityReveil",
+                                  "op": {
+                                    "type": "integer",
+                                    "value": "1"
+                                  }
+                                },
+                                "children": [],
+                                "id": "1768d27c-791b-48ce-abc1-f2a022e4233c",
+                                "type": "set"
+                              }
+                            ],
+                            "id": "2301405c-e66f-4bd8-a4d0-0d0e98e82fae",
+                            "type": "sequence"
+                          }
+                        ],
+                        "id": "074b4604-3d0d-4862-a584-01e5cc150bdc",
+                        "type": "condition"
                       },
                       {
                         "activated": true,
@@ -424,181 +472,202 @@
                           {
                             "activated": true,
                             "metadata": {
-                              "label": "Si Periode Activity Reveil "
+                              "label": ""
                             },
-                            "properties": {},
+                            "properties": {
+                              "op1": {
+                                "type": "entityKnowledge",
+                                "value": "TaskActivityReveil"
+                              },
+                              "op2": {
+                                "type": "integer",
+                                "value": "1"
+                              },
+                              "op": "=="
+                            },
                             "children": [
                               {
                                 "activated": true,
                                 "metadata": {
-                                  "label": "Si capteur chambre à changé d'état"
+                                  "label": "Si Periode Activity Reveil "
                                 },
-                                "properties": {
-                                  "op1": {
-                                    "type": "entityKnowledge",
-                                    "value": "current_CaptChambreP"
-                                  },
-                                  "op2": {
-                                    "type": "entityKnowledge",
-                                    "value": "actuator_CaptChambreP"
-                                  },
-                                  "op": "!="
-                                },
+                                "properties": {},
                                 "children": [
                                   {
                                     "activated": true,
                                     "metadata": {
-                                      "label": ""
+                                      "label": "Si capteur chambre à changé d'état"
                                     },
-                                    "properties": {},
-                                    "children": [
-                                      {
-                                        "activated": false,
-                                        "metadata": {
-                                          "label": ""
-                                        },
-                                        "properties": {
-                                          "name": "Log",
-                                          "inputParams": [
-                                            {
-                                              "key": "MessageLog",
-                                              "type": "string",
-                                              "value": "Capteur chambre à changer 1 à 0"
-                                            }
-                                          ],
-                                          "outputParams": []
-                                        },
-                                        "children": [],
-                                        "id": "33a387f8-c730-4614-8766-31ac1eaf1147",
-                                        "type": "action"
+                                    "properties": {
+                                      "op1": {
+                                        "type": "entityKnowledge",
+                                        "value": "current_CaptChambreP"
                                       },
+                                      "op2": {
+                                        "type": "entityKnowledge",
+                                        "value": "actuator_CaptChambreP"
+                                      },
+                                      "op": "!="
+                                    },
+                                    "children": [
                                       {
                                         "activated": true,
                                         "metadata": {
                                           "label": ""
                                         },
-                                        "properties": {
-                                          "destination": "current_CaptChambreP",
-                                          "op": {
-                                            "type": "entityKnowledge",
-                                            "value": "actuator_CaptChambreP"
+                                        "properties": {},
+                                        "children": [
+                                          {
+                                            "activated": false,
+                                            "metadata": {
+                                              "label": ""
+                                            },
+                                            "properties": {
+                                              "name": "Log",
+                                              "inputParams": [
+                                                {
+                                                  "key": "MessageLog",
+                                                  "type": "string",
+                                                  "value": "Capteur chambre à changer 1 à 0"
+                                                }
+                                              ],
+                                              "outputParams": []
+                                            },
+                                            "children": [],
+                                            "id": "33a387f8-c730-4614-8766-31ac1eaf1147",
+                                            "type": "action"
+                                          },
+                                          {
+                                            "activated": true,
+                                            "metadata": {
+                                              "label": ""
+                                            },
+                                            "properties": {
+                                              "destination": "current_CaptChambreP",
+                                              "op": {
+                                                "type": "entityKnowledge",
+                                                "value": "actuator_CaptChambreP"
+                                              }
+                                            },
+                                            "children": [],
+                                            "id": "ef86164f-67c2-41e1-afa9-b16c91cca433",
+                                            "type": "set"
                                           }
-                                        },
-                                        "children": [],
-                                        "id": "ef86164f-67c2-41e1-afa9-b16c91cca433",
-                                        "type": "set"
+                                        ],
+                                        "id": "222c02a1-3ab9-4567-9d37-29ecfd492f9a",
+                                        "type": "sequence"
                                       }
                                     ],
-                                    "id": "222c02a1-3ab9-4567-9d37-29ecfd492f9a",
-                                    "type": "sequence"
-                                  }
-                                ],
-                                "id": "baa18842-1ad8-4842-9558-3e9b4b9a3b13",
-                                "type": "condition"
-                              },
-                              {
-                                "activated": true,
-                                "metadata": {
-                                  "label": "Si capteur couloir changé d'état"
-                                },
-                                "properties": {
-                                  "op1": {
-                                    "type": "entityKnowledge",
-                                    "value": "current_CaptCouloirP"
+                                    "id": "baa18842-1ad8-4842-9558-3e9b4b9a3b13",
+                                    "type": "condition"
                                   },
-                                  "op2": {
-                                    "type": "entityKnowledge",
-                                    "value": "actuator_CaptCouloirP"
-                                  },
-                                  "op": "!="
-                                },
-                                "children": [
                                   {
                                     "activated": true,
                                     "metadata": {
-                                      "label": ""
+                                      "label": "Si capteur couloir changé d'état"
                                     },
-                                    "properties": {},
-                                    "children": [
-                                      {
-                                        "activated": false,
-                                        "metadata": {
-                                          "label": ""
-                                        },
-                                        "properties": {
-                                          "name": "Log",
-                                          "inputParams": [
-                                            {
-                                              "key": "MessageLog",
-                                              "type": "string",
-                                              "value": "Capteur couloir à changer 0 à 1"
-                                            }
-                                          ],
-                                          "outputParams": []
-                                        },
-                                        "children": [],
-                                        "id": "9730b1ab-2aab-4dbf-8737-6a3bbf01130e",
-                                        "type": "action"
+                                    "properties": {
+                                      "op1": {
+                                        "type": "entityKnowledge",
+                                        "value": "current_CaptCouloirP"
                                       },
+                                      "op2": {
+                                        "type": "entityKnowledge",
+                                        "value": "actuator_CaptCouloirP"
+                                      },
+                                      "op": "!="
+                                    },
+                                    "children": [
                                       {
                                         "activated": true,
                                         "metadata": {
                                           "label": ""
                                         },
-                                        "properties": {
-                                          "destination": "current_CaptCouloirP",
-                                          "op": {
-                                            "type": "entityKnowledge",
-                                            "value": "actuator_CaptCouloirP"
+                                        "properties": {},
+                                        "children": [
+                                          {
+                                            "activated": false,
+                                            "metadata": {
+                                              "label": ""
+                                            },
+                                            "properties": {
+                                              "name": "Log",
+                                              "inputParams": [
+                                                {
+                                                  "key": "MessageLog",
+                                                  "type": "string",
+                                                  "value": "Capteur couloir à changer 0 à 1"
+                                                }
+                                              ],
+                                              "outputParams": []
+                                            },
+                                            "children": [],
+                                            "id": "9730b1ab-2aab-4dbf-8737-6a3bbf01130e",
+                                            "type": "action"
+                                          },
+                                          {
+                                            "activated": true,
+                                            "metadata": {
+                                              "label": ""
+                                            },
+                                            "properties": {
+                                              "destination": "current_CaptCouloirP",
+                                              "op": {
+                                                "type": "entityKnowledge",
+                                                "value": "actuator_CaptCouloirP"
+                                              }
+                                            },
+                                            "children": [],
+                                            "id": "1c8584b0-e7f4-42f2-ad8a-f32453881d3a",
+                                            "type": "set"
                                           }
-                                        },
-                                        "children": [],
-                                        "id": "1c8584b0-e7f4-42f2-ad8a-f32453881d3a",
-                                        "type": "set"
+                                        ],
+                                        "id": "98a88713-0fd1-4f17-a627-59f93cf0edf0",
+                                        "type": "sequence"
                                       }
                                     ],
-                                    "id": "98a88713-0fd1-4f17-a627-59f93cf0edf0",
-                                    "type": "sequence"
+                                    "id": "fb05ce3a-572e-4ebc-b367-4d230beca94c",
+                                    "type": "condition"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": "Check_Reveil"
+                                    },
+                                    "properties": {
+                                      "destination": "Check_Reveil",
+                                      "op": {
+                                        "type": "boolean",
+                                        "value": "true"
+                                      }
+                                    },
+                                    "children": [],
+                                    "id": "005abca0-ecc7-42bc-8d98-62a06e39d569",
+                                    "type": "set"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "destination": "TaskActivityReveil",
+                                      "op": {
+                                        "type": "integer",
+                                        "value": "2"
+                                      }
+                                    },
+                                    "children": [],
+                                    "id": "2ec54cbe-65ab-4696-b611-ac4f7ffd261a",
+                                    "type": "set"
                                   }
                                 ],
-                                "id": "fb05ce3a-572e-4ebc-b367-4d230beca94c",
-                                "type": "condition"
-                              },
-                              {
-                                "activated": true,
-                                "metadata": {
-                                  "label": "Check_Reveil"
-                                },
-                                "properties": {
-                                  "destination": "Check_Reveil",
-                                  "op": {
-                                    "type": "boolean",
-                                    "value": "true"
-                                  }
-                                },
-                                "children": [],
-                                "id": "005abca0-ecc7-42bc-8d98-62a06e39d569",
-                                "type": "set"
-                              },
-                              {
-                                "activated": true,
-                                "metadata": {
-                                  "label": ""
-                                },
-                                "properties": {
-                                  "destination": "TaskActivityReveil",
-                                  "op": {
-                                    "type": "integer",
-                                    "value": "2"
-                                  }
-                                },
-                                "children": [],
-                                "id": "2ec54cbe-65ab-4696-b611-ac4f7ffd261a",
-                                "type": "set"
+                                "id": "4b40fcc4-5336-4641-b0d0-405339e32460",
+                                "type": "sequence"
                               }
                             ],
-                            "id": "4b40fcc4-5336-4641-b0d0-405339e32460",
-                            "type": "sequence"
+                            "id": "869c3901-893a-4fab-9c75-26c060627c41",
+                            "type": "condition"
                           },
                           {
                             "activated": true,
