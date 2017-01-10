@@ -411,7 +411,7 @@
                 },
                 "children": [
                   {
-                    "activated": true,
+                    "activated": false,
                     "metadata": {
                       "label": ""
                     },
@@ -433,6 +433,22 @@
                     },
                     "properties": {},
                     "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "behavior": {
+                            "type": "uriPath",
+                            "value": "bts/dectectionChute.bt"
+                          },
+                          "inputParams": []
+                        },
+                        "children": [],
+                        "id": "f406d513-68aa-4e76-a7eb-084f6fb42b3f",
+                        "type": "embedded"
+                      },
                       {
                         "activated": false,
                         "metadata": {
