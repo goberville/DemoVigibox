@@ -362,35 +362,67 @@
                           "label": ""
                         },
                         "properties": {
-                          "name": "Activite",
-                          "inputParams": [
-                            {
-                              "key": "MessageLog",
-                              "type": "string",
-                              "value": "Toilette;start;ok"
-                            }
-                          ],
-                          "outputParams": []
-                        },
-                        "children": [],
-                        "id": "c6f9ad58-729d-43da-ba24-93f9f04186ba",
-                        "type": "action"
-                      },
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": ""
-                        },
-                        "properties": {
-                          "destination": "TaskActivityToilette",
-                          "op": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "TaskActivityToilette"
+                          },
+                          "op2": {
                             "type": "integer",
-                            "value": "1"
-                          }
+                            "value": "0"
+                          },
+                          "op": "=="
                         },
-                        "children": [],
-                        "id": "5c60b50c-69dc-40c2-a264-8d0b920e1d34",
-                        "type": "set"
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {},
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "name": "Activite",
+                                  "inputParams": [
+                                    {
+                                      "key": "MessageLog",
+                                      "type": "string",
+                                      "value": "Toilette;start;ok"
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "c6f9ad58-729d-43da-ba24-93f9f04186ba",
+                                "type": "action"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "destination": "TaskActivityToilette",
+                                  "op": {
+                                    "type": "integer",
+                                    "value": "1"
+                                  }
+                                },
+                                "children": [],
+                                "id": "5c60b50c-69dc-40c2-a264-8d0b920e1d34",
+                                "type": "set"
+                              }
+                            ],
+                            "id": "321810ab-e7ae-4fbb-bf95-4e7abeeb38cb",
+                            "type": "sequence"
+                          }
+                        ],
+                        "id": "421c0d13-5698-44c4-90f0-efcb73dbe010",
+                        "type": "condition"
                       },
                       {
                         "activated": true,
@@ -651,7 +683,7 @@
                 "properties": {},
                 "children": [
                   {
-                    "activated": true,
+                    "activated": false,
                     "metadata": {
                       "label": ""
                     },
@@ -685,6 +717,16 @@
                     "children": [],
                     "id": "1617ea16-48d7-4a22-995c-2442e700b60d",
                     "type": "set"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {},
+                    "children": [],
+                    "id": "5519dabd-620c-48ba-bf28-0410d011ff9b",
+                    "type": "sequence"
                   },
                   {
                     "activated": true,
