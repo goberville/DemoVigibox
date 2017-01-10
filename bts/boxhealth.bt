@@ -454,7 +454,7 @@
                         "type": "action"
                       },
                       {
-                        "activated": false,
+                        "activated": true,
                         "metadata": {
                           "label": ""
                         },
@@ -490,7 +490,7 @@
                         "type": "action"
                       },
                       {
-                        "activated": false,
+                        "activated": true,
                         "metadata": {
                           "label": ""
                         },
@@ -562,7 +562,7 @@
                         "type": "action"
                       },
                       {
-                        "activated": false,
+                        "activated": true,
                         "metadata": {
                           "label": ""
                         },
@@ -634,7 +634,7 @@
                         "type": "action"
                       },
                       {
-                        "activated": false,
+                        "activated": true,
                         "metadata": {
                           "label": ""
                         },
@@ -670,7 +670,7 @@
                         "type": "action"
                       },
                       {
-                        "activated": false,
+                        "activated": true,
                         "metadata": {
                           "label": ""
                         },
