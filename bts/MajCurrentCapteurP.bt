@@ -66,7 +66,7 @@
                         "type": "set"
                       },
                       {
-                        "activated": false,
+                        "activated": true,
                         "metadata": {
                           "label": ""
                         },
@@ -76,7 +76,7 @@
                             {
                               "key": "MessageLog",
                               "type": "string",
-                              "value": "Current chambre == actuator chambre"
+                              "value": "Current chambre == actuator chambre;2"
                             }
                           ],
                           "outputParams": []
@@ -157,7 +157,7 @@
                     "properties": {},
                     "children": [
                       {
-                        "activated": false,
+                        "activated": true,
                         "metadata": {
                           "label": ""
                         },
@@ -167,7 +167,7 @@
                             {
                               "key": "MessageLog",
                               "type": "string",
-                              "value": "current cuisine == actuactor cusisine"
+                              "value": "current cuisine == actuactor cusisine;2"
                             }
                           ],
                           "outputParams": []
@@ -264,7 +264,7 @@
                     "properties": {},
                     "children": [
                       {
-                        "activated": false,
+                        "activated": true,
                         "metadata": {
                           "label": ""
                         },
@@ -274,7 +274,7 @@
                             {
                               "key": "MessageLog",
                               "type": "string",
-                              "value": "Current salon == actuator salon"
+                              "value": "Current salon == actuator salon;2"
                             }
                           ],
                           "outputParams": []
@@ -478,7 +478,7 @@
                     "properties": {},
                     "children": [
                       {
-                        "activated": false,
+                        "activated": true,
                         "metadata": {
                           "label": ""
                         },
@@ -488,7 +488,7 @@
                             {
                               "key": "MessageLog",
                               "type": "string",
-                              "value": "Current couloir == actuator couloir"
+                              "value": "Current couloir == actuator couloir;2"
                             }
                           ],
                           "outputParams": []
