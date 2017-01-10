@@ -285,6 +285,37 @@
           {
             "activated": true,
             "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "op1": {
+                "type": "entityKnowledge",
+                "value": "TaskActivityReveil"
+              },
+              "op2": {
+                "type": "integer",
+                "value": "3"
+              },
+              "op": "=="
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {},
+                "children": [],
+                "id": "49abfde6-339a-4f91-b790-8ecb917997c9",
+                "type": "success"
+              }
+            ],
+            "id": "8782e442-dc90-4097-bdb9-77965ff6f825",
+            "type": "condition"
+          },
+          {
+            "activated": true,
+            "metadata": {
               "label": "Temps activite reveil depasse"
             },
             "properties": {
@@ -328,16 +359,47 @@
                         "metadata": {
                           "label": ""
                         },
-                        "properties": {
-                          "destination": "TaskActivityReveil",
-                          "op": {
-                            "type": "integer",
-                            "value": "2"
+                        "properties": {},
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "destination": "TaskActivityReveil",
+                              "op": {
+                                "type": "integer",
+                                "value": "2"
+                              }
+                            },
+                            "children": [],
+                            "id": "d5b8c24a-85e4-403d-9b96-c159597183de",
+                            "type": "set"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "Log",
+                              "inputParams": [
+                                {
+                                  "key": "MessageLog",
+                                  "type": "string",
+                                  "value": "Activite reveil temps act depassé;2"
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "c330c9c3-1ef1-47ab-89b2-e1e1dc7aafbd",
+                            "type": "action"
                           }
-                        },
-                        "children": [],
-                        "id": "d5b8c24a-85e4-403d-9b96-c159597183de",
-                        "type": "set"
+                        ],
+                        "id": "56fc8f4a-9b46-4650-9ee6-993bda5103fe",
+                        "type": "sequence"
                       }
                     ],
                     "id": "95d24bb7-93cb-4b35-bd5e-7173f5ad0127",
@@ -392,6 +454,26 @@
                     },
                     "properties": {},
                     "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "name": "Log",
+                          "inputParams": [
+                            {
+                              "key": "MessageLog",
+                              "type": "string",
+                              "value": "Activite reveil en cours de traitement;2"
+                            }
+                          ],
+                          "outputParams": []
+                        },
+                        "children": [],
+                        "id": "44c31077-175f-4f7a-84e9-1b7b4cb8746a",
+                        "type": "action"
+                      },
                       {
                         "activated": true,
                         "metadata": {
@@ -518,7 +600,7 @@
                                         "properties": {},
                                         "children": [
                                           {
-                                            "activated": false,
+                                            "activated": true,
                                             "metadata": {
                                               "label": ""
                                             },
@@ -528,7 +610,7 @@
                                                 {
                                                   "key": "MessageLog",
                                                   "type": "string",
-                                                  "value": "Capteur chambre à changer 1 à 0"
+                                                  "value": "Capteur chambre à changer;2"
                                                 }
                                               ],
                                               "outputParams": []
@@ -586,7 +668,7 @@
                                         "properties": {},
                                         "children": [
                                           {
-                                            "activated": false,
+                                            "activated": true,
                                             "metadata": {
                                               "label": ""
                                             },
@@ -596,7 +678,7 @@
                                                 {
                                                   "key": "MessageLog",
                                                   "type": "string",
-                                                  "value": "Capteur couloir à changer 0 à 1"
+                                                  "value": "Capteur couloir à changer;2"
                                                 }
                                               ],
                                               "outputParams": []
@@ -628,6 +710,26 @@
                                     ],
                                     "id": "fb05ce3a-572e-4ebc-b367-4d230beca94c",
                                     "type": "condition"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "Log",
+                                      "inputParams": [
+                                        {
+                                          "key": "MessageLog",
+                                          "type": "string",
+                                          "value": "Activite reveil va etre ok;2"
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "0c349cff-1d54-4e43-8fb7-d7c06968d98b",
+                                    "type": "action"
                                   },
                                   {
                                     "activated": true,
@@ -778,16 +880,6 @@
             ],
             "id": "d6df0619-b5e8-40a4-b11e-90b0487b5a5d",
             "type": "condition"
-          },
-          {
-            "activated": true,
-            "metadata": {
-              "label": ""
-            },
-            "properties": {},
-            "children": [],
-            "id": "49abfde6-339a-4f91-b790-8ecb917997c9",
-            "type": "success"
           }
         ],
         "id": "93bd32ff-d345-402f-a8c7-0e2b1e1eedaa",
