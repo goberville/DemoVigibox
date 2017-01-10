@@ -14,6 +14,731 @@
         "metadata": {
           "label": ""
         },
+        "properties": {
+          "active": "false"
+        },
+        "children": [
+          {
+            "activated": true,
+            "metadata": {
+              "label": "Temps activité depassé"
+            },
+            "properties": {
+              "op1": {
+                "type": "entityKnowledge",
+                "value": "Time"
+              },
+              "op2": {
+                "type": "entityKnowledge",
+                "value": "Time_Toilette_Max"
+              },
+              "op": ">"
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "activated": false,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "name": "Log",
+                      "inputParams": [
+                        {
+                          "key": "MessageLog",
+                          "type": "string",
+                          "value": "Fin Activité Toilette;4"
+                        }
+                      ],
+                      "outputParams": []
+                    },
+                    "children": [],
+                    "id": "aeba6d2f-45b4-409a-9ea2-c6fefa65815e",
+                    "type": "action"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "destination": "TaskActivityDouche",
+                      "op": {
+                        "type": "integer",
+                        "value": "2"
+                      }
+                    },
+                    "children": [],
+                    "id": "528da530-ac23-4282-87fb-abb6942bb548",
+                    "type": "set"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "active": "false"
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "Check_Douche"
+                          },
+                          "op2": {
+                            "type": "boolean",
+                            "value": "false"
+                          },
+                          "op": "=="
+                        },
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {},
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "destination": "MessageAlerte",
+                                  "op": {
+                                    "type": "string",
+                                    "value": "04010100010107"
+                                  }
+                                },
+                                "children": [],
+                                "id": "b6a3840e-fe9e-473c-9019-a2ec0db08fcf",
+                                "type": "set"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "destination": "BoolAlerteMessage",
+                                  "op": {
+                                    "type": "boolean",
+                                    "value": "true"
+                                  }
+                                },
+                                "children": [],
+                                "id": "7dd548c2-84bf-4dba-aec2-42424e8d3d1e",
+                                "type": "set"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "name": "Log",
+                                  "inputParams": [
+                                    {
+                                      "key": "MessageLog",
+                                      "type": "string",
+                                      "value": "Pepette n'a pas fait sa toilette;3"
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "51f4b3a5-ca97-4031-8363-61301e85dd10",
+                                "type": "action"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "behavior": {
+                                    "type": "uriPath",
+                                    "value": "bts/SendAlerteSigfox.bt"
+                                  },
+                                  "inputParams": []
+                                },
+                                "children": [],
+                                "id": "f41e66f3-625e-4440-9ac5-7e46c8ca4722",
+                                "type": "embedded"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "name": "Activite",
+                                  "inputParams": [
+                                    {
+                                      "key": "MessageLog",
+                                      "type": "string",
+                                      "value": "Toilette;fin;nok"
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "6b76d1ca-2054-4afb-8622-030f8707b6f4",
+                                "type": "action"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {},
+                                "children": [],
+                                "id": "a7ea581f-7e1c-4673-ad8f-18ee008e6399",
+                                "type": "success"
+                              }
+                            ],
+                            "id": "2268178b-9a3e-4f79-9370-70384ec73994",
+                            "type": "sequence"
+                          }
+                        ],
+                        "id": "406e3c2d-6cac-4433-bba1-f071a7936dac",
+                        "type": "condition"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "Activite",
+                              "inputParams": [
+                                {
+                                  "key": "MessageLog",
+                                  "type": "string",
+                                  "value": "Toilette;fin;ok"
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "f926f572-8251-411a-a586-164d0b6df91e",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": "Check_Douche"
+                            },
+                            "properties": {
+                              "destination": "Check_Douche",
+                              "op": {
+                                "type": "boolean",
+                                "value": "false"
+                              }
+                            },
+                            "children": [],
+                            "id": "935d294e-e4da-4c27-9d3a-9299b9499212",
+                            "type": "set"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {},
+                            "children": [],
+                            "id": "d707a5d5-99b1-4514-954e-697f7aa5e3f9",
+                            "type": "success"
+                          }
+                        ],
+                        "id": "88fc7808-40e1-4d78-8b65-dbf0bf279ab2",
+                        "type": "sequence"
+                      }
+                    ],
+                    "id": "67c5d5de-fb6a-46b3-8d04-cf51c459f35c",
+                    "type": "priority"
+                  }
+                ],
+                "id": "dd7a7ad4-0a82-4358-b049-1fa1e5438c84",
+                "type": "sequence"
+              }
+            ],
+            "id": "cc805beb-64ef-4ce5-8854-b18049a76c75",
+            "type": "condition"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": "Activite en cours"
+            },
+            "properties": {
+              "op1": {
+                "type": "entityKnowledge",
+                "value": "Time"
+              },
+              "op2": {
+                "type": "entityKnowledge",
+                "value": "Time_Toilette_Min"
+              },
+              "op": ">="
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "op1": {
+                    "type": "entityKnowledge",
+                    "value": "Time"
+                  },
+                  "op2": {
+                    "type": "entityKnowledge",
+                    "value": "Time_Toilette_Max"
+                  },
+                  "op": "<"
+                },
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {},
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "name": "Activite",
+                          "inputParams": [
+                            {
+                              "key": "MessageLog",
+                              "type": "string",
+                              "value": "Toilette;start;ok"
+                            }
+                          ],
+                          "outputParams": []
+                        },
+                        "children": [],
+                        "id": "c6f9ad58-729d-43da-ba24-93f9f04186ba",
+                        "type": "action"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "destination": "TaskActivityDouche",
+                          "op": {
+                            "type": "integer",
+                            "value": "1"
+                          }
+                        },
+                        "children": [],
+                        "id": "5c60b50c-69dc-40c2-a264-8d0b920e1d34",
+                        "type": "set"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "Si Periode Activity Douche "
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": "Si capteur Salle de bain à changé d'état passage de 0 à 1"
+                            },
+                            "properties": {
+                              "op1": {
+                                "type": "entityKnowledge",
+                                "value": "current_CaptSDBP"
+                              },
+                              "op2": {
+                                "type": "entityKnowledge",
+                                "value": "actuator_CaptSDBP"
+                              },
+                              "op": "!="
+                            },
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "Log",
+                                      "inputParams": [
+                                        {
+                                          "key": "MessageLog",
+                                          "type": "string",
+                                          "value": "Capteur Salle de bain à changer 0 à 1;2"
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "bd1cd358-1f74-47b3-96e7-4ebaf82dfce9",
+                                    "type": "action"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "destination": "current_CaptSDBP",
+                                      "op": {
+                                        "type": "entityKnowledge",
+                                        "value": "actuator_CaptSDBP"
+                                      }
+                                    },
+                                    "children": [],
+                                    "id": "d6a9af58-de90-43f0-bf15-cefc7e5bd970",
+                                    "type": "set"
+                                  }
+                                ],
+                                "id": "e04d1a08-632b-4dbc-b8ce-4332e34d556f",
+                                "type": "sequence"
+                              }
+                            ],
+                            "id": "af450452-1cb9-49ea-9b57-1ab6cd5a9626",
+                            "type": "condition"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": "Si capteur couloir à changé d'état"
+                            },
+                            "properties": {
+                              "op1": {
+                                "type": "entityKnowledge",
+                                "value": "current_CaptCouloirP"
+                              },
+                              "op2": {
+                                "type": "entityKnowledge",
+                                "value": "actuator_CaptCouloirP"
+                              },
+                              "op": "!="
+                            },
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "activated": false,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "Log",
+                                      "inputParams": [
+                                        {
+                                          "key": "MessageLog",
+                                          "type": "string",
+                                          "value": "Capteur cuisine  à changer 1 à 0"
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "d262add5-8919-4621-834e-0fe2c0b9965f",
+                                    "type": "action"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "destination": "current_CaptCouloirP",
+                                      "op": {
+                                        "type": "entityKnowledge",
+                                        "value": "actuator_CaptCouloirP"
+                                      }
+                                    },
+                                    "children": [],
+                                    "id": "bcfd14eb-c7f7-4b61-9703-f1fdc3e16f24",
+                                    "type": "set"
+                                  }
+                                ],
+                                "id": "61dbf6a5-784e-4e46-85b9-2e8b74fef7ab",
+                                "type": "sequence"
+                              }
+                            ],
+                            "id": "a02afe60-4418-46a2-bd1c-b93799a4cae1",
+                            "type": "condition"
+                          },
+                          {
+                            "activated": false,
+                            "metadata": {
+                              "label": "Ctrl si un autre capteur est passé en Presence"
+                            },
+                            "properties": {
+                              "active": "false"
+                            },
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "destination": "MessageAlerte",
+                                      "op": {
+                                        "type": "string",
+                                        "value": "01010100030120"
+                                      }
+                                    },
+                                    "children": [],
+                                    "id": "bc4a23c5-ca70-4fcc-a7cc-6adfed2c113c",
+                                    "type": "set"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "destination": "BoolAlerteMessage",
+                                      "op": {
+                                        "type": "boolean",
+                                        "value": "true"
+                                      }
+                                    },
+                                    "children": [],
+                                    "id": "72368b36-9805-4a9b-8192-1002ab7c09da",
+                                    "type": "set"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "behavior": {
+                                        "type": "uriPath",
+                                        "value": "bts/SendAlerteSigfox.bt"
+                                      },
+                                      "inputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "827b5048-1ab9-4de5-866c-b22736980742",
+                                    "type": "embedded"
+                                  }
+                                ],
+                                "id": "25e031a2-c46b-4fac-b542-e14cde062975",
+                                "type": "sequence"
+                              }
+                            ],
+                            "id": "3758e16b-030e-4fc2-a593-ffeeddca34dc",
+                            "type": "priority"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": "Check_Douche"
+                            },
+                            "properties": {
+                              "destination": "Check_Douche",
+                              "op": {
+                                "type": "boolean",
+                                "value": "true"
+                              }
+                            },
+                            "children": [],
+                            "id": "bb53709c-82f7-4407-8f10-bc92391133e7",
+                            "type": "set"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "Log",
+                              "inputParams": [
+                                {
+                                  "key": "MessageLog",
+                                  "type": "string",
+                                  "value": "Pepette a fait sa toilette;1"
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "d3142fb9-5e52-4627-8ea1-673ba9a28c23",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "destination": "TaskActivityDouche",
+                              "op": {
+                                "type": "integer",
+                                "value": "2"
+                              }
+                            },
+                            "children": [],
+                            "id": "fba9d222-06c0-43c5-bc43-309ec66c8bc6",
+                            "type": "set"
+                          }
+                        ],
+                        "id": "d3cc9fdd-67ec-4944-b91b-f34425ae5402",
+                        "type": "sequence"
+                      }
+                    ],
+                    "id": "7333c9a6-15c6-4f71-9764-2673db8f122c",
+                    "type": "sequence"
+                  }
+                ],
+                "id": "eee9cfb8-3ca6-4fe4-a619-72bff1d4def2",
+                "type": "condition"
+              }
+            ],
+            "id": "257055e3-6b59-451d-9ff2-1134d8bf651d",
+            "type": "condition"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": "Activite pas commencé"
+            },
+            "properties": {
+              "op1": {
+                "type": "entityKnowledge",
+                "value": "Time"
+              },
+              "op2": {
+                "type": "entityKnowledge",
+                "value": "Time_Toilette_Min"
+              },
+              "op": "<"
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "activated": false,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "name": "Log",
+                      "inputParams": [
+                        {
+                          "key": "MessageLog",
+                          "type": "string",
+                          "value": "Pas Activité Douche"
+                        }
+                      ],
+                      "outputParams": []
+                    },
+                    "children": [],
+                    "id": "68c1ec08-581f-49e6-992f-05d9ad2820d5",
+                    "type": "action"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "destination": "TaskActivityDouche",
+                      "op": {
+                        "type": "integer",
+                        "value": "0"
+                      }
+                    },
+                    "children": [],
+                    "id": "1617ea16-48d7-4a22-995c-2442e700b60d",
+                    "type": "set"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "Check_Douche"
+                    },
+                    "properties": {
+                      "destination": "Check_Douche",
+                      "op": {
+                        "type": "boolean",
+                        "value": "false"
+                      }
+                    },
+                    "children": [],
+                    "id": "50568555-3c3e-47ca-8022-a0fe43d0c468",
+                    "type": "set"
+                  }
+                ],
+                "id": "2675b0d4-1d31-47b2-a2b5-58db3f7e55ea",
+                "type": "sequence"
+              }
+            ],
+            "id": "ed52f342-f2bd-444f-9213-bf0139ecff8e",
+            "type": "condition"
+          }
+        ],
+        "id": "eeb10db7-c9cf-4cbc-9633-1d634a36e4a8",
+        "type": "priority"
+      },
+      {
+        "activated": false,
+        "metadata": {
+          "label": ""
+        },
         "properties": {},
         "children": [
           {
@@ -217,6 +942,277 @@
                     ],
                     "id": "7d31e307-5012-427c-9246-17a52e24f1ce",
                     "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "Si Periode Activity Douche "
+                    },
+                    "properties": {},
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "Si capteur Salle de bain à changé d'état"
+                        },
+                        "properties": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "current_CaptSDBP"
+                          },
+                          "op2": {
+                            "type": "entityKnowledge",
+                            "value": "actuator_CaptSDBP"
+                          },
+                          "op": "!="
+                        },
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {},
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "name": "Log",
+                                  "inputParams": [
+                                    {
+                                      "key": "MessageLog",
+                                      "type": "string",
+                                      "value": "Capteur Salle de bain à changer 0 à 1;2"
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "222cdfa0-00da-4784-9c3c-e1ded56a873c",
+                                "type": "action"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "destination": "current_CaptSDBP",
+                                  "op": {
+                                    "type": "entityKnowledge",
+                                    "value": "actuator_CaptSDBP"
+                                  }
+                                },
+                                "children": [],
+                                "id": "8993a601-8353-4ef3-9b70-f37b9e40fe47",
+                                "type": "set"
+                              }
+                            ],
+                            "id": "a645885f-12e3-4367-8948-0de38dffddeb",
+                            "type": "sequence"
+                          }
+                        ],
+                        "id": "9a3d41b3-350a-43bd-8812-3e9539d2840a",
+                        "type": "condition"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "Check_Douche"
+                        },
+                        "properties": {
+                          "destination": "Check_Douche",
+                          "op": {
+                            "type": "boolean",
+                            "value": "true"
+                          }
+                        },
+                        "children": [],
+                        "id": "c302a328-f3be-44b1-9425-8b99f9f12777",
+                        "type": "set"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "Ctrl si un autre capteur est passé en Presence"
+                        },
+                        "properties": {
+                          "active": "false"
+                        },
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": "Si capteur chambre à changé d'état"
+                            },
+                            "properties": {
+                              "op1": {
+                                "type": "entityKnowledge",
+                                "value": "current_CaptCouloirP"
+                              },
+                              "op2": {
+                                "type": "entityKnowledge",
+                                "value": "actuator_CaptCouloirP"
+                              },
+                              "op": "!="
+                            },
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "activated": false,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "Log",
+                                      "inputParams": [
+                                        {
+                                          "key": "MessageLog",
+                                          "type": "string",
+                                          "value": "Capteur cuisine  à changer 1 à 0"
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "a622465f-094c-478a-a643-6fdd84285f49",
+                                    "type": "action"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "destination": "current_CaptCouloirP",
+                                      "op": {
+                                        "type": "entityKnowledge",
+                                        "value": "actuator_CaptCouloirP"
+                                      }
+                                    },
+                                    "children": [],
+                                    "id": "579a09b9-9597-4c56-98fa-2f5ee0a03512",
+                                    "type": "set"
+                                  }
+                                ],
+                                "id": "4909f943-83d2-4517-a357-c667260805f8",
+                                "type": "sequence"
+                              }
+                            ],
+                            "id": "9543f812-0758-43ea-a505-15b8c77c5aa7",
+                            "type": "condition"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {},
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "destination": "MessageAlerte",
+                                  "op": {
+                                    "type": "string",
+                                    "value": "01010100030120"
+                                  }
+                                },
+                                "children": [],
+                                "id": "8a4fb669-1609-47fd-b0e0-b3153c3cad95",
+                                "type": "set"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "destination": "BoolAlerteMessage",
+                                  "op": {
+                                    "type": "boolean",
+                                    "value": "true"
+                                  }
+                                },
+                                "children": [],
+                                "id": "d0af23e8-fccd-42c4-bcde-d73af9e6ae83",
+                                "type": "set"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "behavior": {
+                                    "type": "uriPath",
+                                    "value": "bts/SendAlerteSigfox.bt"
+                                  },
+                                  "inputParams": []
+                                },
+                                "children": [],
+                                "id": "c374d1a9-b0ed-4076-ab2e-4a905db3a881",
+                                "type": "embedded"
+                              }
+                            ],
+                            "id": "6df85cb2-0be3-4d87-a7bf-04d0a12c4c4c",
+                            "type": "sequence"
+                          }
+                        ],
+                        "id": "a2b8afc3-f0a9-41a1-967a-22cddd1be8d4",
+                        "type": "priority"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "name": "Log",
+                          "inputParams": [
+                            {
+                              "key": "MessageLog",
+                              "type": "string",
+                              "value": "Pepette a fait sa toilette;1"
+                            }
+                          ],
+                          "outputParams": []
+                        },
+                        "children": [],
+                        "id": "3a4c77eb-da06-44a4-8593-641e4bb9a897",
+                        "type": "action"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "destination": "TaskActivityDouche",
+                          "op": {
+                            "type": "integer",
+                            "value": "2"
+                          }
+                        },
+                        "children": [],
+                        "id": "ee4c0161-2843-46de-8f30-dd63c4fb4fd0",
+                        "type": "set"
+                      }
+                    ],
+                    "id": "80a9836c-fd7d-494e-8cfe-50bb53f2f9c2",
+                    "type": "sequence"
                   },
                   {
                     "activated": true,
