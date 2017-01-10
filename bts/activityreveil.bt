@@ -778,6 +778,16 @@
             ],
             "id": "d6df0619-b5e8-40a4-b11e-90b0487b5a5d",
             "type": "condition"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {},
+            "children": [],
+            "id": "49abfde6-339a-4f91-b790-8ecb917997c9",
+            "type": "success"
           }
         ],
         "id": "93bd32ff-d345-402f-a8c7-0e2b1e1eedaa",
