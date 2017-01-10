@@ -436,201 +436,222 @@
                           {
                             "activated": true,
                             "metadata": {
-                              "label": "Si Periode Activity Douche "
+                              "label": ""
                             },
-                            "properties": {},
+                            "properties": {
+                              "op1": {
+                                "type": "entityKnowledge",
+                                "value": "TaskActivityToilette"
+                              },
+                              "op2": {
+                                "type": "integer",
+                                "value": "1"
+                              },
+                              "op": "=="
+                            },
                             "children": [
                               {
                                 "activated": true,
                                 "metadata": {
-                                  "label": "Si capteur Salle de bain à changé d'état passage de 0 à 1"
+                                  "label": "Si Periode Activity Douche "
                                 },
-                                "properties": {
-                                  "op1": {
-                                    "type": "entityKnowledge",
-                                    "value": "current_CaptSDBP"
-                                  },
-                                  "op2": {
-                                    "type": "entityKnowledge",
-                                    "value": "actuator_CaptSDBP"
-                                  },
-                                  "op": "!="
-                                },
+                                "properties": {},
                                 "children": [
                                   {
                                     "activated": true,
                                     "metadata": {
-                                      "label": ""
+                                      "label": "Si capteur Salle de bain à changé d'état passage de 0 à 1"
                                     },
-                                    "properties": {},
+                                    "properties": {
+                                      "op1": {
+                                        "type": "entityKnowledge",
+                                        "value": "current_CaptSDBP"
+                                      },
+                                      "op2": {
+                                        "type": "entityKnowledge",
+                                        "value": "actuator_CaptSDBP"
+                                      },
+                                      "op": "!="
+                                    },
                                     "children": [
                                       {
                                         "activated": true,
                                         "metadata": {
                                           "label": ""
                                         },
-                                        "properties": {
-                                          "name": "Log",
-                                          "inputParams": [
-                                            {
-                                              "key": "MessageLog",
-                                              "type": "string",
-                                              "value": "Capteur Salle de bain à changer 0 à 1;2"
-                                            }
-                                          ],
-                                          "outputParams": []
-                                        },
-                                        "children": [],
-                                        "id": "bd1cd358-1f74-47b3-96e7-4ebaf82dfce9",
-                                        "type": "action"
-                                      },
-                                      {
-                                        "activated": true,
-                                        "metadata": {
-                                          "label": ""
-                                        },
-                                        "properties": {
-                                          "destination": "current_CaptSDBP",
-                                          "op": {
-                                            "type": "entityKnowledge",
-                                            "value": "actuator_CaptSDBP"
+                                        "properties": {},
+                                        "children": [
+                                          {
+                                            "activated": true,
+                                            "metadata": {
+                                              "label": ""
+                                            },
+                                            "properties": {
+                                              "name": "Log",
+                                              "inputParams": [
+                                                {
+                                                  "key": "MessageLog",
+                                                  "type": "string",
+                                                  "value": "Capteur Salle de bain à changer 0 à 1;2"
+                                                }
+                                              ],
+                                              "outputParams": []
+                                            },
+                                            "children": [],
+                                            "id": "bd1cd358-1f74-47b3-96e7-4ebaf82dfce9",
+                                            "type": "action"
+                                          },
+                                          {
+                                            "activated": true,
+                                            "metadata": {
+                                              "label": ""
+                                            },
+                                            "properties": {
+                                              "destination": "current_CaptSDBP",
+                                              "op": {
+                                                "type": "entityKnowledge",
+                                                "value": "actuator_CaptSDBP"
+                                              }
+                                            },
+                                            "children": [],
+                                            "id": "d6a9af58-de90-43f0-bf15-cefc7e5bd970",
+                                            "type": "set"
                                           }
-                                        },
-                                        "children": [],
-                                        "id": "d6a9af58-de90-43f0-bf15-cefc7e5bd970",
-                                        "type": "set"
+                                        ],
+                                        "id": "e04d1a08-632b-4dbc-b8ce-4332e34d556f",
+                                        "type": "sequence"
                                       }
                                     ],
-                                    "id": "e04d1a08-632b-4dbc-b8ce-4332e34d556f",
-                                    "type": "sequence"
-                                  }
-                                ],
-                                "id": "af450452-1cb9-49ea-9b57-1ab6cd5a9626",
-                                "type": "condition"
-                              },
-                              {
-                                "activated": true,
-                                "metadata": {
-                                  "label": "Si capteur couloir à changé d'état"
-                                },
-                                "properties": {
-                                  "op1": {
-                                    "type": "entityKnowledge",
-                                    "value": "current_CaptCouloirP"
+                                    "id": "af450452-1cb9-49ea-9b57-1ab6cd5a9626",
+                                    "type": "condition"
                                   },
-                                  "op2": {
-                                    "type": "entityKnowledge",
-                                    "value": "actuator_CaptCouloirP"
-                                  },
-                                  "op": "!="
-                                },
-                                "children": [
                                   {
                                     "activated": true,
                                     "metadata": {
-                                      "label": ""
+                                      "label": "Si capteur couloir à changé d'état"
                                     },
-                                    "properties": {},
+                                    "properties": {
+                                      "op1": {
+                                        "type": "entityKnowledge",
+                                        "value": "current_CaptCouloirP"
+                                      },
+                                      "op2": {
+                                        "type": "entityKnowledge",
+                                        "value": "actuator_CaptCouloirP"
+                                      },
+                                      "op": "!="
+                                    },
                                     "children": [
                                       {
                                         "activated": true,
                                         "metadata": {
                                           "label": ""
                                         },
-                                        "properties": {
-                                          "name": "Log",
-                                          "inputParams": [
-                                            {
-                                              "key": "MessageLog",
-                                              "type": "string",
-                                              "value": "Capteur couloir à changer 0 à 1;2"
-                                            }
-                                          ],
-                                          "outputParams": []
-                                        },
-                                        "children": [],
-                                        "id": "d262add5-8919-4621-834e-0fe2c0b9965f",
-                                        "type": "action"
-                                      },
-                                      {
-                                        "activated": true,
-                                        "metadata": {
-                                          "label": ""
-                                        },
-                                        "properties": {
-                                          "destination": "current_CaptCouloirP",
-                                          "op": {
-                                            "type": "entityKnowledge",
-                                            "value": "actuator_CaptCouloirP"
+                                        "properties": {},
+                                        "children": [
+                                          {
+                                            "activated": true,
+                                            "metadata": {
+                                              "label": ""
+                                            },
+                                            "properties": {
+                                              "name": "Log",
+                                              "inputParams": [
+                                                {
+                                                  "key": "MessageLog",
+                                                  "type": "string",
+                                                  "value": "Capteur couloir à changer 0 à 1;2"
+                                                }
+                                              ],
+                                              "outputParams": []
+                                            },
+                                            "children": [],
+                                            "id": "d262add5-8919-4621-834e-0fe2c0b9965f",
+                                            "type": "action"
+                                          },
+                                          {
+                                            "activated": true,
+                                            "metadata": {
+                                              "label": ""
+                                            },
+                                            "properties": {
+                                              "destination": "current_CaptCouloirP",
+                                              "op": {
+                                                "type": "entityKnowledge",
+                                                "value": "actuator_CaptCouloirP"
+                                              }
+                                            },
+                                            "children": [],
+                                            "id": "bcfd14eb-c7f7-4b61-9703-f1fdc3e16f24",
+                                            "type": "set"
                                           }
-                                        },
-                                        "children": [],
-                                        "id": "bcfd14eb-c7f7-4b61-9703-f1fdc3e16f24",
-                                        "type": "set"
+                                        ],
+                                        "id": "61dbf6a5-784e-4e46-85b9-2e8b74fef7ab",
+                                        "type": "sequence"
                                       }
                                     ],
-                                    "id": "61dbf6a5-784e-4e46-85b9-2e8b74fef7ab",
-                                    "type": "sequence"
+                                    "id": "a02afe60-4418-46a2-bd1c-b93799a4cae1",
+                                    "type": "condition"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": "Check_Douche"
+                                    },
+                                    "properties": {
+                                      "destination": "Check_Douche",
+                                      "op": {
+                                        "type": "boolean",
+                                        "value": "true"
+                                      }
+                                    },
+                                    "children": [],
+                                    "id": "bb53709c-82f7-4407-8f10-bc92391133e7",
+                                    "type": "set"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "Log",
+                                      "inputParams": [
+                                        {
+                                          "key": "MessageLog",
+                                          "type": "string",
+                                          "value": "Pepette a fait sa toilette;1"
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "d3142fb9-5e52-4627-8ea1-673ba9a28c23",
+                                    "type": "action"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "destination": "TaskActivityToilette",
+                                      "op": {
+                                        "type": "integer",
+                                        "value": "2"
+                                      }
+                                    },
+                                    "children": [],
+                                    "id": "fba9d222-06c0-43c5-bc43-309ec66c8bc6",
+                                    "type": "set"
                                   }
                                 ],
-                                "id": "a02afe60-4418-46a2-bd1c-b93799a4cae1",
-                                "type": "condition"
-                              },
-                              {
-                                "activated": true,
-                                "metadata": {
-                                  "label": "Check_Douche"
-                                },
-                                "properties": {
-                                  "destination": "Check_Douche",
-                                  "op": {
-                                    "type": "boolean",
-                                    "value": "true"
-                                  }
-                                },
-                                "children": [],
-                                "id": "bb53709c-82f7-4407-8f10-bc92391133e7",
-                                "type": "set"
-                              },
-                              {
-                                "activated": true,
-                                "metadata": {
-                                  "label": ""
-                                },
-                                "properties": {
-                                  "name": "Log",
-                                  "inputParams": [
-                                    {
-                                      "key": "MessageLog",
-                                      "type": "string",
-                                      "value": "Pepette a fait sa toilette;1"
-                                    }
-                                  ],
-                                  "outputParams": []
-                                },
-                                "children": [],
-                                "id": "d3142fb9-5e52-4627-8ea1-673ba9a28c23",
-                                "type": "action"
-                              },
-                              {
-                                "activated": true,
-                                "metadata": {
-                                  "label": ""
-                                },
-                                "properties": {
-                                  "destination": "TaskActivityToilette",
-                                  "op": {
-                                    "type": "integer",
-                                    "value": "2"
-                                  }
-                                },
-                                "children": [],
-                                "id": "fba9d222-06c0-43c5-bc43-309ec66c8bc6",
-                                "type": "set"
+                                "id": "d3cc9fdd-67ec-4944-b91b-f34425ae5402",
+                                "type": "sequence"
                               }
                             ],
-                            "id": "d3cc9fdd-67ec-4944-b91b-f34425ae5402",
-                            "type": "sequence"
+                            "id": "bf741b8e-594d-4ce0-afa7-7575d15c7fab",
+                            "type": "condition"
                           },
                           {
                             "activated": true,
@@ -717,16 +738,6 @@
                     "children": [],
                     "id": "1617ea16-48d7-4a22-995c-2442e700b60d",
                     "type": "set"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {},
-                    "children": [],
-                    "id": "5519dabd-620c-48ba-bf28-0410d011ff9b",
-                    "type": "sequence"
                   },
                   {
                     "activated": true,
