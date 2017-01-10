@@ -545,7 +545,7 @@
                                     "type": "action"
                                   },
                                   {
-                                    "activated": true,
+                                    "activated": false,
                                     "metadata": {
                                       "label": "Si capteur chambre à changé d'état"
                                     },
@@ -610,6 +610,74 @@
                                       }
                                     ],
                                     "id": "baa18842-1ad8-4842-9558-3e9b4b9a3b13",
+                                    "type": "condition"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": "Si capteur chambre à changé d'état"
+                                    },
+                                    "properties": {
+                                      "op1": {
+                                        "type": "entityKnowledge",
+                                        "value": "actuator_CaptChambreP"
+                                      },
+                                      "op2": {
+                                        "type": "integer",
+                                        "value": "1"
+                                      },
+                                      "op": "=="
+                                    },
+                                    "children": [
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {},
+                                        "children": [
+                                          {
+                                            "activated": true,
+                                            "metadata": {
+                                              "label": ""
+                                            },
+                                            "properties": {
+                                              "name": "Log",
+                                              "inputParams": [
+                                                {
+                                                  "key": "MessageLog",
+                                                  "type": "string",
+                                                  "value": "Capteur chambre à changer;2"
+                                                }
+                                              ],
+                                              "outputParams": []
+                                            },
+                                            "children": [],
+                                            "id": "b85f4064-5579-4006-a424-f1df5e6d888e",
+                                            "type": "action"
+                                          },
+                                          {
+                                            "activated": true,
+                                            "metadata": {
+                                              "label": ""
+                                            },
+                                            "properties": {
+                                              "destination": "current_CaptChambreP",
+                                              "op": {
+                                                "type": "entityKnowledge",
+                                                "value": "actuator_CaptChambreP"
+                                              }
+                                            },
+                                            "children": [],
+                                            "id": "28da8a02-1e20-48d2-bea4-443ff98899e3",
+                                            "type": "set"
+                                          }
+                                        ],
+                                        "id": "4e864d1e-23c2-4e2a-9df2-fc680dd5be60",
+                                        "type": "sequence"
+                                      }
+                                    ],
+                                    "id": "aaf4b62c-3c29-4092-b020-cee01927ee00",
                                     "type": "condition"
                                   },
                                   {
