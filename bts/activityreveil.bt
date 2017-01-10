@@ -285,37 +285,6 @@
           {
             "activated": true,
             "metadata": {
-              "label": ""
-            },
-            "properties": {
-              "op1": {
-                "type": "entityKnowledge",
-                "value": "TaskActivityReveil"
-              },
-              "op2": {
-                "type": "integer",
-                "value": "3"
-              },
-              "op": "=="
-            },
-            "children": [
-              {
-                "activated": true,
-                "metadata": {
-                  "label": ""
-                },
-                "properties": {},
-                "children": [],
-                "id": "49abfde6-339a-4f91-b790-8ecb917997c9",
-                "type": "success"
-              }
-            ],
-            "id": "8782e442-dc90-4097-bdb9-77965ff6f825",
-            "type": "condition"
-          },
-          {
-            "activated": true,
-            "metadata": {
               "label": "Temps activite reveil depasse"
             },
             "properties": {
@@ -879,6 +848,37 @@
               }
             ],
             "id": "d6df0619-b5e8-40a4-b11e-90b0487b5a5d",
+            "type": "condition"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "op1": {
+                "type": "entityKnowledge",
+                "value": "TaskActivityReveil"
+              },
+              "op2": {
+                "type": "integer",
+                "value": "3"
+              },
+              "op": "=="
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {},
+                "children": [],
+                "id": "49abfde6-339a-4f91-b790-8ecb917997c9",
+                "type": "success"
+              }
+            ],
+            "id": "8782e442-dc90-4097-bdb9-77965ff6f825",
             "type": "condition"
           }
         ],
