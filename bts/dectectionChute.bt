@@ -23,6 +23,472 @@
             "metadata": {
               "label": ""
             },
+            "properties": {
+              "op1": {
+                "type": "entityKnowledge",
+                "value": "actuator_CaptCamSimuChute"
+              },
+              "op2": {
+                "type": "integer",
+                "value": "1"
+              },
+              "op": "=="
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "active": "false"
+                },
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "entityKnowledge",
+                        "value": "current_CaptChambreP"
+                      },
+                      "op2": {
+                        "type": "integer",
+                        "value": "1"
+                      },
+                      "op": "=="
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "Log",
+                              "inputParams": [
+                                {
+                                  "key": "MessageLog",
+                                  "type": "string",
+                                  "value": "Pepette est tombée dans la chambre;4"
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "32482663-8a75-4f89-a0be-37eafe990b60",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "destination": "FlagLieuChute",
+                              "op": {
+                                "type": "boolean",
+                                "value": "true"
+                              }
+                            },
+                            "children": [],
+                            "id": "103abeab-92df-4a5c-8e53-f7495de94831",
+                            "type": "set"
+                          }
+                        ],
+                        "id": "e92e11c4-f1b4-4509-9e27-1d56e4c0c5d2",
+                        "type": "sequence"
+                      }
+                    ],
+                    "id": "94a70c5e-54de-4e55-9c77-c9d2af4c061d",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "entityKnowledge",
+                        "value": "current_CaptSalonP"
+                      },
+                      "op2": {
+                        "type": "integer",
+                        "value": "1"
+                      },
+                      "op": "=="
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "Log",
+                              "inputParams": [
+                                {
+                                  "key": "MessageLog",
+                                  "type": "string",
+                                  "value": "Pepette est tombée dans le salon;4"
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "1f7eb8ac-9e48-4906-87ad-a9536fb67491",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "destination": "FlagLieuChute",
+                              "op": {
+                                "type": "boolean",
+                                "value": "true"
+                              }
+                            },
+                            "children": [],
+                            "id": "ddf42ded-1edd-4896-a64a-2a782ac13484",
+                            "type": "set"
+                          }
+                        ],
+                        "id": "0c7f88c0-46d0-4751-b6d9-010e60720ec1",
+                        "type": "sequence"
+                      }
+                    ],
+                    "id": "0ba59c44-2fe3-4e5d-97ee-e7ad353564e1",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "entityKnowledge",
+                        "value": "current_CaptCuisineP"
+                      },
+                      "op2": {
+                        "type": "integer",
+                        "value": "1"
+                      },
+                      "op": "=="
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "Log",
+                              "inputParams": [
+                                {
+                                  "key": "MessageLog",
+                                  "type": "string",
+                                  "value": "Pepette est tombée dans la cuisine;4"
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "de62f917-dbd6-4482-98cc-0d575844027a",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "op1": {
+                                "type": "entityKnowledge",
+                                "value": "current_CaptCuisineE"
+                              },
+                              "op2": {
+                                "type": "integer",
+                                "value": "1"
+                              },
+                              "op": "=="
+                            },
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "name": "Log",
+                                  "inputParams": [
+                                    {
+                                      "key": "MessageLog",
+                                      "type": "string",
+                                      "value": "Le repas de Pepette est sur le feu , Coupure automatiquement ;4"
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "3bfad31c-c4b5-44f7-9f9f-af8a638fd1aa",
+                                "type": "action"
+                              }
+                            ],
+                            "id": "a60db300-2401-4a12-96d2-a66ca05dd9ad",
+                            "type": "condition"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "destination": "FlagLieuChute",
+                              "op": {
+                                "type": "boolean",
+                                "value": "true"
+                              }
+                            },
+                            "children": [],
+                            "id": "94b4a0bf-f96b-417a-82ec-b2a315cfdaba",
+                            "type": "set"
+                          }
+                        ],
+                        "id": "84ceae38-d543-4694-8cf3-d3f5666a42f2",
+                        "type": "sequence"
+                      }
+                    ],
+                    "id": "1654d5bd-ce1b-4bbe-b71d-bf54acacde45",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "entityKnowledge",
+                        "value": "current_CaptCouloirP"
+                      },
+                      "op2": {
+                        "type": "integer",
+                        "value": "1"
+                      },
+                      "op": "=="
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "Log",
+                              "inputParams": [
+                                {
+                                  "key": "MessageLog",
+                                  "type": "string",
+                                  "value": "Pepette est tombée dans le couloir;4"
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "5401e89a-4a84-4271-a7bf-bd5de1a5b84a",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "destination": "FlagLieuChute",
+                              "op": {
+                                "type": "boolean",
+                                "value": "true"
+                              }
+                            },
+                            "children": [],
+                            "id": "b193a706-d283-4e55-ac08-d0a0fd5f410f",
+                            "type": "set"
+                          }
+                        ],
+                        "id": "829fcb1d-28fa-44bd-99d2-cfe7766a29b6",
+                        "type": "sequence"
+                      }
+                    ],
+                    "id": "abfc4d12-95e7-4f08-8980-dc70b8c6af3b",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "entityKnowledge",
+                        "value": "current_CaptSDBP"
+                      },
+                      "op2": {
+                        "type": "integer",
+                        "value": "1"
+                      },
+                      "op": "=="
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "Log",
+                              "inputParams": [
+                                {
+                                  "key": "MessageLog",
+                                  "type": "string",
+                                  "value": "Pepette est tombée dans la salle de bain;4"
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "e68abc7d-5fb4-4e3c-ad53-9a1f36138718",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "destination": "FlagLieuChute",
+                              "op": {
+                                "type": "boolean",
+                                "value": "true"
+                              }
+                            },
+                            "children": [],
+                            "id": "699a73c4-b703-45d4-9f3d-6236bd98f596",
+                            "type": "set"
+                          }
+                        ],
+                        "id": "afa1034a-5984-42e5-aa3e-ea40981309a7",
+                        "type": "sequence"
+                      }
+                    ],
+                    "id": "e8285c0c-e8c8-4dff-9372-4a62e497acb7",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "entityKnowledge",
+                        "value": "FlagLieuChute"
+                      },
+                      "op2": {
+                        "type": "boolean",
+                        "value": "false"
+                      },
+                      "op": "=="
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "name": "Log",
+                          "inputParams": [
+                            {
+                              "key": "MessageLog",
+                              "type": "string",
+                              "value": "Pepette est tombée;4"
+                            }
+                          ],
+                          "outputParams": []
+                        },
+                        "children": [],
+                        "id": "e2d15da5-3a5d-4746-b7ef-32bb022b63b9",
+                        "type": "action"
+                      }
+                    ],
+                    "id": "5cf9e2cb-e36f-49f6-9dd4-0618f32de05a",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {},
+                    "children": [],
+                    "id": "ee69a88c-2ce8-400b-9f74-66a8ff600f83",
+                    "type": "success"
+                  }
+                ],
+                "id": "10112a8a-2d99-494e-a6b3-57383588b7e1",
+                "type": "priority"
+              }
+            ],
+            "id": "2115b221-90a0-44fa-bd2d-9843362467ce",
+            "type": "condition"
+          },
+          {
+            "activated": false,
+            "metadata": {
+              "label": ""
+            },
             "properties": {},
             "children": [
               {
