@@ -52,7 +52,7 @@
                     "properties": {
                       "op1": {
                         "type": "entityKnowledge",
-                        "value": "actuator__CaptChambreP"
+                        "value": "actuator_CaptChambreP"
                       },
                       "op2": {
                         "type": "integer",
@@ -136,7 +136,7 @@
                     "properties": {
                       "op1": {
                         "type": "entityKnowledge",
-                        "value": "actuator__CaptSalonP"
+                        "value": "actuator_CaptSalonP"
                       },
                       "op2": {
                         "type": "integer",
@@ -220,7 +220,7 @@
                     "properties": {
                       "op1": {
                         "type": "entityKnowledge",
-                        "value": "actuator__CaptCuisineP"
+                        "value": "actuator_CaptCuisineP"
                       },
                       "op2": {
                         "type": "integer",
@@ -429,7 +429,7 @@
                     "properties": {
                       "op1": {
                         "type": "entityKnowledge",
-                        "value": "actuator__CaptSDBP"
+                        "value": "actuator_CaptSDBP"
                       },
                       "op2": {
                         "type": "integer",
