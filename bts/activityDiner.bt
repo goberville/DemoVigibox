@@ -665,6 +665,16 @@
                                 ],
                                 "id": "07953778-1176-412c-b0e3-29bac6f34a38",
                                 "type": "sequence"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {},
+                                "children": [],
+                                "id": "72e83872-bce3-4755-8259-2c97f829e05b",
+                                "type": "success"
                               }
                             ],
                             "id": "4cbe9888-985f-49f2-a7ad-0536844f101b",
@@ -709,6 +719,16 @@
                         ],
                         "id": "045764b1-c48d-4956-9d3b-6d52f8eca531",
                         "type": "sequence"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {},
+                        "children": [],
+                        "id": "700cbfd8-8b26-4179-9af2-0302718ef1dc",
+                        "type": "success"
                       }
                     ],
                     "id": "a305180e-b148-460f-8f09-09c013d82a11",
@@ -895,16 +915,6 @@
                                 "type": "condition"
                               },
                               {
-                                "activated": false,
-                                "metadata": {
-                                  "label": ""
-                                },
-                                "properties": {},
-                                "children": [],
-                                "id": "c50a028f-e9db-4544-a444-9f50912d58b3",
-                                "type": "success"
-                              },
-                              {
                                 "activated": true,
                                 "metadata": {
                                   "label": ""
@@ -950,6 +960,16 @@
                                 ],
                                 "id": "c425675b-0366-45af-a10b-cecc72c010d9",
                                 "type": "sequence"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {},
+                                "children": [],
+                                "id": "c50a028f-e9db-4544-a444-9f50912d58b3",
+                                "type": "success"
                               }
                             ],
                             "id": "0c0616df-d387-4aef-95ef-ee3774621149",
