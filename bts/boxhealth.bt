@@ -385,6 +385,40 @@
             "type": "sequence"
           },
           {
+            "activated": false,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "op1": {
+                "type": "boolean",
+                "value": "false"
+              },
+              "op2": {
+                "type": "boolean",
+                "value": "true"
+              },
+              "op": "=="
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "statusCondition": "failsIfAnyFails",
+                  "retryPolicy": "propagateToRunning"
+                },
+                "children": [],
+                "id": "28760220-5edb-4fd5-8207-94aef855b112",
+                "type": "parallel"
+              }
+            ],
+            "id": "159bff25-82b7-4604-a8e4-1355284290ec",
+            "type": "until"
+          },
+          {
             "activated": true,
             "metadata": {
               "label": ""
