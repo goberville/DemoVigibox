@@ -288,259 +288,282 @@
               "label": ""
             },
             "properties": {
-              "op1": {
-                "type": "entityKnowledge",
-                "value": "TaskActivityReveil"
-              },
-              "op2": {
-                "type": "integer",
-                "value": "1"
-              },
-              "op": "=="
+              "active": "false"
             },
             "children": [
               {
                 "activated": true,
                 "metadata": {
-                  "label": "Si Periode Activity Reveil "
+                  "label": ""
                 },
-                "properties": {},
+                "properties": {
+                  "op1": {
+                    "type": "entityKnowledge",
+                    "value": "TaskActivityReveil"
+                  },
+                  "op2": {
+                    "type": "integer",
+                    "value": "1"
+                  },
+                  "op": "=="
+                },
                 "children": [
                   {
                     "activated": true,
                     "metadata": {
-                      "label": ""
+                      "label": "Si Periode Activity Reveil "
                     },
-                    "properties": {
-                      "name": "Log",
-                      "inputParams": [
-                        {
-                          "key": "MessageLog",
-                          "type": "string",
-                          "value": "Activite reveil en cours de traitement;2"
-                        }
-                      ],
-                      "outputParams": []
-                    },
-                    "children": [],
-                    "id": "15a944cb-bb54-4e14-80af-e4e2a1f9a5e5",
-                    "type": "action"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": "Si capteur chambre à changé d'état"
-                    },
-                    "properties": {
-                      "op1": {
-                        "type": "entityKnowledge",
-                        "value": "current_CaptChambreP"
-                      },
-                      "op2": {
-                        "type": "entityKnowledge",
-                        "value": "actuator_CaptChambreP"
-                      },
-                      "op": "!="
-                    },
+                    "properties": {},
                     "children": [
                       {
                         "activated": true,
                         "metadata": {
                           "label": ""
                         },
-                        "properties": {},
+                        "properties": {
+                          "name": "Log",
+                          "inputParams": [
+                            {
+                              "key": "MessageLog",
+                              "type": "string",
+                              "value": "Activite reveil en cours de traitement;2"
+                            }
+                          ],
+                          "outputParams": []
+                        },
+                        "children": [],
+                        "id": "15a944cb-bb54-4e14-80af-e4e2a1f9a5e5",
+                        "type": "action"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "Si capteur chambre à changé d'état"
+                        },
+                        "properties": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "current_CaptChambreP"
+                          },
+                          "op2": {
+                            "type": "entityKnowledge",
+                            "value": "actuator_CaptChambreP"
+                          },
+                          "op": "!="
+                        },
                         "children": [
                           {
                             "activated": true,
                             "metadata": {
                               "label": ""
                             },
-                            "properties": {
-                              "name": "Log",
-                              "inputParams": [
-                                {
-                                  "key": "MessageLog",
-                                  "type": "string",
-                                  "value": "Capteur chambre à changer;2"
-                                }
-                              ],
-                              "outputParams": []
-                            },
-                            "children": [],
-                            "id": "f1886383-f6e7-440e-93ce-4d6af5f32b25",
-                            "type": "action"
-                          },
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {
-                              "destination": "current_CaptChambreP",
-                              "op": {
-                                "type": "entityKnowledge",
-                                "value": "actuator_CaptChambreP"
+                            "properties": {},
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "name": "Log",
+                                  "inputParams": [
+                                    {
+                                      "key": "MessageLog",
+                                      "type": "string",
+                                      "value": "Capteur chambre à changer;2"
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "f1886383-f6e7-440e-93ce-4d6af5f32b25",
+                                "type": "action"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "destination": "current_CaptChambreP",
+                                  "op": {
+                                    "type": "entityKnowledge",
+                                    "value": "actuator_CaptChambreP"
+                                  }
+                                },
+                                "children": [],
+                                "id": "70cb79bd-ddc4-48ff-9c6f-a7915217a828",
+                                "type": "set"
                               }
-                            },
-                            "children": [],
-                            "id": "70cb79bd-ddc4-48ff-9c6f-a7915217a828",
-                            "type": "set"
+                            ],
+                            "id": "32f59d81-3b46-4657-a44c-b20c052c47ad",
+                            "type": "sequence"
                           }
                         ],
-                        "id": "32f59d81-3b46-4657-a44c-b20c052c47ad",
-                        "type": "sequence"
-                      }
-                    ],
-                    "id": "204a2e82-7e6a-43da-8823-c7c6d9c2f92f",
-                    "type": "condition"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "name": "Log",
-                      "inputParams": [
-                        {
-                          "key": "MessageLog",
-                          "type": "string",
-                          "value": "Activite reveil va ssssss k;2"
-                        }
-                      ],
-                      "outputParams": []
-                    },
-                    "children": [],
-                    "id": "251b3d13-96eb-42a6-b4d5-5b222986e5cd",
-                    "type": "action"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": "Si capteur couloir changé d'état"
-                    },
-                    "properties": {
-                      "op1": {
-                        "type": "entityKnowledge",
-                        "value": "current_CaptCouloirP"
+                        "id": "204a2e82-7e6a-43da-8823-c7c6d9c2f92f",
+                        "type": "condition"
                       },
-                      "op2": {
-                        "type": "entityKnowledge",
-                        "value": "actuator_CaptCouloirP"
-                      },
-                      "op": "!="
-                    },
-                    "children": [
                       {
                         "activated": true,
                         "metadata": {
                           "label": ""
                         },
-                        "properties": {},
+                        "properties": {
+                          "name": "Log",
+                          "inputParams": [
+                            {
+                              "key": "MessageLog",
+                              "type": "string",
+                              "value": "Activite reveil va ssssss k;2"
+                            }
+                          ],
+                          "outputParams": []
+                        },
+                        "children": [],
+                        "id": "251b3d13-96eb-42a6-b4d5-5b222986e5cd",
+                        "type": "action"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "Si capteur couloir changé d'état"
+                        },
+                        "properties": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "current_CaptCouloirP"
+                          },
+                          "op2": {
+                            "type": "entityKnowledge",
+                            "value": "actuator_CaptCouloirP"
+                          },
+                          "op": "!="
+                        },
                         "children": [
                           {
                             "activated": true,
                             "metadata": {
                               "label": ""
                             },
-                            "properties": {
-                              "name": "Log",
-                              "inputParams": [
-                                {
-                                  "key": "MessageLog",
-                                  "type": "string",
-                                  "value": "Capteur couloir à changer;2"
-                                }
-                              ],
-                              "outputParams": []
-                            },
-                            "children": [],
-                            "id": "669b38e5-b820-4441-a640-d626f40e4026",
-                            "type": "action"
-                          },
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {
-                              "destination": "current_CaptCouloirP",
-                              "op": {
-                                "type": "entityKnowledge",
-                                "value": "actuator_CaptCouloirP"
+                            "properties": {},
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "name": "Log",
+                                  "inputParams": [
+                                    {
+                                      "key": "MessageLog",
+                                      "type": "string",
+                                      "value": "Capteur couloir à changer;2"
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "669b38e5-b820-4441-a640-d626f40e4026",
+                                "type": "action"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "destination": "current_CaptCouloirP",
+                                  "op": {
+                                    "type": "entityKnowledge",
+                                    "value": "actuator_CaptCouloirP"
+                                  }
+                                },
+                                "children": [],
+                                "id": "dc0568fd-cc1b-4a3a-b890-59a0e5443bfb",
+                                "type": "set"
                               }
-                            },
-                            "children": [],
-                            "id": "dc0568fd-cc1b-4a3a-b890-59a0e5443bfb",
-                            "type": "set"
+                            ],
+                            "id": "a4f4db8d-17ec-454b-b3bc-76927d925135",
+                            "type": "sequence"
                           }
                         ],
-                        "id": "a4f4db8d-17ec-454b-b3bc-76927d925135",
-                        "type": "sequence"
+                        "id": "2e487f86-0b95-44d7-a1d8-4544fb4c77cc",
+                        "type": "condition"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "name": "Log",
+                          "inputParams": [
+                            {
+                              "key": "MessageLog",
+                              "type": "string",
+                              "value": "Activite reveil va etre ok;2"
+                            }
+                          ],
+                          "outputParams": []
+                        },
+                        "children": [],
+                        "id": "5150a3b6-642e-4581-81a1-7f74df598d72",
+                        "type": "action"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "Check_Reveil"
+                        },
+                        "properties": {
+                          "destination": "Check_Reveil",
+                          "op": {
+                            "type": "boolean",
+                            "value": "true"
+                          }
+                        },
+                        "children": [],
+                        "id": "53a53633-3e24-4a5c-bb2c-4239ce41d503",
+                        "type": "set"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "destination": "TaskActivityReveil",
+                          "op": {
+                            "type": "integer",
+                            "value": "2"
+                          }
+                        },
+                        "children": [],
+                        "id": "8a544bf3-b48d-4f06-a8b2-ffac109f55d4",
+                        "type": "set"
                       }
                     ],
-                    "id": "2e487f86-0b95-44d7-a1d8-4544fb4c77cc",
-                    "type": "condition"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "name": "Log",
-                      "inputParams": [
-                        {
-                          "key": "MessageLog",
-                          "type": "string",
-                          "value": "Activite reveil va etre ok;2"
-                        }
-                      ],
-                      "outputParams": []
-                    },
-                    "children": [],
-                    "id": "5150a3b6-642e-4581-81a1-7f74df598d72",
-                    "type": "action"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": "Check_Reveil"
-                    },
-                    "properties": {
-                      "destination": "Check_Reveil",
-                      "op": {
-                        "type": "boolean",
-                        "value": "true"
-                      }
-                    },
-                    "children": [],
-                    "id": "53a53633-3e24-4a5c-bb2c-4239ce41d503",
-                    "type": "set"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "destination": "TaskActivityReveil",
-                      "op": {
-                        "type": "integer",
-                        "value": "2"
-                      }
-                    },
-                    "children": [],
-                    "id": "8a544bf3-b48d-4f06-a8b2-ffac109f55d4",
-                    "type": "set"
+                    "id": "dc11c358-9156-411a-8edb-96efc9a98f33",
+                    "type": "sequence"
                   }
                 ],
-                "id": "dc11c358-9156-411a-8edb-96efc9a98f33",
-                "type": "sequence"
+                "id": "3e5767b5-c233-4bdb-a9ba-274b0cba916f",
+                "type": "condition"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {},
+                "children": [],
+                "id": "9e92eba5-7f95-4fe9-8f46-6189287da5af",
+                "type": "success"
               }
             ],
-            "id": "3e5767b5-c233-4bdb-a9ba-274b0cba916f",
-            "type": "condition"
+            "id": "8e1bdc6b-6582-4c60-b1a5-22a465c9ffe1",
+            "type": "priority"
           },
           {
             "activated": true,
