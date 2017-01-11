@@ -517,6 +517,74 @@
                           {
                             "activated": true,
                             "metadata": {
+                              "label": "Si capteur Cuisine à changé d'état"
+                            },
+                            "properties": {
+                              "op1": {
+                                "type": "entityKnowledge",
+                                "value": "current_CaptSalonP"
+                              },
+                              "op2": {
+                                "type": "entityKnowledge",
+                                "value": "actuator_CaptSalonP"
+                              },
+                              "op": "!="
+                            },
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "activated": false,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "Log",
+                                      "inputParams": [
+                                        {
+                                          "key": "MessageLog",
+                                          "type": "string",
+                                          "value": "Capteur couloir à changer 1 à 0"
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "55de3408-46ce-4842-b55f-61d76b616e0e",
+                                    "type": "action"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "destination": "current_CaptSalonP",
+                                      "op": {
+                                        "type": "entityKnowledge",
+                                        "value": "actuator_CaptSalonP"
+                                      }
+                                    },
+                                    "children": [],
+                                    "id": "a9b5e5c9-e7e7-4cf8-a39e-a58caf2b2570",
+                                    "type": "set"
+                                  }
+                                ],
+                                "id": "d54285b0-7319-4656-90fb-c68ea16a5dd3",
+                                "type": "sequence"
+                              }
+                            ],
+                            "id": "d29781d0-8be6-43ac-8c69-60928124f045",
+                            "type": "condition"
+                          },
+                          {
+                            "activated": false,
+                            "metadata": {
                               "label": "Ctrl si un autre capteur est passé en Presence"
                             },
                             "properties": {
@@ -524,91 +592,7 @@
                             },
                             "children": [
                               {
-                                "activated": true,
-                                "metadata": {
-                                  "label": "Si capteur Cuisine à changé d'état"
-                                },
-                                "properties": {
-                                  "op1": {
-                                    "type": "entityKnowledge",
-                                    "value": "current_CaptSalonP"
-                                  },
-                                  "op2": {
-                                    "type": "entityKnowledge",
-                                    "value": "actuator_CaptSalonP"
-                                  },
-                                  "op": "!="
-                                },
-                                "children": [
-                                  {
-                                    "activated": true,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {},
-                                    "children": [
-                                      {
-                                        "activated": false,
-                                        "metadata": {
-                                          "label": ""
-                                        },
-                                        "properties": {
-                                          "name": "Log",
-                                          "inputParams": [
-                                            {
-                                              "key": "MessageLog",
-                                              "type": "string",
-                                              "value": "Capteur couloir à changer 1 à 0"
-                                            }
-                                          ],
-                                          "outputParams": []
-                                        },
-                                        "children": [],
-                                        "id": "55de3408-46ce-4842-b55f-61d76b616e0e",
-                                        "type": "action"
-                                      },
-                                      {
-                                        "activated": true,
-                                        "metadata": {
-                                          "label": ""
-                                        },
-                                        "properties": {
-                                          "destination": "current_CaptSalonP",
-                                          "op": {
-                                            "type": "entityKnowledge",
-                                            "value": "actuator_CaptSalonP"
-                                          }
-                                        },
-                                        "children": [],
-                                        "id": "a9b5e5c9-e7e7-4cf8-a39e-a58caf2b2570",
-                                        "type": "set"
-                                      }
-                                    ],
-                                    "id": "d54285b0-7319-4656-90fb-c68ea16a5dd3",
-                                    "type": "sequence"
-                                  }
-                                ],
-                                "id": "d29781d0-8be6-43ac-8c69-60928124f045",
-                                "type": "condition"
-                              },
-                              {
                                 "activated": false,
-                                "metadata": {
-                                  "label": ""
-                                },
-                                "properties": {
-                                  "behavior": {
-                                    "type": "uriPath",
-                                    "value": "bts/MajCurrentCapteurP.bt"
-                                  },
-                                  "inputParams": []
-                                },
-                                "children": [],
-                                "id": "c1e63272-c3ce-4117-8457-60389eed1c62",
-                                "type": "embedded"
-                              },
-                              {
-                                "activated": true,
                                 "metadata": {
                                   "label": ""
                                 },
@@ -709,6 +693,16 @@
                         ],
                         "id": "045764b1-c48d-4956-9d3b-6d52f8eca531",
                         "type": "sequence"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {},
+                        "children": [],
+                        "id": "93c4e4c2-f008-480b-a731-9ba9b9ca6d15",
+                        "type": "success"
                       }
                     ],
                     "id": "a305180e-b148-460f-8f09-09c013d82a11",
@@ -950,6 +944,16 @@
                                 ],
                                 "id": "309274ca-1424-423e-b1c1-604ed8e65c8b",
                                 "type": "sequence"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {},
+                                "children": [],
+                                "id": "9d0285ab-a7a5-4259-a913-a661e3cb0072",
+                                "type": "success"
                               }
                             ],
                             "id": "0c0616df-d387-4aef-95ef-ee3774621149",
