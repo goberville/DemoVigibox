@@ -660,26 +660,6 @@
                               "label": ""
                             },
                             "properties": {
-                              "name": "Log",
-                              "inputParams": [
-                                {
-                                  "key": "MessageLog",
-                                  "type": "string",
-                                  "value": "Pepette a pris son dejeuner;1"
-                                }
-                              ],
-                              "outputParams": []
-                            },
-                            "children": [],
-                            "id": "9857f4d2-a4f4-40b8-8907-3fbdd664b0c5",
-                            "type": "action"
-                          },
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {
                               "destination": "TaskActivityDejeuner",
                               "op": {
                                 "type": "integer",
@@ -695,7 +675,7 @@
                         "type": "sequence"
                       },
                       {
-                        "activated": true,
+                        "activated": false,
                         "metadata": {
                           "label": ""
                         },
@@ -895,6 +875,26 @@
                                 },
                                 "properties": {},
                                 "children": [
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "Log",
+                                      "inputParams": [
+                                        {
+                                          "key": "MessageLog",
+                                          "type": "string",
+                                          "value": "Pepette a pris son dejeuner;1"
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "9857f4d2-a4f4-40b8-8907-3fbdd664b0c5",
+                                    "type": "action"
+                                  },
                                   {
                                     "activated": true,
                                     "metadata": {
