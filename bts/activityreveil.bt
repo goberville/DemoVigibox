@@ -336,7 +336,7 @@
                         "type": "action"
                       },
                       {
-                        "activated": true,
+                        "activated": false,
                         "metadata": {
                           "label": "Si capteur chambre à changé d'état"
                         },
@@ -404,6 +404,74 @@
                         "type": "condition"
                       },
                       {
+                        "activated": true,
+                        "metadata": {
+                          "label": "Si capteur chambre à changé d'état"
+                        },
+                        "properties": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "actuator_CaptChambreP"
+                          },
+                          "op2": {
+                            "type": "integer",
+                            "value": "1"
+                          },
+                          "op": "=="
+                        },
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {},
+                            "children": [
+                              {
+                                "activated": false,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "name": "Log",
+                                  "inputParams": [
+                                    {
+                                      "key": "MessageLog",
+                                      "type": "string",
+                                      "value": "Capteur chambre à changer;2"
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "c35e78ae-0790-47ee-8a5f-af13ee0d7842",
+                                "type": "action"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "destination": "current_CaptChambreP",
+                                  "op": {
+                                    "type": "entityKnowledge",
+                                    "value": "actuator_CaptChambreP"
+                                  }
+                                },
+                                "children": [],
+                                "id": "b7b73277-ad0b-4650-ad18-07031eb6628c",
+                                "type": "set"
+                              }
+                            ],
+                            "id": "833e7a24-f67c-4120-895a-7d89838d27ea",
+                            "type": "sequence"
+                          }
+                        ],
+                        "id": "2b6de06d-3614-4163-8a1d-fbe5f8b52f8e",
+                        "type": "condition"
+                      },
+                      {
                         "activated": false,
                         "metadata": {
                           "label": ""
@@ -424,7 +492,7 @@
                         "type": "action"
                       },
                       {
-                        "activated": true,
+                        "activated": false,
                         "metadata": {
                           "label": "Si capteur couloir changé d'état"
                         },
@@ -489,6 +557,74 @@
                           }
                         ],
                         "id": "2e487f86-0b95-44d7-a1d8-4544fb4c77cc",
+                        "type": "condition"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "Si capteur couloir changé d'état"
+                        },
+                        "properties": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "actuator_CaptCouloirP"
+                          },
+                          "op2": {
+                            "type": "integer",
+                            "value": "1"
+                          },
+                          "op": "=="
+                        },
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {},
+                            "children": [
+                              {
+                                "activated": false,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "name": "Log",
+                                  "inputParams": [
+                                    {
+                                      "key": "MessageLog",
+                                      "type": "string",
+                                      "value": "Capteur couloir à changer;2"
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "55184e19-681d-4a3a-ac03-62f5269f45db",
+                                "type": "action"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "destination": "current_CaptCouloirP",
+                                  "op": {
+                                    "type": "entityKnowledge",
+                                    "value": "actuator_CaptCouloirP"
+                                  }
+                                },
+                                "children": [],
+                                "id": "e5c99e46-42a8-403c-9ecd-f226a9ba6719",
+                                "type": "set"
+                              }
+                            ],
+                            "id": "a16570ae-81fd-4133-afff-88a39a968866",
+                            "type": "sequence"
+                          }
+                        ],
+                        "id": "93214748-d8bd-4318-a6fb-d1d9334b9dc2",
                         "type": "condition"
                       },
                       {
