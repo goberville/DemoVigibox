@@ -52,7 +52,7 @@
                     "properties": {
                       "op1": {
                         "type": "entityKnowledge",
-                        "value": "current_CaptChambreP"
+                        "value": "actuator__CaptChambreP"
                       },
                       "op2": {
                         "type": "integer",
@@ -103,6 +103,22 @@
                             "children": [],
                             "id": "103abeab-92df-4a5c-8e53-f7495de94831",
                             "type": "set"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "destination": "actuator_CaptCamSimuChute",
+                              "op": {
+                                "type": "integer",
+                                "value": "0"
+                              }
+                            },
+                            "children": [],
+                            "id": "8f3864be-3848-4ee0-ac2f-287a01fa50d5",
+                            "type": "set"
                           }
                         ],
                         "id": "e92e11c4-f1b4-4509-9e27-1d56e4c0c5d2",
@@ -120,7 +136,7 @@
                     "properties": {
                       "op1": {
                         "type": "entityKnowledge",
-                        "value": "current_CaptSalonP"
+                        "value": "actuator__CaptSalonP"
                       },
                       "op2": {
                         "type": "integer",
@@ -171,6 +187,22 @@
                             "children": [],
                             "id": "ddf42ded-1edd-4896-a64a-2a782ac13484",
                             "type": "set"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "destination": "actuator_CaptCamSimuChute",
+                              "op": {
+                                "type": "integer",
+                                "value": "0"
+                              }
+                            },
+                            "children": [],
+                            "id": "9682d02a-4a35-4917-925c-aaca1adf6c56",
+                            "type": "set"
                           }
                         ],
                         "id": "0c7f88c0-46d0-4751-b6d9-010e60720ec1",
@@ -188,7 +220,7 @@
                     "properties": {
                       "op1": {
                         "type": "entityKnowledge",
-                        "value": "current_CaptCuisineP"
+                        "value": "actuator__CaptCuisineP"
                       },
                       "op2": {
                         "type": "integer",
@@ -280,6 +312,22 @@
                             "children": [],
                             "id": "94b4a0bf-f96b-417a-82ec-b2a315cfdaba",
                             "type": "set"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "destination": "actuator_CaptCamSimuChute",
+                              "op": {
+                                "type": "integer",
+                                "value": "0"
+                              }
+                            },
+                            "children": [],
+                            "id": "ec752d7d-6fcc-4635-a5ad-5bde7b3eec59",
+                            "type": "set"
                           }
                         ],
                         "id": "84ceae38-d543-4694-8cf3-d3f5666a42f2",
@@ -297,7 +345,7 @@
                     "properties": {
                       "op1": {
                         "type": "entityKnowledge",
-                        "value": "current_CaptCouloirP"
+                        "value": "actuator_CaptCouloirP"
                       },
                       "op2": {
                         "type": "integer",
@@ -348,6 +396,22 @@
                             "children": [],
                             "id": "b193a706-d283-4e55-ac08-d0a0fd5f410f",
                             "type": "set"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "destination": "actuator_CaptCamSimuChute",
+                              "op": {
+                                "type": "integer",
+                                "value": "0"
+                              }
+                            },
+                            "children": [],
+                            "id": "8ad534ad-0c9d-4f04-b2b2-0ed5b01eb0e4",
+                            "type": "set"
                           }
                         ],
                         "id": "829fcb1d-28fa-44bd-99d2-cfe7766a29b6",
@@ -365,7 +429,7 @@
                     "properties": {
                       "op1": {
                         "type": "entityKnowledge",
-                        "value": "current_CaptSDBP"
+                        "value": "actuator__CaptSDBP"
                       },
                       "op2": {
                         "type": "integer",
@@ -416,6 +480,22 @@
                             "children": [],
                             "id": "699a73c4-b703-45d4-9f3d-6236bd98f596",
                             "type": "set"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "destination": "actuator_CaptCamSimuChute",
+                              "op": {
+                                "type": "integer",
+                                "value": "0"
+                              }
+                            },
+                            "children": [],
+                            "id": "9e69bf10-0c6f-42cf-8aef-05bd552956a7",
+                            "type": "set"
                           }
                         ],
                         "id": "afa1034a-5984-42e5-aa3e-ea40981309a7",
@@ -447,20 +527,47 @@
                         "metadata": {
                           "label": ""
                         },
-                        "properties": {
-                          "name": "Log",
-                          "inputParams": [
-                            {
-                              "key": "MessageLog",
-                              "type": "string",
-                              "value": "Pepette est tombée;4"
-                            }
-                          ],
-                          "outputParams": []
-                        },
-                        "children": [],
-                        "id": "e2d15da5-3a5d-4746-b7ef-32bb022b63b9",
-                        "type": "action"
+                        "properties": {},
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "Log",
+                              "inputParams": [
+                                {
+                                  "key": "MessageLog",
+                                  "type": "string",
+                                  "value": "Pepette est tombée;4"
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "e2d15da5-3a5d-4746-b7ef-32bb022b63b9",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "destination": "actuator_CaptCamSimuChute",
+                              "op": {
+                                "type": "integer",
+                                "value": "0"
+                              }
+                            },
+                            "children": [],
+                            "id": "2033e096-6063-4d9e-ad5a-8840b0e52e91",
+                            "type": "set"
+                          }
+                        ],
+                        "id": "77c2cec6-bbd5-41b5-9b1b-87fd01370c3f",
+                        "type": "sequence"
                       }
                     ],
                     "id": "5cf9e2cb-e36f-49f6-9dd4-0618f32de05a",
