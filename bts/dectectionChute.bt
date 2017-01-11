@@ -489,6 +489,64 @@
             "metadata": {
               "label": ""
             },
+            "properties": {
+              "op1": {
+                "type": "entityKnowledge",
+                "value": "actuator_CaptCamSimuChute"
+              },
+              "op2": {
+                "type": "integer",
+                "value": "0"
+              },
+              "op": "=="
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "op1": {
+                    "type": "entityKnowledge",
+                    "value": "FlagLieuChute"
+                  },
+                  "op2": {
+                    "type": "boolean",
+                    "value": "true"
+                  },
+                  "op": "=="
+                },
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "destination": "FlagLieuChute",
+                      "op": {
+                        "type": "boolean",
+                        "value": "false"
+                      }
+                    },
+                    "children": [],
+                    "id": "7517e143-6220-45f8-a938-0fd188e31037",
+                    "type": "set"
+                  }
+                ],
+                "id": "938e8303-f0a1-4042-93b2-9284ae64a51c",
+                "type": "condition"
+              }
+            ],
+            "id": "7df3bbaf-a01b-45ab-8545-13795c0bec1e",
+            "type": "condition"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
             "properties": {},
             "children": [],
             "id": "3355ec2a-a791-4753-ba13-d75d48b7b203",
