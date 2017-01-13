@@ -118,7 +118,7 @@
                                     {
                                       "key": "MessageLog",
                                       "type": "string",
-                                      "value": "Pepette n'est pas réveillée;3"
+                                      "value": "Marie n'est pas réveillée;3"
                                     }
                                   ],
                                   "outputParams": []
@@ -225,7 +225,7 @@
                                 {
                                   "key": "MessageLog",
                                   "type": "string",
-                                  "value": "Pepette est reveillée;1"
+                                  "value": "Marie est reveillée;1"
                                 }
                               ],
                               "outputParams": []
