@@ -517,16 +517,16 @@
                           {
                             "activated": true,
                             "metadata": {
-                              "label": "Si capteur Cuisine à changé d'état"
+                              "label": "Si capteur Couloir à changé d'état"
                             },
                             "properties": {
                               "op1": {
                                 "type": "entityKnowledge",
-                                "value": "current_CaptSalonP"
+                                "value": "current_CaptCouloirP"
                               },
                               "op2": {
                                 "type": "entityKnowledge",
-                                "value": "actuator_CaptSalonP"
+                                "value": "actuator_CaptCouloirP"
                               },
                               "op": "!="
                             },
