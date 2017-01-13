@@ -649,7 +649,7 @@
                                 {
                                   "key": "MessageLog",
                                   "type": "string",
-                                  "value": "Pepette est couchée;1"
+                                  "value": "Marie est couchée;1"
                                 }
                               ],
                               "outputParams": []
@@ -809,7 +809,7 @@
                                             {
                                               "key": "MessageLog",
                                               "type": "string",
-                                              "value": "Pepette n'est pas couchée;3"
+                                              "value": "Marie n'est pas couchée;3"
                                             }
                                           ],
                                           "outputParams": []
