@@ -841,7 +841,7 @@
                                             {
                                               "key": "MessageLog",
                                               "type": "string",
-                                              "value": "Pepette n'a pas pris son diner;3"
+                                              "value": "Marie n'a pas pris son diner;3"
                                             }
                                           ],
                                           "outputParams": []
@@ -912,7 +912,7 @@
                                         {
                                           "key": "MessageLog",
                                           "type": "string",
-                                          "value": "Pepette a pris son diner;1"
+                                          "value": "Marie a pris son diner;1"
                                         }
                                       ],
                                       "outputParams": []
