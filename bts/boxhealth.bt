@@ -54,7 +54,7 @@
             "type": "condition"
           },
           {
-            "activated": true,
+            "activated": false,
             "metadata": {
               "label": ""
             },
@@ -98,7 +98,7 @@
                 {
                   "key": "MessageLog",
                   "type": "string",
-                  "value": "Init Tree Decision OK;2"
+                  "value": "CraftAI Pret ;2"
                 }
               ],
               "outputParams": []
